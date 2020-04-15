@@ -1,0 +1,5 @@
+bpmd test_debug.dll Program.GetTicksElapsed
+process launch -s
+process status
+continue
+clrstack -p

@@ -1,0 +1,28 @@
+
+dso - dump stack objects
+
+show all objects on the stack:
+DumpHeap -stat
+
+show all objects of a type:
+DumpHeap -m 00007fff7dd10f90
+
+gcroot <addr> - what other objects hold a reference to an object
+
+
+Good discussion of symbols
+
+get matching core clr symbol files and add to lldb
+
+createdump
+
+dump/assembly interpreter for linux
+
+There is an metadata provider interface that could be used to fix this for SOS on Linux.
+
+https://github.com/dotnet/diagnostics/issues/1
+https://github.com/dotnet/diagnostics/pull/229
+
+to read:
+https://faithlife.codes/blog/2018/01/using-sos/
+

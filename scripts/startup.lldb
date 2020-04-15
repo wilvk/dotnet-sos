@@ -1,0 +1,3 @@
+plugin load /root/.dotnet/sos/libsosplugin.so
+target create /usr/bin/dotnet
+settings set target.run-args "./test_debug/bin/Debug/netcoreapp3.1/test_debug.dll"

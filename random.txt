@@ -1,0 +1,340 @@
+# LLVM and dotnet core
+
+https://github.com/steveharter/dotnet_coreclr/blob/master/Documentation/building/debugging-instructions.md
+
+https://github.com/steveharter/dotnet_coreclr/blob/master/Documentation/building/buildinglldb.md
+
+https://github.com/dotnet/diagnostics#building-the-repository
+
+https://github.com/microsoft/AirSim/pull/1914
+
+https://embeddedartistry.com/blog/2017/02/24/installing-llvm-clang-on-osx/
+
+https://www.raydbg.com/2018/Debugging-Net-Core-on-Linux-with-LLDB/
+
+https://docs.microsoft.com/en-us/dotnet/core/install/linux-package-manager-ubuntu-1804
+
+/root/.dotnet/sos/libsosplugin.so
+
+will01/dotnet-3-llvm
+
+root@2fb1088f87d1:/test_app/bin/Debug/netcoreapp3.1# lldb-3.9 test_app
+(lldb) target create "test_app"
+Current executable set to 'test_app' (x86_64).
+(lldb) plugin load libsosplugin.so
+(lldb) process launch -s
+Process 305 launched: '/test_app/bin/Debug/netcoreapp3.1/test_app' (x86_64)
+(lldb) bpmd test_all Program.Program
+(lldb) continue
+Process 305 resuming
+1 location added to breakpoint 1
+Hello World!
+Process 305 exited with status = 0 (0x00000000)
+(lldb) clrstack
+OS Thread Id: 0x131 (1)
+Unable to walk the managed stack. The current thread is likely not a
+managed thread. You can run clrthreads to get a list of managed threads in
+the process
+Failed to start stack walk: 80131c49
+(lldb)
+
+
+
+TODO: set breakpoint
+
+https://www.youtube.com/watch?v=uWoFC-AGr3g
+
+
+https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md
+
+https://mattwarren.org/2019/01/21/Stackwalking-in-the-.NET-Runtime/
+
+sos installation:
+
+https://github.com/kouvel/dotnet-diagnostics/blob/master/documentation/installing-sos-instructions.md
+
+using this:
+
+https://codeblog.dotsandbrackets.com/command-line-debugging-core-linux/
+
+using System;
+ 
+namespace console
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      while (true)
+      {
+        var lastTick = DateTime.Now.Ticks;
+        System.Threading.Thread.Sleep(2000);
+        var ticksElapsed = GetTicksElapsed(lastTick);
+      }
+    }
+ 
+    static long GetTicksElapsed(long lastTicks)
+    {
+      var currentTicks = DateTime.Now.Ticks;
+      var delta = lastTicks - currentTicks;
+      return delta;
+    }
+  }
+}
+
+
+
+using System;
+ 
+namespace console
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      while (true)
+      {
+        var lastTick = DateTime.Now.Ticks;
+        System.Threading.Thread.Sleep(2000);
+        var ticksElapsed = GetTicksElapsed(lastTick);
+      }
+    }
+ 
+    static long GetTicksElapsed(long lastTicks)
+    {
+      var currentTicks = DateTime.Now.Ticks;
+      var delta = lastTicks - currentTicks;
+      return delta;
+    }
+  }
+}
+
+637186361997404021
+
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.41
+root@16e0e0b98e4e:/test_app# lldb-3.9
+(lldb) plugin load libsosplugin.so
+(lldb) exit
+root@16e0e0b98e4e:/test_app# ./bin/Debug/netcoreapp3.1/test_app
+^C
+root@16e0e0b98e4e:/test_app# ./bin/Debug/netcoreapp3.1/test_app &
+[1] 217
+root@16e0e0b98e4e:/test_app# lldb-3.9
+(lldb) plugin load libsosplugin.so
+(lldb) process attach -p 217
+Process 217 stopped
+* thread #1: tid = 217, 0x00007fbb9d926ed9 libpthread.so.0`__pthread_cond_timedwait + 649, name = 'test_app', stop reason = signal SIGSTOP
+    frame #0: 0x00007fbb9d926ed9 libpthread.so.0`__pthread_cond_timedwait + 649
+libpthread.so.0`__pthread_cond_timedwait:
+->  0x7fbb9d926ed9 <+649>: cmpq   $-0x1000, %rax            ; imm = 0xF000
+    0x7fbb9d926edf <+655>: ja     0x7fbb9d9271c0            ; <+1392>
+    0x7fbb9d926ee5 <+661>: movl   %r8d, %edi
+    0x7fbb9d926ee8 <+664>: callq  0x7fbb9d92a060            ; __pthread_disable_asynccancel
+  thread #2: tid = 218, 0x00007fbb9caf9bf9 libc.so.6`__poll + 73, name = 'test_app', stop reason = signal SIGSTOP
+    frame #0: 0x00007fbb9caf9bf9 libc.so.6`__poll + 73
+libc.so.6`__poll:
+->  0x7fbb9caf9bf9 <+73>: cmpq   $-0x1000, %rax            ; imm = 0xF000
+    0x7fbb9caf9bff <+79>: ja     0x7fbb9caf9c32            ; <+130>
+    0x7fbb9caf9c01 <+81>: movl   %r8d, %edi
+    0x7fbb9caf9c04 <+84>: movl   %eax, 0xc(%rsp)
+  thread #3: tid = 219, 0x00007fbb9d92adae libpthread.so.0`__libc_open64 + 206, name = 'test_app', stop reason = signal SIGSTOP
+    frame #0: 0x00007fbb9d92adae libpthread.so.0`__libc_open64 + 206
+libpthread.so.0`__libc_open64:
+->  0x7fbb9d92adae <+206>: cmpq   $-0x1000, %rax            ; imm = 0xF000
+    0x7fbb9d92adb4 <+212>: ja     0x7fbb9d92ade6            ; <+262>
+    0x7fbb9d92adb6 <+214>: movl   %r8d, %edi
+    0x7fbb9d92adb9 <+217>: movl   %eax, 0x8(%rsp)
+  thread #4: tid = 220, 0x00007fbb9d9269f3 libpthread.so.0`__pthread_cond_wait + 579, name = 'test_app', stop reason = signal SIGSTOP
+    frame #0: 0x00007fbb9d9269f3 libpthread.so.0`__pthread_cond_wait + 579
+libpthread.so.0`__pthread_cond_wait:
+->  0x7fbb9d9269f3 <+579>: cmpq   $-0x1000, %rax            ; imm = 0xF000
+    0x7fbb9d9269f9 <+585>: movq   0x30(%rsp), %r8
+    0x7fbb9d9269fe <+590>: ja     0x7fbb9d926b30            ; <+896>
+    0x7fbb9d926a04 <+596>: movl   %r9d, %edi
+  thread #5: tid = 221, 0x00007fbb9d926ed9 libpthread.so.0`__pthread_cond_timedwait + 649, name = 'test_app', stop reason = signal SIGSTOP
+    frame #0: 0x00007fbb9d926ed9 libpthread.so.0`__pthread_cond_timedwait + 649
+libpthread.so.0`__pthread_cond_timedwait:
+->  0x7fbb9d926ed9 <+649>: cmpq   $-0x1000, %rax            ; imm = 0xF000
+    0x7fbb9d926edf <+655>: ja     0x7fbb9d9271c0            ; <+1392>
+    0x7fbb9d926ee5 <+661>: movl   %r8d, %edi
+    0x7fbb9d926ee8 <+664>: callq  0x7fbb9d92a060            ; __pthread_disable_asynccancel
+  thread #6: tid = 222, 0x00007fbb9d92a6d7 libpthread.so.0`__libc_accept + 71, name = 'test_app', stop reason = signal SIGSTOP
+    frame #0: 0x00007fbb9d92a6d7 libpthread.so.0`__libc_accept + 71
+libpthread.so.0`__libc_accept:
+->  0x7fbb9d92a6d7 <+71>: cmpq   $-0x1000, %rax            ; imm = 0xF000
+    0x7fbb9d92a6dd <+77>: ja     0x7fbb9d92a712            ; <+130>
+    0x7fbb9d92a6df <+79>: movl   %r8d, %edi
+    0x7fbb9d92a6e2 <+82>: movl   %eax, 0xc(%rsp)
+  thread #7: tid = 223, 0x00007fbb9d9269f3 libpthread.so.0`__pthread_cond_wait + 579, name = 'test_app', stop reason = signal SIGSTOP
+    frame #0: 0x00007fbb9d9269f3 libpthread.so.0`__pthread_cond_wait + 579
+libpthread.so.0`__pthread_cond_wait:
+->  0x7fbb9d9269f3 <+579>: cmpq   $-0x1000, %rax            ; imm = 0xF000
+    0x7fbb9d9269f9 <+585>: movq   0x30(%rsp), %r8
+    0x7fbb9d9269fe <+590>: ja     0x7fbb9d926b30            ; <+896>
+    0x7fbb9d926a04 <+596>: movl   %r9d, %edi
+
+Executable module set to "/test_app/bin/Debug/netcoreapp3.1/test_app".
+Architecture set to: x86_64-pc-linux.
+(lldb) clrthreads
+ThreadCount:      3
+UnstartedThread:  0
+BackgroundThread: 2
+PendingThread:    0
+DeadThread:       0
+Hosted Runtime:   no
+                                                                                                        Lock
+ DBG   ID OSID ThreadOBJ           State GC Mode     GC Alloc Context                  Domain           Count Apt Exception
+   1    1   d9 00000000021282C0  2020020 Preemptive  00007FBAFC008710:00007FBAFC008B38 00000000020F1E70 0     Ukn
+   5    2   dd 000000000214A8A0    21220 Preemptive  0000000000000000:0000000000000000 00000000020F1E70 0     Ukn (Finalizer)
+   7    3   df 00007FBAF0000C50  1020220 Preemptive  0000000000000000:0000000000000000 00000000020F1E70 0     Ukn (Threadpool Worker)
+(lldb) bpmd test_app.dll Program.GetTicksElapsed
+MethodDesc = 00007FBB22C9FF38
+Setting breakpoint: breakpoint set --address 0x00007FBB22BF2264 [console.Program.GetTicksElapsed(Int64)]
+Adding pending breakpoints...
+(lldb) clrstack
+OS Thread Id: 0xd9 (1)
+        Child SP               IP Call Site
+00007FFF5DF75B88 00007fbb9d926ed9 [HelperMethodFrame: 00007fff5df75b88] System.Threading.Thread.SleepInternal(Int32)
+00007FFF5DF75CD0 00007FBB2270566B System.Threading.Thread.Sleep(Int32)
+00007FFF5DF75CE0 00007FBB22BF04F8 console.Program.Main(System.String[]) [/test_app/Program.cs @ 12]
+00007FFF5DF76028 00007fbb9bff4d9f [GCFrame: 00007fff5df76028]
+00007FFF5DF76510 00007fbb9bff4d9f [GCFrame: 00007fff5df76510]
+(lldb) clrstack
+OS Thread Id: 0xd9 (1)
+        Child SP               IP Call Site
+00007FFF5DF75B88 00007fbb9d926ed9 [HelperMethodFrame: 00007fff5df75b88] System.Threading.Thread.SleepInternal(Int32)
+00007FFF5DF75CD0 00007FBB2270566B System.Threading.Thread.Sleep(Int32)
+00007FFF5DF75CE0 00007FBB22BF04F8 console.Program.Main(System.String[]) [/test_app/Program.cs @ 12]
+00007FFF5DF76028 00007fbb9bff4d9f [GCFrame: 00007fff5df76028]
+00007FFF5DF76510 00007fbb9bff4d9f [GCFrame: 00007fff5df76510]
+(lldb) ip2md 00007FBB22BF04F8
+
+
+
+ps
+^C
+MethodDesc:   00007fbb22c9ff20
+Method Name:          console.Program.Main(System.String[])
+Class:                00007fbb22ce1d80
+MethodTable:          00007fbb22c9ff60
+mdToken:              0000000006000001
+Module:               00007fbb22c9db70
+IsJitted:             yes
+Current CodeAddr:     00007fbb22bf0490
+Version History:
+  ILCodeVersion:      0000000000000000
+  ReJIT ID:           0
+  IL Addr:            0000000000000000
+     CodeAddr:           00007fbb22bf0490  (MinOptJitted)
+     NativeCodeVersion:  0000000000000000
+Source file:  /test_app/Program.cs @ 12
+(lldb) MethodDesc:   00007fbb22c9ff20
+Method Name:          console.Program.Main(System.String[])
+Class:                00007fbb22ce1d80
+MethodTable:          00007fbb22c9ff60
+mdToken:              0000000006000001
+Module:               00007fbb22c9db70
+IsJitted:             yes
+Current CodeAddr:     00007fbb22bf0490
+Version History:
+  ILCodeVersion:      0000000000000000
+  ReJIT ID:           0
+  IL Addr:            0000000000000000
+     CodeAddr:           00007fbb22bf0490  (MinOptJitted)
+     NativeCodeVersion:  0000000000000000
+Source file:  /test_app/Program.cs @ 12
+(lldb) bpmd -md 00007fbb22c9ff20
+MethodDesc = 00007FBB22C9FF20
+Setting breakpoint: breakpoint set --address 0x00007FBB22BF0490 [console.Program.Main(System.String[])]
+(lldb) program continue
+error: 'program' is not a valid command.
+error: Unrecognized command 'program'.
+(lldb) continue
+Process 217 resuming
+(lldb) Process 217 stopped
+* thread #1: tid = 217, 0x00007fbb22bf2264, name = 'test_app', stop reason = breakpoint 1.1
+    frame #0: 0x00007fbb22bf2264
+->  0x7fbb22bf2264: nop
+    0x7fbb22bf2265: callq  0x7fbb22bf03e8
+    0x7fbb22bf226a: movq   %rax, -0x30(%rbp)
+    0x7fbb22bf226e: movq   -0x30(%rbp), %rdi
+(lldb) sos ClrStack
+OS Thread Id: 0xd9 (1)
+        Child SP               IP Call Site
+00007FFF5DF75C90 00007FBB22BF2264 console.Program.GetTicksElapsed(Int64) [/test_app/Program.cs @ 18]
+00007FFF5DF75CE0 00007FBB22BF0502 console.Program.Main(System.String[]) [/test_app/Program.cs @ 13]
+00007FFF5DF76028 00007fbb9bff4d9f [GCFrame: 00007fff5df76028]
+00007FFF5DF76510 00007fbb9bff4d9f [GCFrame: 00007fff5df76510]
+(lldb) clrstack -p
+OS Thread Id: 0xd9 (1)
+        Child SP               IP Call Site
+00007FFF5DF75C90 00007FBB22BF2264 console.Program.GetTicksElapsed(Int64) [/test_app/Program.cs @ 18]
+    PARAMETERS:
+        lastTicks (0x00007FFF5DF75CC8) = 0x08d7bd9eca942775
+
+00007FFF5DF75CE0 00007FBB22BF0502 console.Program.Main(System.String[]) [/test_app/Program.cs @ 13]
+    PARAMETERS:
+        args (0x00007FFF5DF75D18) = 0x00007fbafc0072d0
+
+00007FFF5DF76028 00007fbb9bff4d9f [GCFrame: 00007fff5df76028]
+00007FFF5DF76510 00007fbb9bff4d9f [GCFrame: 00007fff5df76510]
+(lldb) objdump 0x00007FFF5DF75D18
+error: 'objdump' is not a valid command.
+error: Unrecognized command 'objdump'.
+(lldb) dumpobj 0x00007FFF5DF75D18
+<Note: this object has an invalid CLASS field>
+Invalid object
+DumpObj 0x00007FFF5DF75D18  failed
+(lldb) dumpobj 0x00007fbafc0072d0
+Name:        System.String[]
+MethodTable: 00007fbb22c9ed90
+EEClass:     00007fbb22c65488
+Size:        24(0x18) bytes
+Array:       Rank 1, Number of elements 0, Type CLASS
+Fields:
+None
+(lldb) dumpobj 0x08d7bd9eca942775
+<Note: this object has an invalid CLASS field>
+Invalid object
+DumpObj 0x08d7bd9eca942775  failed
+(lldb) next
+(lldb) Process 217 stopped
+* thread #1: tid = 217, 0x00007fbb22bf2265, name = 'test_app', stop reason = instruction step over
+    frame #0: 0x00007fbb22bf2265
+->  0x7fbb22bf2265: callq  0x7fbb22bf03e8
+    0x7fbb22bf226a: movq   %rax, -0x30(%rbp)
+    0x7fbb22bf226e: movq   -0x30(%rbp), %rdi
+    0x7fbb22bf2272: movq   %rdi, -0x20(%rbp)
+(lldb) step
+(lldb) Process 217 stopped
+* thread #1: tid = 217, 0x00007fbb22bf03e8, name = 'test_app', stop reason = instruction step into
+    frame #0: 0x00007fbb22bf03e8
+->  0x7fbb22bf03e8: callq  0x7fbb9bff5aa0            ; PrecodeFixupThunk
+    0x7fbb22bf03ed: popq   %rsi
+(lldb) clrstack
+OS Thread Id: 0xd9 (1)
+        Child SP               IP Call Site
+00007FFF5DF76028 00007fbb22bf03e8 [GCFrame: 00007fff5df76028]
+00007FFF5DF76510 00007fbb22bf03e8 [GCFrame: 00007fff5df76510]
+(lldb) ip2md 00007fbb22bf03e8
+Failed to request MethodData, not in JIT code range
+IP2MD 00007fbb22bf03e8  failed
+(lldb) ip2md 0x7fbb22bf03e8
+Failed to request MethodData, not in JIT code range
+IP2MD 0x7fbb22bf03e8  failed
+(lldb)
+
+
+Remote debuging:
+
+https://lldb.llvm.org/use/remote.html
+
+llvm starters guide:
+
+https://llvm.org/docs/GettingStarted.html
+

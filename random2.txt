@@ -1,0 +1,57 @@
+# c# debugging on macos with lldb
+
+
+https://github.com/dotnet/diagnostics/blob/master/documentation/installing-sos-instructions.md
+
+Install:
+
+dotnet tool install -g dotnet-sos
+
+find / -name dotnet-sos 2> /dev/null
+
+ln -s <binary> /usr/local/bin/dotnet-sos
+
+dotnet-sos install
+
+Run:
+
+lldb corerun HelloWorld.exe linu
+
+process launch -s
+
+
+Check:
+
+clrstack
+
+
+
+https://github.com/dotnet/coreclr/blob/master/Documentation/building/debugging-instructions.md
+https://github.com/dotnet/coreclr/blob/master/Documentation/building/debugging-instructions.md#debugging-coreclr-on-linux-and-macos
+https://lldb.llvm.org/use/map.html
+
+
+Debugging C# in lldb
+
+blogs:
+https://codeblog.dotsandbrackets.com/command-line-debugging-core-linux/
+http://sonicguo.com/2018/How-To-Debugging-DotNet-Core-On-Linux/
+
+https://www.mono-project.com/docs/debug+profile/debug/
+
+
+SOS is required: 
+https://github.com/wilvk/diagnostics
+
+OSX instructions for building SOS and diagnostics:
+https://github.com/wilvk/diagnostics/blob/master/documentation/building/osx-instructions.md
+
+https://github.com/dotnet/diagnostics/blob/master/documentation/debugging-coredump.md
+
+Dotnet runtime corerun
+
+SOS extension:
+https://devblogs.microsoft.com/premier-developer/debugging-net-core-with-sos-everywhere/
+
+https://github.com/dotnet/coreclr has been replaced with https://github.com/dotnet/runtime
+
