@@ -1,0 +1,110 @@
+FROM ubuntu:19.04
+
+WORKDIR /app
+
+RUN apt-get -y update && \
+    apt-get -y install \
+    software-properties-common \
+    wget
+
+RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add -
+
+RUN add-apt-repository 'deb http://apt.llvm.org/disco/ llvm-toolchain-disco-9 main'
+
+RUN apt-get install -y \
+    libllvm-9-ocaml-dev \
+    libllvm10 \
+    llvm-9 \
+    llvm-9-dev \
+    llvm-9-doc \
+    llvm-9-examples \
+    llvm-9-runtime
+
+RUN apt-get install -y \
+    clang-9 \
+    clang-tools-9 \
+    clang-9-doc \
+    libclang-common-9-dev \
+    libclang-9-dev \
+    libclang1-9 \
+    clang-format-9 \
+    clangd-9
+
+RUN apt-get -y \
+    install \
+    clang-format \
+    clang-tidy \
+    clang-tools \
+    clang \
+    libc++-dev \
+    libc++1 \
+    libc++abi-dev \
+    libc++abi1 \
+    libclang-dev \
+    libclang1 \
+    liblldb-dev \
+    libllvm-ocaml-dev \
+    libomp-dev \
+    libomp5 \
+    lld \
+    lldb \
+    llvm-dev \
+    llvm-runtime \
+    llvm \
+    python-clang
+
+RUN apt-get -y install \
+    wget \
+    apt-utils \
+    git cmake \
+    gdb gettext \
+    git \
+    libicu-dev \
+    libunwind8 \
+    llvm \
+    make \
+    tar \
+    wget \
+    zip \
+    liblttng-ust-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libkrb5-dev \
+    libnuma-dev \
+    libicu-dev \
+    libunwind8 \
+    libunwind8-dev \
+    locales
+
+RUN locale-gen en_US.UTF-8
+
+#RUN git clone https://github.com/dotnet/diagnostics.git
+RUN git clone https://github.com/dotnet/runtime.git
+#RUN git clone https://github.com/dotnet/symstore.git
+#RUN git clone https://github.com/dotnet/sdk.git
+#RUN git clone https://github.com/dotnet/roslyn-sdk.git
+#RUN git clone https://github.com/dotnet/core
+#RUN git clone https://github.com/dotnet/roslyn-tools
+#RUN git clone https://github.com/dotnet/corefx
+#RUN git clone https://github.com/dotnet/source-build
+#RUN git clone https://github.com/dotnet/symreader-portable
+#RUN git clone https://github.com/dotnet/symreader
+#RUN git clone https://github.com/dotnet/sourcelink
+#RUN git clone https://github.com/dotnet/metadata-tools
+#RUN git clone https://github.com/dotnet/toolset
+#RUN git clone https://github.com/dotnet/llvm-project
+#RUN git clone https://github.com/dotnet/vscode-dotnet-runtime
+#RUN git clone https://github.com/dotnet/buildtools
+#RUN git clone https://github.com/dotnet/ILMerge
+#RUN git clone https://github.com/dotnet/corefx-tools
+#RUN git clone https://github.com/dotnet/standard
+#RUN git clone https://github.com/dotnet/coreclr
+#RUN git clone https://github.com/dotnet/roslyn
+
+RUN ./runtime/build.sh --configuration debug --subset clr --arch c64 --os Linux
+
+#RUN ./runtime/build.sh --configuration debug --subset clr
+#RUN ./diagnostics/build.sh --configuration debug
+#RUN ./symstore/build.sh --configuration debug
+#RUN dotnet tool install -g dotnet-symbol
+ENV PATH="/root/.dotnet/tools:/usr/lib/llvm-9/bin:${PATH}"
