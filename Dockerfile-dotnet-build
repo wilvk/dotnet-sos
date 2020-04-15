@@ -13,7 +13,7 @@ RUN add-apt-repository 'deb http://apt.llvm.org/disco/ llvm-toolchain-disco-9 ma
 
 RUN apt-get install -y \
     libllvm-9-ocaml-dev \
-    libllvm10 \
+    libllvm9 \
     llvm-9 \
     llvm-9-dev \
     llvm-9-doc \
@@ -54,7 +54,6 @@ RUN apt-get -y \
     python-clang
 
 RUN apt-get -y install \
-    wget \
     apt-utils \
     git cmake \
     gdb gettext \
@@ -64,7 +63,6 @@ RUN apt-get -y install \
     llvm \
     make \
     tar \
-    wget \
     zip \
     liblttng-ust-dev \
     libcurl4-openssl-dev \
