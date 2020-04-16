@@ -1,9 +1,10 @@
-FROM ubuntu:19.04
+FROM ubuntu:19.10
 
 WORKDIR /app
 
-RUN apt-get -y update && \
-    apt-get -y install \
+RUN apt -y update
+
+RUN apt -y install \
     software-properties-common \
     wget
 
@@ -11,7 +12,7 @@ RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add -
 
 RUN add-apt-repository 'deb http://apt.llvm.org/disco/ llvm-toolchain-disco-9 main'
 
-RUN apt-get install -y \
+RUN apt install -y \
     libllvm-9-ocaml-dev \
     libllvm9 \
     llvm-9 \
@@ -20,7 +21,7 @@ RUN apt-get install -y \
     llvm-9-examples \
     llvm-9-runtime
 
-RUN apt-get install -y \
+RUN apt install -y \
     clang-9 \
     clang-tools-9 \
     clang-9-doc \
@@ -30,7 +31,7 @@ RUN apt-get install -y \
     clang-format-9 \
     clangd-9
 
-RUN apt-get -y \
+RUN apt -y \
     install \
     clang-format \
     clang-tidy \
@@ -53,11 +54,11 @@ RUN apt-get -y \
     llvm \
     python-clang
 
-RUN apt-get -y install \
+RUN apt -y install \
     apt-utils \
-    git cmake \
-    gdb gettext \
     git \
+    gdb \
+    gettext \
     libicu-dev \
     libunwind8 \
     llvm \
@@ -72,7 +73,15 @@ RUN apt-get -y install \
     libicu-dev \
     libunwind8 \
     libunwind8-dev \
-    locales
+    locales \
+    zlib1g-dev \
+    build-essential
+
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.16.6/cmake-3.16.6-Linux-x86_64.sh
+RUN chmod +x cmake-3.16.6-Linux-x86_64.sh
+RUN mkdir /opt/cmake
+RUN ./cmake-3.16.6-Linux-x86_64.sh --skip-license --prefix=/opt/cmake
+RUN ln -s /opt/cmake/bin/cmake /usr/bin/cmake
 
 RUN locale-gen en_US.UTF-8
 
