@@ -1,119 +1,72 @@
-FROM ubuntu:19.10
+FROM ubuntu:16.04
+
+# https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/master/src/ubuntu/16.04/Dockerfile
+
+# Install the base toolchain we need to build anything (clang, cmake, make and the like)
+# this does not include libraries that we need to compile different projects, we'd like
+# them in a different layer.
+RUN apt-get update && \
+    apt-get install -y apt-transport-https ca-certificates gnupg software-properties-common wget && \
+    echo "deb http://llvm.org/apt/xenial/ llvm-toolchain-xenial-9 main" | tee -a /etc/apt/sources.list.d/llvm.list && \
+    wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | apt-key add - && \
+    wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc | apt-key add - && \
+    apt-add-repository 'deb https://apt.kitware.com/ubuntu/ xenial main' && \
+    apt-get update && \
+    apt-get install -y \
+            clang-9 \
+            cmake \
+            gdb \
+            liblldb-6.0-dev \
+            lldb-6.0 \
+            llvm-9 \
+            locales \
+            make \
+            python-lldb-6.0 \
+            sudo && \
+    apt-get clean
+
+# Install tools used by the VSO build automation.
+RUN apt-get install -y git \
+            nodejs \
+            npm \
+            tar \
+            zip && \
+    apt-get clean && \
+    npm install -g azure-cli@0.9.20 && \
+    npm cache clean
+
+# .NET SDK MSBuild requires US.UTF-8 locale to execute tasks
+RUN locale-gen en_US.UTF-8
+
+# Dependencies for CoreCLR, Mono and CoreFX
+RUN apt-get install -y \
+            autoconf \
+            automake \
+            build-essential \
+            gettext \
+            libcurl4-openssl-dev \
+            libgdiplus \
+            libicu-dev \
+            libkrb5-dev \
+            liblttng-ust-dev \
+            libnuma-dev \
+            libssl-dev \
+            libtool \
+            libunwind8-dev \
+            libunwind8 \
+            python3 \
+            uuid-dev \
+    && apt-get clean
 
 WORKDIR /app
 
-RUN apt -y update
-
-RUN apt -y install \
-    software-properties-common \
-    wget
-
-RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|apt-key add -
-
-RUN add-apt-repository 'deb http://apt.llvm.org/disco/ llvm-toolchain-disco-9 main'
-
-RUN apt install -y \
-    libllvm-9-ocaml-dev \
-    libllvm9 \
-    llvm-9 \
-    llvm-9-dev \
-    llvm-9-doc \
-    llvm-9-examples \
-    llvm-9-runtime
-
-RUN apt install -y \
-    clang-9 \
-    clang-tools-9 \
-    clang-9-doc \
-    libclang-common-9-dev \
-    libclang-9-dev \
-    libclang1-9 \
-    clang-format-9 \
-    clangd-9
-
-RUN apt -y \
-    install \
-    clang-format \
-    clang-tidy \
-    clang-tools \
-    clang \
-    libc++-dev \
-    libc++1 \
-    libc++abi-dev \
-    libc++abi1 \
-    libclang-dev \
-    libclang1 \
-    liblldb-dev \
-    libllvm-ocaml-dev \
-    libomp-dev \
-    libomp5 \
-    lld \
-    lldb \
-    llvm-dev \
-    llvm-runtime \
-    llvm \
-    python-clang
-
-RUN apt -y install \
-    apt-utils \
-    git \
-    gdb \
-    gettext \
-    libicu-dev \
-    libunwind8 \
-    llvm \
-    make \
-    tar \
-    zip \
-    liblttng-ust-dev \
-    libcurl4-openssl-dev \
-    libssl-dev \
-    libkrb5-dev \
-    libnuma-dev \
-    libicu-dev \
-    libunwind8 \
-    libunwind8-dev \
-    locales \
-    zlib1g-dev \
-    build-essential
-
-RUN wget https://github.com/Kitware/CMake/releases/download/v3.16.6/cmake-3.16.6-Linux-x86_64.sh
-RUN chmod +x cmake-3.16.6-Linux-x86_64.sh
-RUN mkdir /opt/cmake
-RUN ./cmake-3.16.6-Linux-x86_64.sh --skip-license --prefix=/opt/cmake
-RUN ln -s /opt/cmake/bin/cmake /usr/bin/cmake
-
+RUN apt-get install locales
 RUN locale-gen en_US.UTF-8
 
-#RUN git clone https://github.com/dotnet/diagnostics.git
 RUN git clone https://github.com/dotnet/runtime.git
-#RUN git clone https://github.com/dotnet/symstore.git
-#RUN git clone https://github.com/dotnet/sdk.git
-#RUN git clone https://github.com/dotnet/roslyn-sdk.git
-#RUN git clone https://github.com/dotnet/core
-#RUN git clone https://github.com/dotnet/roslyn-tools
-#RUN git clone https://github.com/dotnet/corefx
-#RUN git clone https://github.com/dotnet/source-build
-#RUN git clone https://github.com/dotnet/symreader-portable
-#RUN git clone https://github.com/dotnet/symreader
-#RUN git clone https://github.com/dotnet/sourcelink
-#RUN git clone https://github.com/dotnet/metadata-tools
-#RUN git clone https://github.com/dotnet/toolset
-#RUN git clone https://github.com/dotnet/llvm-project
-#RUN git clone https://github.com/dotnet/vscode-dotnet-runtime
-#RUN git clone https://github.com/dotnet/buildtools
-#RUN git clone https://github.com/dotnet/ILMerge
-#RUN git clone https://github.com/dotnet/corefx-tools
-#RUN git clone https://github.com/dotnet/standard
-#RUN git clone https://github.com/dotnet/coreclr
-#RUN git clone https://github.com/dotnet/roslyn
+RUN cd /app/runtime && ./build.sh -runtimeConfiguration Release
 
-RUN ./runtime/build.sh --configuration debug --subset clr --arch x64 --os Linux
-
-#RUN ./runtime/build.sh --configuration debug --subset libs --arch x64 --os Linux
-
-#RUN ./runtime/build.sh --configuration debug --subset clr
 #RUN ./diagnostics/build.sh --configuration debug
 #RUN ./symstore/build.sh --configuration debug
 #RUN dotnet tool install -g dotnet-symbol
-ENV PATH="/root/.dotnet/tools:/usr/lib/llvm-9/bin:${PATH}"
+#ENV PATH="/root/.dotnet/tools:/usr/lib/llvm-9/bin:${PATH}"

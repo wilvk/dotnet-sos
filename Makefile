@@ -9,7 +9,7 @@ llvm:
 	$(DOCKER_COMPOSE_LLVM) test-llvm-server /bin/bash
 
 dotnet-build:
-	docker build -f Dockerfile-dotnet-build --memory='2048M' -t dotnet-sos .
+	docker build -f Dockerfile-dotnet-build --memory="4096m" --memory-swap="8192m" -t dotnet-sos .
 	docker run -it -v ${CWDIR}:/work --privileged dotnet-sos /bin/bash
 
 list:
