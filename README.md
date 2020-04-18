@@ -1,6 +1,14 @@
 # dotnet-sos
 dotnet core and sos testing
 
+## Approach
+
+Build binaries
+Understand symbol files
+Understand llvm sos debugging
+(If needed) Modify sos debugger to stop on line numbers
+
+
 ## TODO:
 
 determine how to set a breakpoint for a line in a file
