@@ -63,8 +63,12 @@ WORKDIR /app
 RUN apt-get install locales
 RUN locale-gen en_US.UTF-8
 
-RUN git clone https://github.com/dotnet/runtime.git
-RUN cd /app/runtime && ./build.sh -runtimeConfiguration Release
+RUN git clone https://github.com/dotnet/coreclr.git
+RUN git clone https://github.com/dotnet/corefx.git
+
+RUN cd coreclr && git checkout v3.1.0 && ./build -runtimeConfiguration Release
+
+#RUN cd /app/runtime && ./build.sh -runtimeConfiguration Release
 
 #RUN ./diagnostics/build.sh --configuration debug
 #RUN ./symstore/build.sh --configuration debug
