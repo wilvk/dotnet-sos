@@ -65,4 +65,5 @@ dotnet add package Microsoft.NETFramework.ReferenceAssemblies
 chmod -R 0755 ./
 dotnet build
 change project file to netcoreapp3.1
-dotnet run ./obj/Debug/net461/MdDumper.exe --framework netcoreapp3.1
+change frameworks to framework
+dotnet run ../../../../dotnet-sos/test_app/bin/Debug/netcoreapp3.1/test_app.dll
