@@ -9,6 +9,10 @@ https://github.com/dotnet/symreader-portable
 Good overview of non-portable pdb (symbol) files:
 https://www.wintellect.com/pdb-files-what-every-developer-must-know/
 
+## debuging dotnet core on linux with llvm
+http://sonicguo.com/2018/How-To-Debugging-DotNet-Core-On-Linux/
+
+
 ## debugging asp.net core source
 
 https://www.raydbg.com/2018/Debugging-ASP-NET-Core-Application-with-Framework-Source-Code/
