@@ -67,3 +67,8 @@ dotnet build
 change project file to netcoreapp3.1
 change frameworks to framework
 dotnet run ../../../../dotnet-sos/test_app/bin/Debug/netcoreapp3.1/test_app.dll
+
+
+## extending gdb:
+
+https://sourceware.org/gdb/current/onlinedocs/gdb/Extending-GDB.html
