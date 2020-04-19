@@ -58,19 +58,40 @@ RUN apt-get install -y \
             uuid-dev \
     && apt-get clean
 
+RUN apt-get update && apt-get install -y clang-3.9
+
+
 WORKDIR /app
 
 RUN apt-get install locales
 RUN locale-gen en_US.UTF-8
 
+RUN git clone https://github.com/dotnet/diagnostics.git
+RUN git clone https://github.com/dotnet/symstore.git
+RUN git clone https://github.com/dotnet/sdk.git
+RUN git clone https://github.com/dotnet/roslyn-sdk.git
+RUN git clone https://github.com/dotnet/core
+RUN git clone https://github.com/dotnet/roslyn-tools
+RUN git clone https://github.com/dotnet/source-build
+RUN git clone https://github.com/dotnet/symreader-portable
+RUN git clone https://github.com/dotnet/symreader
+RUN git clone https://github.com/dotnet/sourcelink
+RUN git clone https://github.com/dotnet/metadata-tools
+RUN git clone https://github.com/dotnet/toolset
+RUN git clone https://github.com/dotnet/llvm-project
+RUN git clone https://github.com/dotnet/vscode-dotnet-runtime
+RUN git clone https://github.com/dotnet/buildtools
+RUN git clone https://github.com/dotnet/ILMerge
+RUN git clone https://github.com/dotnet/corefx-tools
+RUN git clone https://github.com/dotnet/standard
+RUN git clone https://github.com/dotnet/roslyn
+
 RUN git clone https://github.com/dotnet/coreclr.git
 RUN git clone https://github.com/dotnet/corefx.git
 
-RUN cd coreclr && git checkout v3.1.0 && ./build -runtimeConfiguration Release
-
-#RUN cd /app/runtime && ./build.sh -runtimeConfiguration Release
+RUN cd coreclr && git checkout v3.1.0 && ./build.sh
+RUN cd corefx  && git checkout v3.1.0 && ./build.sh --restore --build --publish --configuration Debug
 
 #RUN ./diagnostics/build.sh --configuration debug
 #RUN ./symstore/build.sh --configuration debug
 #RUN dotnet tool install -g dotnet-symbol
-#ENV PATH="/root/.dotnet/tools:/usr/lib/llvm-9/bin:${PATH}"
