@@ -1,0 +1,1707 @@
+./obj/Debug/net461/MdDumper.exe
+********************************************************************************
+Module (0x00):
+================================================================================================
+   Gen  Name                   Mvid                                         EncId  EncBaseId  
+================================================================================================
+1: 0    'MdDumper.exe' (#a18)  {fc26bd05-eae0-410d-ac11-a21085555e85} (#1)  nil    nil        
+
+TypeRef (0x01):
+===================================================================================================================================
+    Scope                     Name                                                   Namespace                                      
+===================================================================================================================================
+ 1: 0x23000001 (AssemblyRef)  'CompilationRelaxationsAttribute' (#943)               'System.Runtime.CompilerServices' (#11ca)      
+ 2: 0x23000001 (AssemblyRef)  'RuntimeCompatibilityAttribute' (#9a9)                 'System.Runtime.CompilerServices' (#11ca)      
+ 3: 0x23000001 (AssemblyRef)  'DebuggableAttribute' (#875)                           'System.Diagnostics' (#1190)                   
+ 4: 0x01000003 (TypeRef)      'DebuggingModes' (#123f)                               nil                                            
+ 5: 0x23000001 (AssemblyRef)  'TargetFrameworkAttribute' (#8a0)                      'System.Runtime.Versioning' (#ab0)             
+ 6: 0x23000001 (AssemblyRef)  'AssemblyCompanyAttribute' (#990)                      'System.Reflection' (#ce3)                     
+ 7: 0x23000001 (AssemblyRef)  'AssemblyConfigurationAttribute' (#924)                'System.Reflection' (#ce3)                     
+ 8: 0x23000001 (AssemblyRef)  'AssemblyFileVersionAttribute' (#8e1)                  'System.Reflection' (#ce3)                     
+ 9: 0x23000001 (AssemblyRef)  'AssemblyInformationalVersionAttribute' (#8fe)         'System.Reflection' (#ce3)                     
+ a: 0x23000001 (AssemblyRef)  'AssemblyProductAttribute' (#963)                      'System.Reflection' (#ce3)                     
+ b: 0x23000001 (AssemblyRef)  'AssemblyTitleAttribute' (#889)                        'System.Reflection' (#ce3)                     
+ c: 0x23000001 (AssemblyRef)  'Object' (#15d2)                                       'System' (#b75)                                
+ d: 0x23000001 (AssemblyRef)  'FileStream' (#b3c)                                    'System.IO' (#22a)                             
+ e: 0x23000002 (AssemblyRef)  'PEReader' (#1020)                                     'System.Reflection.PortableExecutable' (#45d)  
+ f: 0x23000002 (AssemblyRef)  'MetadataReader' (#102c)                               'System.Reflection.Metadata' (#236)            
+10: 0x23000001 (AssemblyRef)  'Exception' (#fae)                                     'System' (#b75)                                
+11: 0x23000001 (AssemblyRef)  'CompilerGeneratedAttribute' (#85a)                    'System.Runtime.CompilerServices' (#11ca)      
+12: 0x23000001 (AssemblyRef)  'TextWriter' (#10a8)                                   'System.IO' (#22a)                             
+13: 0x23000001 (AssemblyRef)  'IReadOnlyList`1' (#1b8)                               'System.Collections.Generic' (#29d)            
+14: 0x23000002 (AssemblyRef)  'MetadataAggregator' (#1117)                           'System.Reflection.Metadata.Ecma335' (#1f3)    
+15: 0x23000003 (AssemblyRef)  'ImmutableArray`1' (#1c8)                              'System.Collections.Immutable' (#482)          
+16: 0x23000002 (AssemblyRef)  'EntityHandle' (#744)                                  'System.Reflection.Metadata' (#236)            
+17: 0x23000001 (AssemblyRef)  'List`1' (#1c1)                                        'System.Collections.Generic' (#29d)            
+18: 0x23000001 (AssemblyRef)  'ParamArrayAttribute' (#97c)                           'System' (#b75)                                
+19: 0x01000017 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+1a: 0x23000002 (AssemblyRef)  'Handle' (#74a)                                        'System.Reflection.Metadata' (#236)            
+1b: 0x23000002 (AssemblyRef)  'HandleKind' (#31a)                                    'System.Reflection.Metadata' (#236)            
+1c: 0x23000002 (AssemblyRef)  'TableIndex' (#1754)                                   'System.Reflection.Metadata.Ecma335' (#1f3)    
+1d: 0x23000001 (AssemblyRef)  'Func`3' (#1e6)                                        'System' (#b75)                                
+1e: 0x23000002 (AssemblyRef)  'StringHandle' (#5c7)                                  'System.Reflection.Metadata' (#236)            
+1f: 0x23000002 (AssemblyRef)  'NamespaceDefinitionHandle' (#691)                     'System.Reflection.Metadata' (#236)            
+20: 0x23000002 (AssemblyRef)  'GuidHandle' (#4bd)                                    'System.Reflection.Metadata' (#236)            
+21: 0x23000002 (AssemblyRef)  'BlobHandle' (#4b2)                                    'System.Reflection.Metadata' (#236)            
+22: 0x23000001 (AssemblyRef)  'IEquatable`1' (#17b)                                  'System' (#b75)                                
+23: 0x23000001 (AssemblyRef)  'IReadOnlyCollection`1' (#188)                         'System.Collections.Generic' (#29d)            
+24: 0x23000001 (AssemblyRef)  'Func`2' (#1df)                                        'System' (#b75)                                
+25: 0x23000001 (AssemblyRef)  'IEnumerable`1' (#16d)                                 'System.Collections.Generic' (#29d)            
+26: 0x23000002 (AssemblyRef)  'InterfaceImplementationHandleCollection' (#dfd)       'System.Reflection.Metadata' (#236)            
+27: 0x23000002 (AssemblyRef)  'ModuleDefinition' (#f3e)                              'System.Reflection.Metadata' (#236)            
+28: 0x23000002 (AssemblyRef)  'TypeReferenceHandleCollection' (#cf5)                 'System.Reflection.Metadata' (#236)            
+29: 0x01000028 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+2a: 0x23000002 (AssemblyRef)  'TypeReferenceHandle' (#4de)                           'System.Reflection.Metadata' (#236)            
+2b: 0x23000002 (AssemblyRef)  'TypeReference' (#374)                                 'System.Reflection.Metadata' (#236)            
+2c: 0x23000002 (AssemblyRef)  'TypeDefinitionHandleCollection' (#e66)                'System.Reflection.Metadata' (#236)            
+2d: 0x0100002c (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+2e: 0x23000002 (AssemblyRef)  'TypeDefinitionHandle' (#6ab)                          'System.Reflection.Metadata' (#236)            
+2f: 0x23000002 (AssemblyRef)  'TypeDefinition' (#f52)                                'System.Reflection.Metadata' (#236)            
+30: 0x23000002 (AssemblyRef)  'TypeLayout' (#1717)                                   'System.Reflection.Metadata' (#236)            
+31: 0x23000002 (AssemblyRef)  'FieldDefinitionHandleCollection' (#e25)               'System.Reflection.Metadata' (#236)            
+32: 0x01000031 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+33: 0x23000002 (AssemblyRef)  'FieldDefinitionHandle' (#664)                         'System.Reflection.Metadata' (#236)            
+34: 0x23000002 (AssemblyRef)  'FieldDefinition' (#f17)                               'System.Reflection.Metadata' (#236)            
+35: 0x23000002 (AssemblyRef)  'MethodDefinitionHandleCollection' (#e45)              'System.Reflection.Metadata' (#236)            
+36: 0x01000035 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+37: 0x23000002 (AssemblyRef)  'MethodDefinitionHandle' (#67a)                        'System.Reflection.Metadata' (#236)            
+38: 0x23000002 (AssemblyRef)  'MethodDefinition' (#f2a)                              'System.Reflection.Metadata' (#236)            
+39: 0x23000002 (AssemblyRef)  'MethodImport' (#16e3)                                 'System.Reflection.Metadata' (#236)            
+3a: 0x23000002 (AssemblyRef)  'Parameter' (#109e)                                    'System.Reflection.Metadata' (#236)            
+3b: 0x23000002 (AssemblyRef)  'MemberReferenceHandleCollection' (#d13)               'System.Reflection.Metadata' (#236)            
+3c: 0x0100003b (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+3d: 0x23000002 (AssemblyRef)  'MemberReferenceHandle' (#4f2)                         'System.Reflection.Metadata' (#236)            
+3e: 0x23000002 (AssemblyRef)  'MemberReference' (#385)                               'System.Reflection.Metadata' (#236)            
+3f: 0x23000002 (AssemblyRef)  'Constant' (#1650)                                     'System.Reflection.Metadata' (#236)            
+40: 0x23000002 (AssemblyRef)  'CustomAttributeHandleCollection' (#db0)               'System.Reflection.Metadata' (#236)            
+41: 0x01000040 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+42: 0x23000002 (AssemblyRef)  'CustomAttributeHandle' (#58a)                         'System.Reflection.Metadata' (#236)            
+43: 0x23000002 (AssemblyRef)  'CustomAttribute' (#8d1)                               'System.Reflection.Metadata' (#236)            
+44: 0x23000002 (AssemblyRef)  'DeclarativeSecurityAttributeHandleCollection' (#dd0)  'System.Reflection.Metadata' (#236)            
+45: 0x01000044 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+46: 0x23000002 (AssemblyRef)  'DeclarativeSecurityAttributeHandle' (#5a0)            'System.Reflection.Metadata' (#236)            
+47: 0x23000002 (AssemblyRef)  'DeclarativeSecurityAttribute' (#9ca)                  'System.Reflection.Metadata' (#236)            
+48: 0x23000002 (AssemblyRef)  'StandaloneSignature' (#82c)                           'System.Reflection.Metadata' (#236)            
+49: 0x23000002 (AssemblyRef)  'EventDefinitionHandleCollection' (#e85)               'System.Reflection.Metadata' (#236)            
+4a: 0x01000049 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+4b: 0x23000002 (AssemblyRef)  'EventDefinitionHandle' (#6c0)                         'System.Reflection.Metadata' (#236)            
+4c: 0x23000002 (AssemblyRef)  'EventDefinition' (#f64)                               'System.Reflection.Metadata' (#236)            
+4d: 0x23000002 (AssemblyRef)  'EventAccessors' (#1549)                               'System.Reflection.Metadata' (#236)            
+4e: 0x23000002 (AssemblyRef)  'PropertyDefinitionHandleCollection' (#ea5)            'System.Reflection.Metadata' (#236)            
+4f: 0x0100004e (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+50: 0x23000002 (AssemblyRef)  'PropertyDefinitionHandle' (#6d6)                      'System.Reflection.Metadata' (#236)            
+51: 0x23000002 (AssemblyRef)  'PropertyDefinition' (#f8d)                            'System.Reflection.Metadata' (#236)            
+52: 0x23000002 (AssemblyRef)  'PropertyAccessors' (#1558)                            'System.Reflection.Metadata' (#236)            
+53: 0x23000002 (AssemblyRef)  'MethodImplementation' (#c92)                          'System.Reflection.Metadata' (#236)            
+54: 0x23000002 (AssemblyRef)  'ModuleReference' (#361)                               'System.Reflection.Metadata' (#236)            
+55: 0x23000002 (AssemblyRef)  'TypeSpecification' (#c13)                             'System.Reflection.Metadata' (#236)            
+56: 0x23000001 (AssemblyRef)  'IEnumerator`1' (#1aa)                                 'System.Collections.Generic' (#29d)            
+57: 0x23000002 (AssemblyRef)  'EditAndContinueLogEntry' (#17b6)                      'System.Reflection.Metadata.Ecma335' (#1f3)    
+58: 0x23000002 (AssemblyRef)  'AssemblyDefinition' (#f77)                            'System.Reflection.Metadata' (#236)            
+59: 0x23000002 (AssemblyRef)  'AssemblyReferenceHandleCollection' (#d33)             'System.Reflection.Metadata' (#236)            
+5a: 0x01000059 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+5b: 0x23000002 (AssemblyRef)  'AssemblyReferenceHandle' (#508)                       'System.Reflection.Metadata' (#236)            
+5c: 0x23000002 (AssemblyRef)  'AssemblyReference' (#398)                             'System.Reflection.Metadata' (#236)            
+5d: 0x23000002 (AssemblyRef)  'AssemblyFileHandleCollection' (#d76)                  'System.Reflection.Metadata' (#236)            
+5e: 0x0100005d (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+5f: 0x23000002 (AssemblyRef)  'AssemblyFileHandle' (#537)                            'System.Reflection.Metadata' (#236)            
+60: 0x23000002 (AssemblyRef)  'AssemblyFile' (#765)                                  'System.Reflection.Metadata' (#236)            
+61: 0x23000002 (AssemblyRef)  'ExportedTypeHandleCollection' (#d93)                  'System.Reflection.Metadata' (#236)            
+62: 0x01000061 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+63: 0x23000002 (AssemblyRef)  'ExportedTypeHandle' (#54a)                            'System.Reflection.Metadata' (#236)            
+64: 0x23000002 (AssemblyRef)  'ExportedType' (#7dc)                                  'System.Reflection.Metadata' (#236)            
+65: 0x23000002 (AssemblyRef)  'ManifestResourceHandleCollection' (#d55)              'System.Reflection.Metadata' (#236)            
+66: 0x01000065 (TypeRef)      'Enumerator' (#1144)                                   nil                                            
+67: 0x23000002 (AssemblyRef)  'ManifestResourceHandle' (#520)                        'System.Reflection.Metadata' (#236)            
+68: 0x23000002 (AssemblyRef)  'ManifestResource' (#3c3)                              'System.Reflection.Metadata' (#236)            
+69: 0x23000002 (AssemblyRef)  'ManifestResourceAttributes' (#12e4)                   'System.Reflection' (#ce3)                     
+6a: 0x23000002 (AssemblyRef)  'GenericParameter' (#108a)                             'System.Reflection.Metadata' (#236)            
+6b: 0x23000002 (AssemblyRef)  'MethodSpecification' (#bfc)                           'System.Reflection.Metadata' (#236)            
+6c: 0x23000002 (AssemblyRef)  'GenericParameterConstraint' (#169a)                   'System.Reflection.Metadata' (#236)            
+6d: 0x23000002 (AssemblyRef)  'UserStringHandle' (#5c3)                              'System.Reflection.Metadata' (#236)            
+6e: 0x23000001 (AssemblyRef)  'Guid' (#2ee)                                          'System' (#b75)                                
+6f: 0x23000001 (AssemblyRef)  'IComparer`1' (#19e)                                   'System.Collections.Generic' (#29d)            
+70: 0x23000002 (AssemblyRef)  'ParameterHandle' (#6f6)                               'System.Reflection.Metadata' (#236)            
+71: 0x23000002 (AssemblyRef)  'GenericParameterHandle' (#6ef)                        'System.Reflection.Metadata' (#236)            
+72: 0x23000002 (AssemblyRef)  'GenericParameterConstraintHandle' (#715)              'System.Reflection.Metadata' (#236)            
+73: 0x23000002 (AssemblyRef)  'InterfaceImplementationHandle' (#646)                 'System.Reflection.Metadata' (#236)            
+74: 0x23000001 (AssemblyRef)  'String' (#ae4)                                        'System' (#b75)                                
+75: 0x23000004 (AssemblyRef)  'Enumerable' (#446)                                    'System.Linq' (#fe4)                           
+76: 0x23000001 (AssemblyRef)  'Console' (#772)                                       'System' (#b75)                                
+77: 0x23000001 (AssemblyRef)  'File' (#76d)                                          'System.IO' (#22a)                             
+78: 0x23000001 (AssemblyRef)  'Stream' (#b40)                                        'System.IO' (#22a)                             
+79: 0x23000002 (AssemblyRef)  'PEReaderExtensions' (#142a)                           'System.Reflection.Metadata' (#236)            
+7a: 0x23000001 (AssemblyRef)  'IDisposable' (#451)                                   'System' (#b75)                                
+7b: 0x23000003 (AssemblyRef)  'ImmutableArray' (#1769)                               'System.Collections.Immutable' (#482)          
+7c: 0x23000001 (AssemblyRef)  'Int32' (#1d9)                                         'System' (#b75)                                
+7d: 0x23000002 (AssemblyRef)  'MetadataReaderExtensions' (#143d)                     'System.Reflection.Metadata.Ecma335' (#1f3)    
+7e: 0x23000005 (AssemblyRef)  'Debug' (#af7)                                         'System.Diagnostics' (#1190)                   
+7f: 0x23000001 (AssemblyRef)  'Math' (#b0a)                                          'System' (#b75)                                
+80: 0x23000002 (AssemblyRef)  'MetadataTokens' (#141b)                               'System.Reflection.Metadata.Ecma335' (#1f3)    
+81: 0x23000001 (AssemblyRef)  'BadImageFormatException' (#fa0)                       'System' (#b75)                                
+82: 0x23000001 (AssemblyRef)  'UInt16' (#216)                                        'System' (#b75)                                
+83: 0x23000001 (AssemblyRef)  'TypeAttributes' (#12ff)                               'System.Reflection' (#ce3)                     
+84: 0x23000001 (AssemblyRef)  'FieldAttributes' (#12c3)                              'System.Reflection' (#ce3)                     
+85: 0x23000002 (AssemblyRef)  'ParameterHandleCollection' (#ecf)                     'System.Reflection.Metadata' (#236)            
+86: 0x23000002 (AssemblyRef)  'GenericParameterHandleCollection' (#ec8)              'System.Reflection.Metadata' (#236)            
+87: 0x23000001 (AssemblyRef)  'MethodAttributes' (#12d3)                             'System.Reflection' (#ce3)                     
+88: 0x23000001 (AssemblyRef)  'MethodImplAttributes' (#1321)                         'System.Reflection' (#ce3)                     
+89: 0x23000002 (AssemblyRef)  'MethodImportAttributes' (#1376)                       'System.Reflection' (#ce3)                     
+8a: 0x23000002 (AssemblyRef)  'ModuleReferenceHandle' (#4c8)                         'System.Reflection.Metadata' (#236)            
+8b: 0x23000001 (AssemblyRef)  'ParameterAttributes' (#1352)                          'System.Reflection' (#ce3)                     
+8c: 0x23000002 (AssemblyRef)  'ConstantHandle' (#706)                                'System.Reflection.Metadata' (#236)            
+8d: 0x23000002 (AssemblyRef)  'ConstantTypeCode' (#3e1)                              'System.Reflection.Metadata' (#236)            
+8e: 0x23000002 (AssemblyRef)  'DeclarativeSecurityAction' (#cc9)                     'System.Reflection' (#ce3)                     
+8f: 0x23000002 (AssemblyRef)  'StandaloneSignatureHandle' (#55d)                     'System.Reflection.Metadata' (#236)            
+90: 0x23000001 (AssemblyRef)  'EventAttributes' (#1366)                              'System.Reflection' (#ce3)                     
+91: 0x23000001 (AssemblyRef)  'PropertyAttributes' (#13af)                           'System.Reflection' (#ce3)                     
+92: 0x23000002 (AssemblyRef)  'MethodImplementationHandle' (#62b)                    'System.Reflection.Metadata' (#236)            
+93: 0x23000002 (AssemblyRef)  'TypeSpecificationHandle' (#5ee)                       'System.Reflection.Metadata' (#236)            
+94: 0x23000002 (AssemblyRef)  'EditAndContinueOperation' (#c63)                      'System.Reflection.Metadata.Ecma335' (#1f3)    
+95: 0x23000001 (AssemblyRef)  'IEnumerator' (#1135)                                  'System.Collections' (#148a)                   
+96: 0x23000001 (AssemblyRef)  'Version' (#be6)                                       'System' (#b75)                                
+97: 0x23000002 (AssemblyRef)  'AssemblyFlags' (#13d9)                                'System.Reflection' (#ce3)                     
+98: 0x23000002 (AssemblyRef)  'AssemblyHashAlgorithm' (#b8e)                         'System.Reflection' (#ce3)                     
+99: 0x23000001 (AssemblyRef)  'Int64' (#1ed)                                         'System' (#b75)                                
+9a: 0x23000001 (AssemblyRef)  'GenericParameterAttributes' (#134b)                   'System.Reflection' (#ce3)                     
+9b: 0x23000002 (AssemblyRef)  'GenericParameterConstraintHandleCollection' (#ee9)    'System.Reflection.Metadata' (#236)            
+9c: 0x23000002 (AssemblyRef)  'MethodSpecificationHandle' (#5d4)                     'System.Reflection.Metadata' (#236)            
+9d: 0x23000002 (AssemblyRef)  'HeapIndex' (#175f)                                    'System.Reflection.Metadata.Ecma335' (#1f3)    
+9e: 0x23000001 (AssemblyRef)  'BitConverter' (#10ba)                                 'System' (#b75)                                
+9f: 0x23000001 (AssemblyRef)  'StringComparison' (#fb8)                              'System' (#b75)                                
+a0: 0x23000001 (AssemblyRef)  'Enum' (#ba8)                                          'System' (#b75)                                
+
+TypeDef (0x02):
+=========================================================================================================================================================================================================================================================================================================
+   Name                           Namespace                        EnclosingType         BaseType              Interfaces  Fields                 Methods                Attributes                                                                                       ClassSize  PackingSize  
+=========================================================================================================================================================================================================================================================================================================
+1: '<Module>' (#221)              nil                              nil                   nil                   nil         nil                    nil                    0                                                                                                n/a        n/a          
+2: 'Program' (#b64)               'MdDumper' (#1053)               nil                   0x0100000c (TypeRef)  nil         nil                    0x06000001-0x06000003  0x00100000 (BeforeFieldInit)                                                                     n/a        n/a          
+3: 'MetadataVisualizer' (#10f0)   'MdDumper.Visualization' (#ca7)  nil                   0x0100000c (TypeRef)  nil         0x04000001-0x04000006  0x06000004-0x06000038  0x00100101 (AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit)                       n/a        n/a          
+4: '<>c__DisplayClass0_0' (#1c)   nil                              0x02000002 (TypeDef)  0x0100000c (TypeRef)  nil         0x04000007-0x04000007  0x06000039-0x0600003a  0x00100103 (AutoLayout, AnsiClass, Class, NestedPrivate, Sealed, BeforeFieldInit)                n/a        n/a          
+5: 'TokenTypeComparer' (#105c)    nil                              0x02000003 (TypeDef)  0x0100000c (TypeRef)  0x09000001  0x04000008-0x04000008  0x0600003b-0x0600003d  0x00100103 (AutoLayout, AnsiClass, Class, NestedPrivate, Sealed, BeforeFieldInit)                n/a        n/a          
+6: '<>c' (#27b)                   nil                              0x02000003 (TypeDef)  0x0100000c (TypeRef)  nil         0x04000009-0x04000013  0x0600003e-0x06000049  0x00102103 (AutoLayout, AnsiClass, Class, NestedPrivate, Sealed, Serializable, BeforeFieldInit)  n/a        n/a          
+7: '<>c__DisplayClass29_0' (#fd)  nil                              0x02000003 (TypeDef)  0x0100000c (TypeRef)  nil         0x04000014-0x04000015  0x0600004a-0x0600004b  0x00100103 (AutoLayout, AnsiClass, Class, NestedPrivate, Sealed, BeforeFieldInit)                n/a        n/a          
+
+Field (0x04):
+================================================================================================================================================
+    Name                   Signature                                         Attributes                             Marshalling  Offset  RVA  
+================================================================================================================================================
+ 1: 'writer' (#10b3)       06-12-49 (#905)                                   0x00000021 (Private, InitOnly)         nil          n/a     0    
+ 2: 'readers' (#1511)      06-15-12-4D-01-12-3D (#909)                       0x00000021 (Private, InitOnly)         nil          n/a     0    
+ 3: 'aggregator' (#112a)   06-12-51 (#911)                                   0x00000021 (Private, InitOnly)         nil          n/a     0    
+ 4: 'encMaps' (#1509)      06-15-11-55-01-15-11-55-01-11-59 (#915)           0x00000021 (Private, InitOnly)         nil          n/a     0    
+ 5: 'reader' (#1042)       06-12-3D (#921)                                   0x00000001 (Private)                   nil          n/a     0    
+ 6: 'pendingRows' (#15b8)  06-15-12-5D-01-1D-0E (#925)                       0x00000021 (Private, InitOnly)         nil          n/a     0    
+ 7: 'args' (#1405)         06-1D-0E (#92d)                                   0x00000006 (Public)                    nil          n/a     0    
+ 8: 'Instance' (#355)      06-12-14 (#931)                                   0x00000036 (Public, Static, InitOnly)  nil          n/a     0    
+ 9: '<>9' (#21d)           06-12-18 (#935)                                   0x00000036 (Public, Static, InitOnly)  nil          n/a     0    
+ a: '<>9__6_0' (#cb)       06-15-12-80-91-02-12-3D-15-11-55-01-11-59 (#939)  0x00000016 (Public, Static)            nil          n/a     0    
+ b: '<>9__19_0' (#e2)      06-15-12-75-03-12-3D-11-69-0E (#948)              0x00000016 (Public, Static)            nil          n/a     0    
+ c: '<>9__20_0' (#1)       06-15-12-75-03-12-3D-11-69-0E (#948)              0x00000016 (Public, Static)            nil          n/a     0    
+ d: '<>9__21_0' (#31)      06-15-12-75-03-12-3D-11-69-0E (#948)              0x00000016 (Public, Static)            nil          n/a     0    
+ e: '<>9__22_0' (#4c)      06-15-12-75-03-12-3D-11-69-0E (#948)              0x00000016 (Public, Static)            nil          n/a     0    
+ f: '<>9__32_0' (#67)      06-15-12-80-91-02-11-80-CD-11-69 (#953)           0x00000016 (Public, Static)            nil          n/a     0    
+10: '<>9__32_1' (#12e)     06-15-12-80-91-02-11-80-DD-11-69 (#95f)           0x00000016 (Public, Static)            nil          n/a     0    
+11: '<>9__34_0' (#ac)      06-15-12-80-91-02-11-81-C1-11-69 (#96b)           0x00000016 (Public, Static)            nil          n/a     0    
+12: '<>9__34_1' (#14e)     06-15-12-80-91-02-11-81-C5-11-69 (#977)           0x00000016 (Public, Static)            nil          n/a     0    
+13: '<>9__53_0' (#87)      06-15-12-80-91-02-11-81-C9-11-69 (#983)           0x00000016 (Public, Static)            nil          n/a     0    
+14: '<>4__this' (#140a)    06-12-0C (#98f)                                   0x00000006 (Public)                    nil          n/a     0    
+15: 'displayTable' (#439)  06-02 (#993)                                      0x00000006 (Public)                    nil          n/a     0    
+
+Method (0x06, 0x1C):
+==========================================================================================================================================================================================================================================================================================================================
+    Name                                   Signature                                                           RVA         Parameters             GenericParameters      ImplAttributes                                                                     Attributes  ImportAttributes  ImportName  ImportModule  
+==========================================================================================================================================================================================================================================================================================================================
+ 1: 'Main' (#bcb)                          00-01-01-1D-0E (#996)                                               0x00002050  0x08000001-0x08000001  nil                    0x00000091 (PrivateScope, Private, Static, HideBySig)                              0           0                 nil         nil           
+ 2: 'PrintUsage' (#3f2)                    00-00-01 (#99c)                                                     0x0000218C  nil                    nil                    0x00000091 (PrivateScope, Private, Static, HideBySig)                              0           0                 nil         nil           
+ 3: '.ctor' (#114f)                        20-00-01 (#6)                                                       0x000021A5  nil                    nil                    0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0           0                 nil         nil           
+ 4: '.ctor' (#114f)                        20-02-01-12-49-15-12-4D-01-12-3D (#9a0)                             0x000021B0  0x08000002-0x08000003  nil                    0x00001881 (PrivateScope, Private, HideBySig, SpecialName, RTSpecialName)          0           0                 nil         nil           
+ 5: '.ctor' (#114f)                        20-02-01-12-3D-12-49 (#9ac)                                         0x0000223D  0x08000004-0x08000005  nil                    0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0           0                 nil         nil           
+ 6: '.ctor' (#114f)                        20-02-01-15-12-4D-01-12-3D-12-49 (#9b4)                             0x00002259  0x08000006-0x08000007  nil                    0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0           0                 nil         nil           
+ 7: 'VisualizeAllGenerations' (#1456)      20-00-01 (#6)                                                       0x00002268  nil                    nil                    0x00000086 (PrivateScope, Public, HideBySig)                                       0           0                 nil         nil           
+ 8: 'Visualize' (#a4a)                     20-01-01-08 (#1)                                                    0x000022E4  0x08000008-0x08000008  nil                    0x00000086 (PrivateScope, Public, HideBySig)                                       0           0                 nil         nil           
+ 9: 'get_IsDelta' (#266)                   20-00-02 (#1a8)                                                     0x000023E8  nil                    nil                    0x00000881 (PrivateScope, Private, HideBySig, SpecialName)                         0           0                 nil         nil           
+ a: 'AddHeader' (#1016)                    20-01-01-1D-0E (#9c0)                                               0x0000240A  0x08000009-0x08000009  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+ b: 'AddRow' (#1735)                       20-01-01-1D-0E (#9c0)                                               0x0000242E  0x0800000a-0x0800000a  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+ c: 'WriteRows' (#15ae)                    20-01-01-0E (#10)                                                   0x00002468  0x0800000b-0x0800000b  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+ d: 'GetAggregateHandle' (#577)            20-02-11-69-11-59-08 (#9c6)                                         0x000026D8  0x0800000c-0x0800000d  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+ e: 'TryGetHandleRange' (#409)             00-04-02-15-11-55-01-11-59-11-6D-10-08-10-08 (#9ce)                 0x0000274C  0x0800000e-0x08000011  nil                    0x00000091 (PrivateScope, Private, Static, HideBySig)                              0           0                 nil         nil           
+ f: 'Get' (#15e0)                          30-01-02-1E-00-11-69-15-12-75-03-12-3D-11-69-1E-00 (#9de)           0x000027FC  0x08000012-0x08000013  0x2a000001-0x2a000001  0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+10: 'Literal' (#b1a)                       20-01-0E-11-79 (#837)                                               0x00002850  0x08000014-0x08000014  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+11: 'Literal' (#b1a)                       20-01-0E-11-7D (#8ae)                                               0x00002890  0x08000015-0x08000015  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+12: 'Literal' (#b1a)                       20-01-0E-11-80-81 (#9f0)                                            0x000028D0  0x08000016-0x08000016  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+13: 'Literal' (#b1a)                       20-01-0E-11-80-85 (#9f7)                                            0x00002910  0x08000017-0x08000017  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+14: 'Literal' (#b1a)                       20-02-0E-11-69-15-12-75-03-12-3D-11-69-0E (#9fe)                    0x00002950  0x08000018-0x08000019  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+15: 'Hex' (#1740)                          20-01-0E-07 (#a0d)                                                  0x00002A60  0x0800001a-0x0800001a  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+16: 'Hex' (#1740)                          20-01-0E-08 (#a12)                                                  0x00002A88  0x0800001b-0x0800001b  nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+17: 'Token' (#bc5)                         20-02-0E-11-69-02 (#a17)                                            0x00002AB0  0x0800001c-0x0800001d  nil                    0x00000086 (PrivateScope, Public, HideBySig)                                       0           0                 nil         nil           
+18: 'EnumValue' (#9ff)                     10-01-01-0E-1C (#a1e)                                               0x00002B30  0x0800001e-0x0800001e  0x2a000002-0x2a000002  0x00000091 (PrivateScope, Private, Static, HideBySig)                              0           0                 nil         nil           
+19: 'TokenRange' (#427)                    30-01-02-0E-15-12-80-8D-01-1E-00-15-12-80-91-02-1E-00-11-69 (#a24)  0x00002B80  0x0800001f-0x08000020  0x2a000003-0x2a000003  0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+1a: 'TokenList' (#16ff)                    20-02-0E-11-80-99-02 (#a39)                                         0x00002BD0  0x08000021-0x08000022  nil                    0x00000086 (PrivateScope, Public, HideBySig)                                       0           0                 nil         nil           
+1b: 'WriteModule' (#78b)                   20-00-01 (#6)                                                       0x00002C30  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+1c: 'WriteTypeRef' (#a70)                  20-00-01 (#6)                                                       0x00002CEC  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+1d: 'WriteTypeDef' (#a54)                  20-00-01 (#6)                                                       0x00002DC8  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+1e: 'WriteField' (#2fc)                    20-00-01 (#6)                                                       0x00002FE4  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+1f: 'WriteMethod' (#33b)                   20-00-01 (#6)                                                       0x0000311C  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+20: 'WriteParam' (#b59)                    20-00-01 (#6)                                                       0x00003314  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+21: 'WriteMemberRef' (#a7d)                20-00-01 (#6)                                                       0x000033E4  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+22: 'WriteConstant' (#163f)                20-00-01 (#6)                                                       0x000034C0  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+23: 'WriteCustomAttribute' (#8b9)          20-00-01 (#6)                                                       0x0000357C  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+24: 'WriteDeclSecurity' (#17ce)            20-00-01 (#6)                                                       0x0000365C  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+25: 'WriteStandAloneSig' (#a9d)            20-00-01 (#6)                                                       0x0000373C  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+26: 'WriteEvent' (#1670)                   20-00-01 (#6)                                                       0x000037C0  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+27: 'WriteProperty' (#17e8)                20-00-01 (#6)                                                       0x000038EC  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+28: 'WriteMethodImpl' (#b2c)               20-00-01 (#6)                                                       0x000039F4  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+29: 'WriteModuleRef' (#a61)                20-00-01 (#6)                                                       0x00003AB8  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+2a: 'WriteTypeSpec' (#28f)                 20-00-01 (#6)                                                       0x00003B3C  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+2b: 'WriteEnCLog' (#aeb)                   20-00-01 (#6)                                                       0x00003BC0  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+2c: 'WriteEnCMap' (#fd3)                   20-00-01 (#6)                                                       0x00003C70  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+2d: 'WriteAssembly' (#1795)                20-00-01 (#6)                                                       0x00003E08  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+2e: 'WriteAssemblyRef' (#a8c)              20-00-01 (#6)                                                       0x00003F68  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+2f: 'WriteFile' (#758)                     20-00-01 (#6)                                                       0x000040F8  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+30: 'WriteExportedType' (#7c7)             20-00-01 (#6)                                                       0x000041D4  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+31: 'WriteManifestResource' (#3aa)         20-00-01 (#6)                                                       0x000042B0  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+32: 'WriteGenericParam' (#b47)             20-00-01 (#6)                                                       0x000043B0  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+33: 'WriteMethodSpec' (#27f)               20-00-01 (#6)                                                       0x000044AC  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+34: 'WriteGenericParamConstraint' (#167b)  20-00-01 (#6)                                                       0x0000454C  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+35: 'WriteUserStrings' (#13f4)             20-00-01 (#6)                                                       0x000045F4  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+36: 'WriteStrings' (#13e7)                 20-00-01 (#6)                                                       0x000046A0  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+37: 'WriteBlobs' (#1185)                   20-00-01 (#6)                                                       0x0000474C  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+38: 'WriteGuids' (#11a3)                   20-00-01 (#6)                                                       0x00004800  nil                    nil                    0x00000081 (PrivateScope, Private, HideBySig)                                      0           0                 nil         nil           
+39: '.ctor' (#114f)                        20-00-01 (#6)                                                       0x000048A1  nil                    nil                    0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0           0                 nil         nil           
+3a: '<Main>b__0' (#113)                    20-01-02-0E (#a41)                                                  0x000048AA  0x08000023-0x08000023  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+3b: 'Compare' (#807)                       20-02-08-11-59-11-59 (#a46)                                         0x000048BC  0x08000024-0x08000025  nil                    0x000001e6 (PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask)     0           0                 nil         nil           
+3c: '.ctor' (#114f)                        20-00-01 (#6)                                                       0x000048EF  nil                    nil                    0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0           0                 nil         nil           
+3d: '.cctor' (#1155)                       00-00-01 (#99c)                                                     0x000048F8  nil                    nil                    0x00001891 (PrivateScope, Private, Static, HideBySig, SpecialName, RTSpecialName)  0           0                 nil         nil           
+3e: '.cctor' (#1155)                       00-00-01 (#99c)                                                     0x00004904  nil                    nil                    0x00001891 (PrivateScope, Private, Static, HideBySig, SpecialName, RTSpecialName)  0           0                 nil         nil           
+3f: '.ctor' (#114f)                        20-00-01 (#6)                                                       0x00004910  nil                    nil                    0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0           0                 nil         nil           
+40: '<.ctor>b__6_0' (#d4)                  20-01-15-11-55-01-11-59-12-3D (#a4e)                                0x00004919  0x08000026-0x08000026  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+41: '<Literal>b__19_0' (#ec)               20-02-0E-12-3D-11-69 (#a59)                                         0x00004926  0x08000027-0x08000028  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+42: '<Literal>b__20_0' (#b)                20-02-0E-12-3D-11-69 (#a59)                                         0x00004943  0x08000029-0x0800002a  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+43: '<Literal>b__21_0' (#3b)               20-02-0E-12-3D-11-69 (#a59)                                         0x00004960  0x0800002b-0x0800002c  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+44: '<Literal>b__22_0' (#56)               20-02-0E-12-3D-11-69 (#a59)                                         0x00004996  0x0800002d-0x0800002e  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+45: '<WriteTypeDef>b__32_0' (#71)          20-01-11-69-11-80-CD (#a61)                                         0x000049A9  0x0800002f-0x0800002f  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+46: '<WriteTypeDef>b__32_1' (#138)         20-01-11-69-11-80-DD (#a69)                                         0x000049B1  0x08000030-0x08000030  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+47: '<WriteMethod>b__34_0' (#b6)           20-01-11-69-11-81-C1 (#a71)                                         0x000049B9  0x08000031-0x08000031  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+48: '<WriteMethod>b__34_1' (#158)          20-01-11-69-11-81-C5 (#a79)                                         0x000049C1  0x08000032-0x08000032  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+49: '<WriteGenericParam>b__53_0' (#91)     20-01-11-69-11-81-C9 (#a81)                                         0x000049C9  0x08000033-0x08000033  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+4a: '.ctor' (#114f)                        20-00-01 (#6)                                                       0x000049D1  nil                    nil                    0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0           0                 nil         nil           
+4b: '<TokenList>b__0' (#11e)               20-01-0E-11-81-CD (#a89)                                            0x000049DA  0x08000034-0x08000034  nil                    0x00000083 (PrivateScope, Assembly, HideBySig)                                     0           0                 nil         nil           
+
+Param (0x08):
+=====================================================================================
+    Name                       Seq#  Attributes                         Marshalling  
+=====================================================================================
+ 1: 'args' (#1405)             1     0                                  nil          
+ 2: 'writer' (#10b3)           1     0                                  nil          
+ 3: 'readers' (#1511)          2     0                                  nil          
+ 4: 'reader' (#1042)           1     0                                  nil          
+ 5: 'writer' (#10b3)           2     0                                  nil          
+ 6: 'readers' (#1511)          1     0                                  nil          
+ 7: 'writer' (#10b3)           2     0                                  nil          
+ 8: 'generation' (#c4a)        1     0x00001010 (Optional, HasDefault)  nil          
+ 9: 'header' (#103b)           1     0                                  nil          
+ a: 'fields' (#11b8)           1     0                                  nil          
+ b: 'title' (#77a)             1     0                                  nil          
+ c: 'generationHandle' (#61a)  1     0                                  nil          
+ d: 'generation' (#c4a)        2     0                                  nil          
+ e: 'handles' (#1288)          1     0                                  nil          
+ f: 'handleKind' (#325)        2     0                                  nil          
+10: 'start' (#16d6)            3     0x00000002 (Out)                   nil          
+11: 'count' (#16d0)            4     0x00000002 (Out)                   nil          
+12: 'handle' (#751)            1     0                                  nil          
+13: 'getter' (#10dd)           2     0                                  nil          
+14: 'handle' (#751)            1     0                                  nil          
+15: 'handle' (#751)            1     0                                  nil          
+16: 'handle' (#751)            1     0                                  nil          
+17: 'handle' (#751)            1     0                                  nil          
+18: 'handle' (#751)            1     0                                  nil          
+19: 'getValue' (#a09)          2     0                                  nil          
+1a: 'value' (#a12)             1     0                                  nil          
+1b: 'value' (#a12)             1     0                                  nil          
+1c: 'handle' (#751)            1     0                                  nil          
+1d: 'displayTable' (#439)      2     0x00001010 (Optional, HasDefault)  nil          
+1e: 'value' (#a12)             1     0                                  nil          
+1f: 'handles' (#1288)          1     0                                  nil          
+20: 'conversion' (#bee)        2     0                                  nil          
+21: 'handles' (#1288)          1     0                                  nil          
+22: 'displayTable' (#439)      2     0x00001010 (Optional, HasDefault)  nil          
+23: 'x' (#1767)                1     0                                  nil          
+24: 'x' (#1767)                1     0                                  nil          
+25: 'y' (#17f4)                2     0                                  nil          
+26: 'reader' (#1042)           1     0                                  nil          
+27: 'r' (#1183)                1     0                                  nil          
+28: 'h' (#b18)                 2     0                                  nil          
+29: 'r' (#1183)                1     0                                  nil          
+2a: 'h' (#b18)                 2     0                                  nil          
+2b: 'r' (#1183)                1     0                                  nil          
+2c: 'h' (#b18)                 2     0                                  nil          
+2d: 'r' (#1183)                1     0                                  nil          
+2e: 'h' (#b18)                 2     0                                  nil          
+2f: 'h' (#b18)                 1     0                                  nil          
+30: 'h' (#b18)                 1     0                                  nil          
+31: 'h' (#b18)                 1     0                                  nil          
+32: 'h' (#b18)                 1     0                                  nil          
+33: 'h' (#b18)                 1     0                                  nil          
+34: 'h' (#b18)                 1     0                                  nil          
+
+MemberRef (0x0a):
+============================================================================================================================================================
+     Parent                 Name                                         Signature                                                                            
+============================================================================================================================================================
+  1: 0x01000001 (TypeRef)   '.ctor' (#114f)                              20-01-01-08 (#1)                                                                     
+  2: 0x01000002 (TypeRef)   '.ctor' (#114f)                              20-00-01 (#6)                                                                        
+  3: 0x01000003 (TypeRef)   '.ctor' (#114f)                              20-01-01-11-11 (#a)                                                                  
+  4: 0x01000005 (TypeRef)   '.ctor' (#114f)                              20-01-01-0E (#10)                                                                    
+  5: 0x01000006 (TypeRef)   '.ctor' (#114f)                              20-01-01-0E (#10)                                                                    
+  6: 0x01000007 (TypeRef)   '.ctor' (#114f)                              20-01-01-0E (#10)                                                                    
+  7: 0x01000008 (TypeRef)   '.ctor' (#114f)                              20-01-01-0E (#10)                                                                    
+  8: 0x01000009 (TypeRef)   '.ctor' (#114f)                              20-01-01-0E (#10)                                                                    
+  9: 0x0100000a (TypeRef)   '.ctor' (#114f)                              20-01-01-0E (#10)                                                                    
+  a: 0x0100000b (TypeRef)   '.ctor' (#114f)                              20-01-01-0E (#10)                                                                    
+  b: 0x01000011 (TypeRef)   '.ctor' (#114f)                              20-00-01 (#6)                                                                        
+  c: 0x01000018 (TypeRef)   '.ctor' (#114f)                              20-00-01 (#6)                                                                        
+  d: 0x1b000003 (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+  e: 0x01000075 (TypeRef)   'Any' (#17b2)                                10-01-02-02-15-12-80-95-01-1E-00-15-12-80-91-02-1E-00-02 (#47)                       
+  f: 0x01000076 (TypeRef)   'WriteLine' (#7a0)                           00-01-01-0E (#5f)                                                                    
+ 10: 0x01000074 (TypeRef)   '.ctor' (#114f)                              20-02-01-03-08 (#64)                                                                 
+ 11: 0x01000077 (TypeRef)   'OpenRead' (#2de)                            00-01-12-35-0E (#6a)                                                                 
+ 12: 0x0100000e (TypeRef)   '.ctor' (#114f)                              20-01-01-12-81-E1 (#70)                                                              
+ 13: 0x01000079 (TypeRef)   'GetMetadataReader' (#1029)                  00-01-12-3D-12-39 (#77)                                                              
+ 14: 0x01000076 (TypeRef)   'get_Out' (#170f)                            00-00-12-49 (#7e)                                                                    
+ 15: 0x0100007a (TypeRef)   'Dispose' (#84c)                             20-00-01 (#6)                                                                        
+ 16: 0x01000010 (TypeRef)   'get_Message' (#3fd)                         20-00-0E (#83)                                                                       
+ 17: 0x0100000c (TypeRef)   '.ctor' (#114f)                              20-00-01 (#6)                                                                        
+ 18: 0x1b000004 (TypeSpec)  '.ctor' (#114f)                              20-00-01 (#6)                                                                        
+ 19: 0x1b000005 (TypeSpec)  'get_Count' (#16b5)                          20-00-08 (#a0)                                                                       
+ 1a: 0x01000075 (TypeRef)   'Skip' (#fdf)                                10-01-02-15-12-80-95-01-1E-00-15-12-80-95-01-1E-00-08 (#a4)                          
+ 1b: 0x1b000006 (TypeSpec)  '.ctor' (#114f)                              20-01-01-15-12-80-95-01-13-00 (#c3)                                                  
+ 1c: 0x1b000007 (TypeSpec)  'get_Item' (#b6c)                            20-01-13-00-08 (#d5)                                                                 
+ 1d: 0x01000014 (TypeRef)   '.ctor' (#114f)                              20-02-01-12-3D-15-12-4D-01-12-3D (#db)                                               
+ 1e: 0x1b000008 (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+ 1f: 0x01000075 (TypeRef)   'Select' (#15d9)                             10-02-02-15-12-80-95-01-1E-01-15-12-80-95-01-1E-00-15-12-80-91-02-1E-00-1E-01 (#f5)  
+ 20: 0x0100007b (TypeRef)   'CreateRange' (#41b)                         10-01-01-15-11-55-01-1E-00-15-12-80-95-01-1E-00 (#11b)                               
+ 21: 0x01000012 (TypeRef)   'WriteLine' (#7a0)                           20-01-01-0E (#10)                                                                    
+ 22: 0x01000074 (TypeRef)   'Format' (#15cb)                             00-02-0E-0E-1C (#13a)                                                                
+ 23: 0x01000012 (TypeRef)   'WriteLine' (#7a0)                           20-00-01 (#6)                                                                        
+ 24: 0x01000075 (TypeRef)   'Last' (#16fa)                               10-01-01-1E-00-15-12-80-95-01-1E-00 (#140)                                           
+ 25: 0x0100007d (TypeRef)   'GetTableRowCount' (#16bf)                   00-02-08-12-3D-11-71 (#151)                                                          
+ 26: 0x1b000004 (TypeSpec)  'get_Count' (#16b5)                          20-00-08 (#a0)                                                                       
+ 27: 0x0100007e (TypeRef)   'Assert' (#16dc)                             00-01-01-02 (#159)                                                                   
+ 28: 0x1b000004 (TypeSpec)  'Add' (#2e7)                                 20-01-01-13-00 (#15e)                                                                
+ 29: 0x1b000004 (TypeSpec)  'Clear' (#ff0)                               20-00-01 (#6)                                                                        
+ 2a: 0x01000012 (TypeRef)   'Write' (#854)                               20-01-01-0E (#10)                                                                    
+ 2b: 0x0100007c (TypeRef)   'ToString' (#aca)                            20-01-0E-0E (#188)                                                                   
+ 2c: 0x01000074 (TypeRef)   'get_Length' (#b0f)                          20-00-08 (#a0)                                                                       
+ 2d: 0x01000075 (TypeRef)   'First' (#1709)                              10-01-01-1E-00-15-12-80-95-01-1E-00 (#140)                                           
+ 2e: 0x1b000004 (TypeSpec)  'GetEnumerator' (#1141)                      20-00-15-11-65-01-13-00 (#18d)                                                       
+ 2f: 0x1b000009 (TypeSpec)  'get_Current' (#1664)                        20-00-13-00 (#19d)                                                                   
+ 30: 0x0100007f (TypeRef)   'Max' (#173c)                                00-02-08-08-08 (#1a2)                                                                
+ 31: 0x1b000009 (TypeSpec)  'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ 32: 0x01000075 (TypeRef)   'Sum' (#ba4)                                 00-01-08-15-12-80-95-01-08 (#1ac)                                                    
+ 33: 0x1b000004 (TypeSpec)  'get_Item' (#b6c)                            20-01-13-00-08 (#d5)                                                                 
+ 34: 0x1b00000a (TypeSpec)  'get_Item' (#b6c)                            20-01-13-00-08 (#d5)                                                                 
+ 35: 0x01000016 (TypeRef)   'get_Kind' (#311)                            20-00-11-6D (#1d9)                                                                   
+ 36: 0x01000080 (TypeRef)   'GetToken' (#bc2)                            00-01-08-11-59 (#1de)                                                                
+ 37: 0x01000081 (TypeRef)   '.ctor' (#114f)                              20-01-01-0E (#10)                                                                    
+ 38: 0x01000080 (TypeRef)   'GetRowNumber' (#1009)                       00-01-08-11-59 (#1de)                                                                
+ 39: 0x1b00000b (TypeSpec)  'get_Item' (#b6c)                            20-01-13-00-08 (#d5)                                                                 
+ 3a: 0x01000016 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-59 (#1eb)                                                             
+ 3b: 0x01000080 (TypeRef)   'TryGetTableIndex' (#174e)                   00-02-02-11-6D-10-11-71 (#200)                                                       
+ 3c: 0x01000080 (TypeRef)   'EntityHandle' (#744)                        00-02-11-59-11-71-08 (#209)                                                          
+ 3d: 0x0100007b (TypeRef)   'BinarySearch' (#afd)                        10-01-03-08-15-11-55-01-1E-00-1E-00-15-12-81-BD-01-1E-00 (#211)                      
+ 3e: 0x1b00000b (TypeSpec)  'get_Length' (#b0f)                          20-00-08 (#a0)                                                                       
+ 3f: 0x01000014 (TypeRef)   'GetGenerationHandle' (#606)                 20-02-11-69-11-69-10-08 (#233)                                                       
+ 40: 0x1b00000c (TypeSpec)  'Invoke' (#432)                              20-02-13-02-13-00-13-01 (#247)                                                       
+ 41: 0x0100001e (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-79 (#254)                                                             
+ 42: 0x1b00000d (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+ 43: 0x0100001f (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-7D (#265)                                                             
+ 44: 0x01000020 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-80-81 (#26c)                                                          
+ 45: 0x01000021 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-80-85 (#274)                                                          
+ 46: 0x0100001a (TypeRef)   'get_IsNil' (#b22)                           20-00-02 (#1a8)                                                                      
+ 47: 0x1b00000d (TypeSpec)  'Invoke' (#432)                              20-02-13-02-13-00-13-01 (#247)                                                       
+ 48: 0x01000080 (TypeRef)   'GetHeapOffset' (#1601)                      00-02-08-12-3D-11-69 (#28c)                                                          
+ 49: 0x01000074 (TypeRef)   'Format' (#15cb)                             00-03-0E-0E-1C-1C (#294)                                                             
+ 4a: 0x01000074 (TypeRef)   'Format' (#15cb)                             00-04-0E-0E-1C-1C-1C (#29b)                                                          
+ 4b: 0x01000082 (TypeRef)   'ToString' (#aca)                            20-01-0E-0E (#188)                                                                   
+ 4c: 0x01000074 (TypeRef)   'Concat' (#15c4)                             00-02-0E-0E-0E (#2a3)                                                                
+ 4d: 0x0100001a (TypeRef)   'get_Kind' (#311)                            20-00-11-6D (#1d9)                                                                   
+ 4e: 0x01000080 (TypeRef)   'GetToken' (#bc2)                            00-02-08-12-3D-11-69 (#28c)                                                          
+ 4f: 0x1b000001 (TypeSpec)  'Equals' (#1414)                             20-01-02-13-00 (#2bd)                                                                
+ 50: 0x1b00000f (TypeSpec)  'get_Count' (#16b5)                          20-00-08 (#a0)                                                                       
+ 51: 0x01000074 (TypeRef)   'Concat' (#15c4)                             00-03-0E-0E-0E-0E (#2e2)                                                             
+ 52: 0x01000026 (TypeRef)   'get_Count' (#16b5)                          20-00-08 (#a0)                                                                       
+ 53: 0x1b000010 (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+ 54: 0x01000074 (TypeRef)   'Join' (#bd0)                                00-02-0E-0E-15-12-80-95-01-0E (#301)                                                 
+ 55: 0x0100000f (TypeRef)   'GetModuleDefinition' (#f3b)                 20-00-11-80-9D (#313)                                                                
+ 56: 0x01000027 (TypeRef)   'get_Generation' (#c3b)                      20-00-08 (#a0)                                                                       
+ 57: 0x0100007c (TypeRef)   'ToString' (#aca)                            20-00-0E (#83)                                                                       
+ 58: 0x01000027 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ 59: 0x01000027 (TypeRef)   'get_Mvid' (#2f3)                            20-00-11-80-81 (#31e)                                                                
+ 5a: 0x01000027 (TypeRef)   'get_GenerationId' (#2b8)                    20-00-11-80-81 (#31e)                                                                
+ 5b: 0x01000027 (TypeRef)   'get_BaseGenerationId' (#2c9)                20-00-11-80-81 (#31e)                                                                
+ 5c: 0x0100000f (TypeRef)   'get_TypeReferences' (#11ea)                 20-00-11-80-A1 (#333)                                                                
+ 5d: 0x01000028 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-80-A5 (#339)                                                                
+ 5e: 0x01000029 (TypeRef)   'get_Current' (#1664)                        20-00-11-80-A9 (#33f)                                                                
+ 5f: 0x0100000f (TypeRef)   'GetTypeReference' (#371)                    20-01-11-80-AD-11-80-A9 (#345)                                                       
+ 60: 0x0100002b (TypeRef)   'get_ResolutionScope' (#7aa)                 20-00-11-59 (#34e)                                                                   
+ 61: 0x0100002b (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ 62: 0x0100002b (TypeRef)   'get_Namespace' (#347)                       20-00-11-79 (#319)                                                                   
+ 63: 0x01000029 (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ 64: 0x0100000f (TypeRef)   'get_TypeDefinitions' (#14c8)                20-00-11-80-B1 (#366)                                                                
+ 65: 0x0100002c (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-80-B5 (#36c)                                                                
+ 66: 0x0100002d (TypeRef)   'get_Current' (#1664)                        20-00-11-80-B9 (#372)                                                                
+ 67: 0x0100000f (TypeRef)   'GetTypeDefinition' (#f4f)                   20-01-11-80-BD-11-80-B9 (#378)                                                       
+ 68: 0x0100002f (TypeRef)   'GetLayout' (#1722)                          20-00-11-80-C1 (#381)                                                                
+ 69: 0x0100002f (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ 6a: 0x0100002f (TypeRef)   'get_Namespace' (#347)                       20-00-11-79 (#319)                                                                   
+ 6b: 0x0100002f (TypeRef)   'GetDeclaringType' (#7f6)                    20-00-11-80-B9 (#372)                                                                
+ 6c: 0x0100002e (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-80-B9 (#387)                                                          
+ 6d: 0x0100002f (TypeRef)   'get_BaseType' (#7e9)                        20-00-11-59 (#34e)                                                                   
+ 6e: 0x0100002f (TypeRef)   'GetInterfaceImplementations' (#146e)        20-00-11-80-99 (#38f)                                                                
+ 6f: 0x0100002f (TypeRef)   'GetFields' (#11ae)                          20-00-11-80-C5 (#395)                                                                
+ 70: 0x1b000011 (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+ 71: 0x0100002f (TypeRef)   'GetMethods' (#11bf)                         20-00-11-80-D5 (#3ac)                                                                
+ 72: 0x1b000012 (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+ 73: 0x0100002f (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-82-0D (#3c3)                                                                
+ 74: 0x01000030 (TypeRef)   'get_IsDefault' (#1631)                      20-00-02 (#1a8)                                                                      
+ 75: 0x01000030 (TypeRef)   'get_Size' (#a25)                            20-00-08 (#a0)                                                                       
+ 76: 0x01000030 (TypeRef)   'get_PackingSize' (#a2e)                     20-00-08 (#a0)                                                                       
+ 77: 0x0100002d (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ 78: 0x0100000f (TypeRef)   'get_FieldDefinitions' (#149d)               20-00-11-80-C5 (#395)                                                                
+ 79: 0x01000031 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-80-C9 (#3de)                                                                
+ 7a: 0x01000032 (TypeRef)   'get_Current' (#1664)                        20-00-11-80-CD (#3e4)                                                                
+ 7b: 0x0100000f (TypeRef)   'GetFieldDefinition' (#f14)                  20-01-11-80-D1-11-80-CD (#3ea)                                                       
+ 7c: 0x01000034 (TypeRef)   'GetOffset' (#160f)                          20-00-08 (#a0)                                                                       
+ 7d: 0x01000034 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ 7e: 0x01000034 (TypeRef)   'get_Signature' (#81b)                       20-00-11-80-85 (#3f3)                                                                
+ 7f: 0x01000034 (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-82-11 (#3f9)                                                                
+ 80: 0x01000034 (TypeRef)   'GetMarshallingDescriptor' (#116c)           20-00-11-80-85 (#3f3)                                                                
+ 81: 0x01000034 (TypeRef)   'GetRelativeVirtualAddress' (#1585)          20-00-08 (#a0)                                                                       
+ 82: 0x01000032 (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ 83: 0x0100000f (TypeRef)   'get_MethodDefinitions' (#14b2)              20-00-11-80-D5 (#3ac)                                                                
+ 84: 0x01000035 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-80-D9 (#411)                                                                
+ 85: 0x01000036 (TypeRef)   'get_Current' (#1664)                        20-00-11-80-DD (#417)                                                                
+ 86: 0x0100000f (TypeRef)   'GetMethodDefinition' (#f27)                 20-01-11-80-E1-11-80-DD (#41d)                                                       
+ 87: 0x01000038 (TypeRef)   'GetImport' (#16f0)                          20-00-11-80-E5 (#426)                                                                
+ 88: 0x01000038 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ 89: 0x01000038 (TypeRef)   'get_Signature' (#81b)                       20-00-11-80-85 (#3f3)                                                                
+ 8a: 0x01000038 (TypeRef)   'get_RelativeVirtualAddress' (#156a)         20-00-08 (#a0)                                                                       
+ 8b: 0x01000038 (TypeRef)   'GetParameters' (#152e)                      20-00-11-82-15 (#42c)                                                                
+ 8c: 0x1b000013 (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+ 8d: 0x01000038 (TypeRef)   'GetGenericParameters' (#1519)               20-00-11-82-19 (#443)                                                                
+ 8e: 0x1b000014 (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+ 8f: 0x01000038 (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-82-1D (#45a)                                                                
+ 90: 0x01000038 (TypeRef)   'get_ImplAttributes' (#130e)                 20-00-11-82-21 (#460)                                                                
+ 91: 0x01000039 (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-82-25 (#466)                                                                
+ 92: 0x01000039 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ 93: 0x01000039 (TypeRef)   'get_Module' (#780)                          20-00-11-82-29 (#470)                                                                
+ 94: 0x0100008a (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-82-29 (#476)                                                          
+ 95: 0x01000036 (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ 96: 0x01000080 (TypeRef)   'ParameterHandle' (#6f6)                     00-01-11-81-C1-08 (#488)                                                             
+ 97: 0x0100000f (TypeRef)   'GetParameter' (#109b)                       20-01-11-80-E9-11-81-C1 (#48f)                                                       
+ 98: 0x0100003a (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ 99: 0x0100003a (TypeRef)   'get_SequenceNumber' (#ff6)                  20-00-08 (#a0)                                                                       
+ 9a: 0x0100003a (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-82-2D (#498)                                                                
+ 9b: 0x0100003a (TypeRef)   'GetMarshallingDescriptor' (#116c)           20-00-11-80-85 (#3f3)                                                                
+ 9c: 0x0100000f (TypeRef)   'get_MemberReferences' (#11fd)               20-00-11-80-ED (#4ad)                                                                
+ 9d: 0x0100003b (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-80-F1 (#4b3)                                                                
+ 9e: 0x0100003c (TypeRef)   'get_Current' (#1664)                        20-00-11-80-F5 (#4b9)                                                                
+ 9f: 0x0100000f (TypeRef)   'GetMemberReference' (#382)                  20-01-11-80-F9-11-80-F5 (#4bf)                                                       
+ a0: 0x0100003e (TypeRef)   'get_Parent' (#1659)                         20-00-11-59 (#34e)                                                                   
+ a1: 0x0100003e (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ a2: 0x0100003e (TypeRef)   'get_Signature' (#81b)                       20-00-11-80-85 (#3f3)                                                                
+ a3: 0x0100003c (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ a4: 0x01000080 (TypeRef)   'ConstantHandle' (#706)                      00-01-11-82-31-08 (#4d1)                                                             
+ a5: 0x0100000f (TypeRef)   'GetConstant' (#164d)                        20-01-11-80-FD-11-82-31 (#4d8)                                                       
+ a6: 0x0100003f (TypeRef)   'get_Parent' (#1659)                         20-00-11-59 (#34e)                                                                   
+ a7: 0x0100003f (TypeRef)   'get_TypeCode' (#3d4)                        20-00-11-82-35 (#4e1)                                                                
+ a8: 0x0100003f (TypeRef)   'get_Value' (#9e7)                           20-00-11-80-85 (#3f3)                                                                
+ a9: 0x0100000f (TypeRef)   'get_CustomAttributes' (#1336)               20-00-11-81-01 (#4fa)                                                                
+ aa: 0x01000040 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-81-05 (#500)                                                                
+ ab: 0x01000041 (TypeRef)   'get_Current' (#1664)                        20-00-11-81-09 (#506)                                                                
+ ac: 0x0100000f (TypeRef)   'GetCustomAttribute' (#8ce)                  20-01-11-81-0D-11-81-09 (#50c)                                                       
+ ad: 0x01000043 (TypeRef)   'get_Parent' (#1659)                         20-00-11-59 (#34e)                                                                   
+ ae: 0x01000043 (TypeRef)   'get_Constructor' (#115c)                    20-00-11-59 (#34e)                                                                   
+ af: 0x01000043 (TypeRef)   'get_Value' (#9e7)                           20-00-11-80-85 (#3f3)                                                                
+ b0: 0x01000041 (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ b1: 0x0100000f (TypeRef)   'get_DeclarativeSecurityAttributes' (#138d)  20-00-11-81-11 (#524)                                                                
+ b2: 0x01000044 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-81-15 (#52a)                                                                
+ b3: 0x01000045 (TypeRef)   'get_Current' (#1664)                        20-00-11-81-19 (#530)                                                                
+ b4: 0x0100000f (TypeRef)   'GetDeclarativeSecurityAttribute' (#9c7)     20-01-11-81-1D-11-81-19 (#536)                                                       
+ b5: 0x01000047 (TypeRef)   'get_Parent' (#1659)                         20-00-11-59 (#34e)                                                                   
+ b6: 0x01000047 (TypeRef)   'get_PermissionSet' (#15e4)                  20-00-11-80-85 (#3f3)                                                                
+ b7: 0x01000047 (TypeRef)   'get_Action' (#cbe)                          20-00-11-82-39 (#53f)                                                                
+ b8: 0x01000045 (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ b9: 0x01000080 (TypeRef)   'StandaloneSignatureHandle' (#55d)           00-01-11-82-3D-08 (#54e)                                                             
+ ba: 0x0100000f (TypeRef)   'GetStandaloneSignature' (#829)              20-01-11-81-21-11-82-3D (#555)                                                       
+ bb: 0x01000048 (TypeRef)   'get_Signature' (#81b)                       20-00-11-80-85 (#3f3)                                                                
+ bc: 0x0100000f (TypeRef)   'get_EventDefinitions' (#14dc)               20-00-11-81-25 (#570)                                                                
+ bd: 0x01000049 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-81-29 (#576)                                                                
+ be: 0x0100004a (TypeRef)   'get_Current' (#1664)                        20-00-11-81-2D (#57c)                                                                
+ bf: 0x0100000f (TypeRef)   'GetEventDefinition' (#f61)                  20-01-11-81-31-11-81-2D (#582)                                                       
+ c0: 0x0100004c (TypeRef)   'GetAccessors' (#153c)                       20-00-11-81-35 (#58b)                                                                
+ c1: 0x0100004c (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ c2: 0x0100004d (TypeRef)   'get_Adder' (#1049)                          20-00-11-80-DD (#417)                                                                
+ c3: 0x01000037 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-80-DD (#591)                                                          
+ c4: 0x0100004d (TypeRef)   'get_Remover' (#10e4)                        20-00-11-80-DD (#417)                                                                
+ c5: 0x0100004d (TypeRef)   'get_Raiser' (#106e)                         20-00-11-80-DD (#417)                                                                
+ c6: 0x0100004c (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-82-41 (#599)                                                                
+ c7: 0x0100004a (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ c8: 0x0100000f (TypeRef)   'get_PropertyDefinitions' (#14f1)            20-00-11-81-39 (#5b1)                                                                
+ c9: 0x0100004e (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-81-3D (#5b7)                                                                
+ ca: 0x0100004f (TypeRef)   'get_Current' (#1664)                        20-00-11-81-41 (#5bd)                                                                
+ cb: 0x0100000f (TypeRef)   'GetPropertyDefinition' (#f8a)               20-01-11-81-45-11-81-41 (#5c3)                                                       
+ cc: 0x01000051 (TypeRef)   'GetAccessors' (#153c)                       20-00-11-81-49 (#5cc)                                                                
+ cd: 0x01000051 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ ce: 0x01000052 (TypeRef)   'get_Getter' (#10c7)                         20-00-11-80-DD (#417)                                                                
+ cf: 0x01000052 (TypeRef)   'get_Setter' (#10d2)                         20-00-11-80-DD (#417)                                                                
+ d0: 0x01000051 (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-82-45 (#5d2)                                                                
+ d1: 0x0100004f (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ d2: 0x01000080 (TypeRef)   'MethodImplementationHandle' (#62b)          00-01-11-82-49-08 (#5e1)                                                             
+ d3: 0x0100000f (TypeRef)   'GetMethodImplementation' (#c8f)             20-01-11-81-4D-11-82-49 (#5e8)                                                       
+ d4: 0x01000053 (TypeRef)   'get_Type' (#7be)                            20-00-11-80-B9 (#372)                                                                
+ d5: 0x01000053 (TypeRef)   'get_MethodBody' (#1778)                     20-00-11-59 (#34e)                                                                   
+ d6: 0x01000053 (TypeRef)   'get_MethodDeclaration' (#c25)               20-00-11-59 (#34e)                                                                   
+ d7: 0x01000080 (TypeRef)   'ModuleReferenceHandle' (#4c8)               00-01-11-82-29-08 (#5fa)                                                             
+ d8: 0x0100000f (TypeRef)   'GetModuleReference' (#35e)                  20-01-11-81-51-11-82-29 (#601)                                                       
+ d9: 0x01000054 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ da: 0x01000080 (TypeRef)   'TypeSpecificationHandle' (#5ee)             00-01-11-82-4D-08 (#613)                                                             
+ db: 0x0100000f (TypeRef)   'GetTypeSpecification' (#c10)                20-01-11-81-55-11-82-4D (#61a)                                                       
+ dc: 0x01000055 (TypeRef)   'get_Signature' (#81b)                       20-00-11-80-85 (#3f3)                                                                
+ dd: 0x0100007d (TypeRef)   'GetEditAndContinueLogEntries' (#124e)       00-01-15-12-80-95-01-11-81-5D-12-3D (#631)                                           
+ de: 0x1b000015 (TypeSpec)  'GetEnumerator' (#1141)                      20-00-15-12-81-59-01-13-00 (#647)                                                    
+ df: 0x1b000016 (TypeSpec)  'get_Current' (#1664)                        20-00-13-00 (#19d)                                                                   
+ e0: 0x01000057 (TypeRef)   'get_Handle' (#4a7)                          20-00-11-59 (#34e)                                                                   
+ e1: 0x01000057 (TypeRef)   'get_Operation' (#c55)                       20-00-11-82-51 (#65a)                                                                
+ e2: 0x01000095 (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ e3: 0x0100007d (TypeRef)   'GetEditAndContinueMapEntries' (#126b)       00-01-15-12-80-95-01-11-59-12-3D (#676)                                              
+ e4: 0x1b000017 (TypeSpec)  'GetEnumerator' (#1141)                      20-00-15-12-81-59-01-13-00 (#647)                                                    
+ e5: 0x1b000018 (TypeSpec)  'get_Current' (#1664)                        20-00-13-00 (#19d)                                                                   
+ e6: 0x01000016 (TypeRef)   'op_Explicit' (#1625)                        00-01-11-59-11-69 (#692)                                                             
+ e7: 0x0100000f (TypeRef)   'get_IsAssembly' (#17a3)                     20-00-02 (#1a8)                                                                      
+ e8: 0x0100000f (TypeRef)   'GetAssemblyDefinition' (#f74)               20-00-11-81-61 (#6a1)                                                                
+ e9: 0x01000058 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ ea: 0x01000058 (TypeRef)   'get_Version' (#be2)                         20-00-12-82-59 (#6a7)                                                                
+ eb: 0x01000096 (TypeRef)   'get_Major' (#1103)                          20-00-08 (#a0)                                                                       
+ ec: 0x01000096 (TypeRef)   'get_Minor' (#110d)                          20-00-08 (#a0)                                                                       
+ ed: 0x01000096 (TypeRef)   'get_Revision' (#bd5)                        20-00-08 (#a0)                                                                       
+ ee: 0x01000096 (TypeRef)   'get_Build' (#307)                           20-00-08 (#a0)                                                                       
+ ef: 0x01000074 (TypeRef)   'Concat' (#15c4)                             00-01-0E-1D-0E (#6ad)                                                                
+ f0: 0x01000058 (TypeRef)   'get_Culture' (#840)                         20-00-11-79 (#319)                                                                   
+ f1: 0x01000058 (TypeRef)   'get_PublicKey' (#1787)                      20-00-11-80-85 (#3f3)                                                                
+ f2: 0x01000058 (TypeRef)   'get_Flags' (#13cf)                          20-00-11-82-5D (#6b3)                                                                
+ f3: 0x01000058 (TypeRef)   'get_HashAlgorithm' (#b7c)                   20-00-11-82-61 (#6b9)                                                                
+ f4: 0x0100000f (TypeRef)   'get_AssemblyReferences' (#1212)             20-00-11-81-65 (#6cf)                                                                
+ f5: 0x01000059 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-81-69 (#6d5)                                                                
+ f6: 0x0100005a (TypeRef)   'get_Current' (#1664)                        20-00-11-81-6D (#6db)                                                                
+ f7: 0x0100000f (TypeRef)   'GetAssemblyReference' (#395)                20-01-11-81-71-11-81-6D (#6e1)                                                       
+ f8: 0x0100005c (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+ f9: 0x0100005c (TypeRef)   'get_Version' (#be2)                         20-00-12-82-59 (#6a7)                                                                
+ fa: 0x0100005c (TypeRef)   'get_Culture' (#840)                         20-00-11-79 (#319)                                                                   
+ fb: 0x0100005c (TypeRef)   'get_PublicKeyOrToken' (#bad)                20-00-11-80-85 (#3f3)                                                                
+ fc: 0x0100005c (TypeRef)   'get_Flags' (#13cf)                          20-00-11-82-5D (#6b3)                                                                
+ fd: 0x0100005a (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+ fe: 0x0100000f (TypeRef)   'get_AssemblyFiles' (#1290)                  20-00-11-81-75 (#6f9)                                                                
+ ff: 0x0100005d (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-81-79 (#6ff)                                                                
+100: 0x0100005e (TypeRef)   'get_Current' (#1664)                        20-00-11-81-7D (#705)                                                                
+101: 0x0100000f (TypeRef)   'GetAssemblyFile' (#762)                     20-01-11-81-81-11-81-7D (#70b)                                                       
+102: 0x01000060 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+103: 0x01000060 (TypeRef)   'get_ContainsMetadata' (#251)                20-00-02 (#1a8)                                                                      
+104: 0x01000060 (TypeRef)   'get_HashValue' (#9f1)                       20-00-11-80-85 (#3f3)                                                                
+105: 0x0100005e (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+106: 0x0100000f (TypeRef)   'get_ExportedTypes' (#12a2)                  20-00-11-81-85 (#723)                                                                
+107: 0x01000061 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-81-89 (#729)                                                                
+108: 0x01000062 (TypeRef)   'get_Current' (#1664)                        20-00-11-81-8D (#72f)                                                                
+109: 0x0100000f (TypeRef)   'GetExportedType' (#7d9)                     20-01-11-81-91-11-81-8D (#735)                                                       
+10a: 0x01000064 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+10b: 0x01000064 (TypeRef)   'get_Namespace' (#347)                       20-00-11-79 (#319)                                                                   
+10c: 0x01000064 (TypeRef)   'get_Implementation' (#c7c)                  20-00-11-59 (#34e)                                                                   
+10d: 0x01000062 (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+10e: 0x0100000f (TypeRef)   'get_ManifestResources' (#1229)              20-00-11-81-95 (#751)                                                                
+10f: 0x01000065 (TypeRef)   'GetEnumerator' (#1141)                      20-00-11-81-99 (#757)                                                                
+110: 0x01000066 (TypeRef)   'get_Current' (#1664)                        20-00-11-81-9D (#75d)                                                                
+111: 0x0100000f (TypeRef)   'GetManifestResource' (#3c0)                 20-01-11-81-A1-11-81-9D (#763)                                                       
+112: 0x01000068 (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+113: 0x01000068 (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-81-A5 (#76c)                                                                
+114: 0x0100000c (TypeRef)   'ToString' (#aca)                            20-00-0E (#83)                                                                       
+115: 0x01000068 (TypeRef)   'get_Offset' (#15f6)                         20-00-0A (#772)                                                                      
+116: 0x01000099 (TypeRef)   'ToString' (#aca)                            20-00-0E (#83)                                                                       
+117: 0x01000068 (TypeRef)   'get_Implementation' (#c7c)                  20-00-11-59 (#34e)                                                                   
+118: 0x01000066 (TypeRef)   'MoveNext' (#172c)                           20-00-02 (#1a8)                                                                      
+119: 0x01000080 (TypeRef)   'GenericParameterHandle' (#6ef)              00-01-11-81-C5-08 (#780)                                                             
+11a: 0x0100000f (TypeRef)   'GetGenericParameter' (#1087)                20-01-11-81-A9-11-81-C5 (#787)                                                       
+11b: 0x0100006a (TypeRef)   'get_Name' (#797)                            20-00-11-79 (#319)                                                                   
+11c: 0x0100006a (TypeRef)   'get_Index' (#1744)                          20-00-08 (#a0)                                                                       
+11d: 0x0100006a (TypeRef)   'get_Attributes' (#12b4)                     20-00-11-82-69 (#790)                                                                
+11e: 0x0100006a (TypeRef)   'GetConstraints' (#159f)                     20-00-11-82-6D (#796)                                                                
+11f: 0x1b000019 (TypeSpec)  '.ctor' (#114f)                              20-02-01-1C-18 (#41)                                                                 
+120: 0x01000080 (TypeRef)   'MethodSpecificationHandle' (#5d4)           00-01-11-82-71-08 (#7b6)                                                             
+121: 0x0100000f (TypeRef)   'GetMethodSpecification' (#bf9)              20-01-11-81-AD-11-82-71 (#7bd)                                                       
+122: 0x0100006b (TypeRef)   'get_Method' (#330)                          20-00-11-59 (#34e)                                                                   
+123: 0x0100006b (TypeRef)   'get_Signature' (#81b)                       20-00-11-80-85 (#3f3)                                                                
+124: 0x01000080 (TypeRef)   'GenericParameterConstraintHandle' (#715)    00-01-11-81-C9-08 (#7cf)                                                             
+125: 0x0100000f (TypeRef)   'GetGenericParameterConstraint' (#1697)      20-01-11-81-B1-11-81-C9 (#7d6)                                                       
+126: 0x0100006c (TypeRef)   'get_Parameter' (#1079)                      20-00-11-81-C5 (#7df)                                                                
+127: 0x01000071 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-81-C5 (#7e5)                                                          
+128: 0x0100006c (TypeRef)   'get_Type' (#7be)                            20-00-11-59 (#34e)                                                                   
+129: 0x0100007d (TypeRef)   'GetHeapSize' (#a3e)                         00-02-08-12-3D-11-82-75 (#7f7)                                                       
+12a: 0x01000080 (TypeRef)   'UserStringHandle' (#5c3)                    00-01-11-81-B5-08 (#800)                                                             
+12b: 0x0100000f (TypeRef)   'GetUserString' (#ad3)                       20-01-0E-11-81-B5 (#807)                                                             
+12c: 0x0100006d (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-81-B5 (#80e)                                                          
+12d: 0x01000012 (TypeRef)   'WriteLine' (#7a0)                           20-03-01-0E-1C-1C (#816)                                                             
+12e: 0x0100007d (TypeRef)   'GetNextHandle' (#736)                       00-02-11-81-B5-12-3D-11-81-B5 (#81d)                                                 
+12f: 0x0100006d (TypeRef)   'get_IsNil' (#b22)                           20-00-02 (#1a8)                                                                      
+130: 0x01000080 (TypeRef)   'StringHandle' (#5c7)                        00-01-11-79-08 (#831)                                                                
+131: 0x0100000f (TypeRef)   'GetString' (#ae1)                           20-01-0E-11-79 (#837)                                                                
+132: 0x0100007d (TypeRef)   'GetNextHandle' (#736)                       00-02-11-79-12-3D-11-79 (#83d)                                                       
+133: 0x0100001e (TypeRef)   'get_IsNil' (#b22)                           20-00-02 (#1a8)                                                                      
+134: 0x01000080 (TypeRef)   'BlobHandle' (#4b2)                          00-01-11-80-85-08 (#851)                                                             
+135: 0x0100000f (TypeRef)   'GetBlobBytes' (#13c2)                       20-01-1D-05-11-80-85 (#858)                                                          
+136: 0x0100009e (TypeRef)   'ToString' (#aca)                            00-01-0E-1D-05 (#860)                                                                
+137: 0x0100007d (TypeRef)   'GetNextHandle' (#736)                       00-02-11-80-85-12-3D-11-80-85 (#866)                                                 
+138: 0x01000021 (TypeRef)   'get_IsNil' (#b22)                           20-00-02 (#1a8)                                                                      
+139: 0x01000080 (TypeRef)   'GuidHandle' (#4bd)                          00-01-11-80-81-08 (#87c)                                                             
+13a: 0x0100000f (TypeRef)   'GetGuid' (#2eb)                             20-01-11-81-B9-11-80-81 (#883)                                                       
+13b: 0x01000074 (TypeRef)   'Equals' (#1414)                             00-03-02-0E-0E-11-82-7D (#88c)                                                       
+13c: 0x010000a0 (TypeRef)   'CompareTo' (#fc9)                           20-01-08-1C (#89b)                                                                   
+13d: 0x0100001e (TypeRef)   'op_Explicit' (#1625)                        00-01-11-79-11-69 (#8a0)                                                             
+13e: 0x0100001f (TypeRef)   'op_Explicit' (#1625)                        00-01-11-7D-11-69 (#8a7)                                                             
+13f: 0x0100000f (TypeRef)   'GetString' (#ae1)                           20-01-0E-11-7D (#8ae)                                                                
+140: 0x01000020 (TypeRef)   'op_Explicit' (#1625)                        00-01-11-80-81-11-69 (#8ba)                                                          
+141: 0x01000021 (TypeRef)   'op_Explicit' (#1625)                        00-01-11-80-85-11-69 (#8c2)                                                          
+142: 0x01000033 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-80-CD (#8ca)                                                          
+143: 0x01000070 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-81-C1 (#8d2)                                                          
+144: 0x01000072 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-81-C9 (#8da)                                                          
+145: 0x01000073 (TypeRef)   'op_Implicit' (#1619)                        00-01-11-69-11-81-CD (#8e2)                                                          
+
+Constant (0x0b):
+=================================================================
+   Parent              Type                  Value               
+=================================================================
+1: 0x08000008 (Param)  0x00000008 (Int32)    FF-FF-FF-FF (#8fc)  
+2: 0x0800001d (Param)  0x00000002 (Boolean)  01 (#901)           
+3: 0x08000022 (Param)  0x00000002 (Boolean)  00 (#903)           
+
+CustomAttribute (0x0c):
+=================================================================================================================================================================================================================================================================================================
+    Parent                 Constructor             Value                                                                                                                                                                                                                                          
+=================================================================================================================================================================================================================================================================================================
+ 1: 0x20000001 (Assembly)  0x0a000001 (MemberRef)  01-00-08-00-00-00-00-00 (#a94)                                                                                                                                                                                                                 
+ 2: 0x20000001 (Assembly)  0x0a000002 (MemberRef)  01-00-01-00-54-02-16-57-72-61-70-4E-6F-6E-45-78-63-65-70-74-69-6F-6E-54-68-72-6F-77-73-01 (#a9d)                                                                                                                                               
+ 3: 0x20000001 (Assembly)  0x0a000003 (MemberRef)  01-00-07-01-00-00-00-00 (#abc)                                                                                                                                                                                                                 
+ 4: 0x20000001 (Assembly)  0x0a000004 (MemberRef)  01-00-1C-2E-4E-45-54-46-72-61-6D-65-77-6F-72-6B-2C-56-65-72-73-69-6F-6E-3D-76-34-2E-36-2E-31-01-00-54-0E-14-46-72-61-6D-65-77-6F-72-6B-44-69-73-70-6C-61-79-4E-61-6D-65-14-2E-4E-45-54-20-46-72-61-6D-65-77-6F-72-6B-20-34-2E-36-2E-31 (#ac5)  
+ 5: 0x20000001 (Assembly)  0x0a000005 (MemberRef)  01-00-08-4D-64-44-75-6D-70-65-72-00-00 (#b13)                                                                                                                                                                                                  
+ 6: 0x20000001 (Assembly)  0x0a000006 (MemberRef)  01-00-05-44-65-62-75-67-00-00 (#b21)                                                                                                                                                                                                           
+ 7: 0x20000001 (Assembly)  0x0a000007 (MemberRef)  01-00-07-31-2E-30-2E-30-2E-30-00-00 (#b2c)                                                                                                                                                                                                     
+ 8: 0x20000001 (Assembly)  0x0a000008 (MemberRef)  01-00-05-31-2E-30-2E-30-00-00 (#b39)                                                                                                                                                                                                           
+ 9: 0x20000001 (Assembly)  0x0a000009 (MemberRef)  01-00-08-4D-64-44-75-6D-70-65-72-00-00 (#b13)                                                                                                                                                                                                  
+ a: 0x20000001 (Assembly)  0x0a00000a (MemberRef)  01-00-08-4D-64-44-75-6D-70-65-72-00-00 (#b13)                                                                                                                                                                                                  
+ b: 0x02000004 (TypeDef)   0x0a00000b (MemberRef)  01-00-00-00 (#b44)                                                                                                                                                                                                                             
+ c: 0x02000006 (TypeDef)   0x0a00000b (MemberRef)  01-00-00-00 (#b44)                                                                                                                                                                                                                             
+ d: 0x02000007 (TypeDef)   0x0a00000b (MemberRef)  01-00-00-00 (#b44)                                                                                                                                                                                                                             
+ e: 0x08000009 (Param)     0x0a00000c (MemberRef)  01-00-00-00 (#b44)                                                                                                                                                                                                                             
+ f: 0x0800000a (Param)     0x0a00000c (MemberRef)  01-00-00-00 (#b44)                                                                                                                                                                                                                             
+
+StandAloneSig (0x11):
+===================================================================================================
+    Signature                                                                                         
+===================================================================================================
+ 1: 07-0A-12-10-02-1D-0E-08-0E-12-35-12-39-12-3D-12-0C-12-41 (#25)                                    
+ 2: 07-02-02-15-12-5D-01-12-3D (#87)                                                                  
+ 3: 07-02-08-02 (#135)                                                                                
+ 4: 07-01-02 (#14d)                                                                                   
+ 5: 07-14-0E-08-1D-08-08-0E-02-08-15-11-65-01-1D-0E-1D-0E-08-02-08-1D-0E-02-0E-08-0E-02-02-02 (#169)  
+ 6: 07-06-15-11-55-01-11-59-08-08-15-11-55-01-15-11-55-01-11-59-02-11-69 (#1b6)                       
+ 7: 07-09-11-71-08-08-08-02-02-02-11-59-02 (#1f2)                                                     
+ 8: 07-04-02-08-11-69-1E-00 (#22a)                                                                    
+ 9: 07-01-0E (#250)                                                                                   
+ a: 07-0B-02-0E-02-08-11-69-12-3D-0E-08-08-02-02 (#27c)                                               
+ b: 07-04-11-71-02-0E-02 (#2a9)                                                                       
+ c: 07-04-1E-00-02-1E-00-0E (#2b1)                                                                    
+ d: 07-02-15-12-80-95-01-11-69-0E (#2c3)                                                              
+ e: 07-03-12-1C-02-0E (#2e9)                                                                          
+ f: 07-02-11-80-9D-08 (#30c)                                                                          
+10: 07-04-11-80-A5-11-80-A1-11-80-A9-11-80-AD (#324)                                                  
+11: 07-06-11-80-B5-11-80-B1-11-80-B9-11-80-BD-11-80-C1-08 (#353)                                      
+12: 07-06-11-80-C9-11-80-C5-11-80-CD-11-80-D1-08-08 (#3cd)                                            
+13: 07-05-11-80-D9-11-80-D5-11-80-DD-11-80-E1-11-80-E5 (#3ff)                                         
+14: 07-05-08-08-11-80-E9-08-02 (#47e)                                                                 
+15: 07-04-11-80-F1-11-80-ED-11-80-F5-11-80-F9 (#49e)                                                  
+16: 07-04-08-08-11-80-FD-02 (#4c8)                                                                    
+17: 07-04-11-81-05-11-81-01-11-81-09-11-81-0D (#4eb)                                                  
+18: 07-04-11-81-15-11-81-11-11-81-19-11-81-1D (#515)                                                  
+19: 07-04-08-08-11-81-21-02 (#545)                                                                    
+1a: 07-05-11-81-29-11-81-25-11-81-2D-11-81-31-11-81-35 (#55e)                                         
+1b: 07-05-11-81-3D-11-81-39-11-81-41-11-81-45-11-81-49 (#59f)                                         
+1c: 07-04-08-08-11-81-4D-02 (#5d8)                                                                    
+1d: 07-04-08-08-11-81-51-02 (#5f1)                                                                    
+1e: 07-04-08-08-11-81-55-02 (#60a)                                                                    
+1f: 07-02-15-12-81-59-01-11-81-5D-11-81-5D (#623)                                                     
+20: 07-09-02-15-12-81-59-01-11-59-11-59-02-08-11-69-02-11-80-9D-08 (#660)                             
+21: 07-03-02-11-81-61-08 (#699)                                                                       
+22: 07-05-11-81-69-11-81-65-11-81-6D-11-81-71-08 (#6bf)                                               
+23: 07-04-11-81-79-11-81-75-11-81-7D-11-81-81 (#6ea)                                                  
+24: 07-04-11-81-89-11-81-85-11-81-8D-11-81-91 (#714)                                                  
+25: 07-06-11-81-99-11-81-95-11-81-9D-11-81-A1-11-81-A5-0A (#73e)                                      
+26: 07-05-08-08-11-81-A9-08-02 (#776)                                                                 
+27: 07-04-08-08-11-81-AD-02 (#7ad)                                                                    
+28: 07-04-08-08-11-81-B1-02 (#7c6)                                                                    
+29: 07-05-08-11-81-B5-02-0E-02 (#7ed)                                                                 
+2a: 07-05-08-11-79-02-0E-02 (#828)                                                                    
+2b: 07-05-08-11-80-85-02-1D-05-02 (#846)                                                              
+2c: 07-06-08-08-02-0E-11-81-B9-02 (#871)                                                              
+2d: 07-02-11-6D-08 (#895)                                                                             
+2e: 07-01-11-81-B9 (#8b4)                                                                             
+
+Property (0x15, 0x17, 0x18):
+===============================================================
+   Name              Get                     Set  Attributes  
+===============================================================
+1: 'IsDelta' (#26a)  0x06000009 (MethodDef)  nil  0           
+
+TypeSpec (0x1b):
+===============================================
+    Name                                          
+===============================================
+ 1: 15-12-80-89-01-1E-00 (#15)                    
+ 2: 15-12-81-BD-01-11-59 (#1d)                    
+ 3: 15-12-80-91-02-0E-02 (#39)                    
+ 4: 15-12-5D-01-1D-0E (#91)                       
+ 5: 15-12-80-8D-01-12-3D (#98)                    
+ 6: 15-12-5D-01-12-3D (#bc)                       
+ 7: 15-12-4D-01-12-3D (#ce)                       
+ 8: 15-12-80-91-02-12-3D-15-11-55-01-11-59 (#e7)  
+ 9: 15-11-65-01-1D-0E (#196)                      
+ a: 15-11-55-01-15-11-55-01-11-59 (#1ce)          
+ b: 15-11-55-01-11-59 (#1e4)                      
+ c: 15-12-75-03-12-3D-11-69-1E-00 (#23c)          
+ d: 15-12-75-03-12-3D-11-69-0E (#25b)             
+ e: 1E-00 (#2ba)                                  
+ f: 15-12-80-8D-01-1E-00 (#2d5)                   
+10: 15-12-80-91-02-11-81-CD-0E (#2f0)             
+11: 15-12-80-91-02-11-80-CD-11-69 (#39b)          
+12: 15-12-80-91-02-11-80-DD-11-69 (#3b2)          
+13: 15-12-80-91-02-11-81-C1-11-69 (#432)          
+14: 15-12-80-91-02-11-81-C5-11-69 (#449)          
+15: 15-12-80-95-01-11-81-5D (#63e)                
+16: 15-12-81-59-01-11-81-5D (#651)                
+17: 15-12-80-95-01-11-59 (#682)                   
+18: 15-12-81-59-01-11-59 (#68a)                   
+19: 15-12-80-91-02-11-81-C9-11-69 (#79c)          
+
+Assembly (0x20):
+=================================================================================
+   Name                Version  Culture  PublicKey  Flags  HashAlgorithm      
+=================================================================================
+1: 'MdDumper' (#1053)  1.0.0.0  nil      nil        0      0x00008004 (Sha1)  
+
+AssemblyRef (0x23):
+=====================================================================================================
+   Name                                   Version  Culture  PublicKeyOrToken                Flags  
+=====================================================================================================
+1: 'mscorlib' (#272)                      4.0.0.0  nil      B7-7A-5C-56-19-34-E0-89 (#8ea)  0      
+2: 'System.Reflection.Metadata' (#236)    1.4.0.4  nil      B0-3F-5F-7F-11-D5-0A-3A (#8f3)  0      
+3: 'System.Collections.Immutable' (#482)  1.2.0.4  nil      B0-3F-5F-7F-11-D5-0A-3A (#8f3)  0      
+4: 'System.Core' (#80f)                   4.0.0.0  nil      B7-7A-5C-56-19-34-E0-89 (#8ea)  0      
+5: 'System' (#b75)                        4.0.0.0  nil      B7-7A-5C-56-19-34-E0-89 (#8ea)  0      
+
+GenericParam (0x2a):
+================================================================
+   Name               Seq#  Attributes  TypeConstraints        
+================================================================
+1: 'TEntity' (#17e0)  0     0           nil                    
+2: 'T' (#234)         0     0           0x2c000001-0x2c000001  
+3: 'THandle' (#49f)   0     0           nil                    
+
+MethodSpec (0x2b):
+================================================================
+    Method                  Signature                             
+================================================================
+ 1: 0x0a00000e (MemberRef)  0A-01-0E (#5b)                        
+ 2: 0x0a00001a (MemberRef)  0A-01-12-3D (#b7)                     
+ 3: 0x0a00001f (MemberRef)  0A-02-12-3D-15-11-55-01-11-59 (#110)  
+ 4: 0x0a000020 (MemberRef)  0A-01-15-11-55-01-11-59 (#12c)        
+ 5: 0x0a000024 (MemberRef)  0A-01-12-3D (#b7)                     
+ 6: 0x0a000024 (MemberRef)  0A-01-1D-0E (#164)                    
+ 7: 0x0a00002d (MemberRef)  0A-01-1D-0E (#164)                    
+ 8: 0x0a00003d (MemberRef)  0A-01-11-59 (#225)                    
+ 9: 0x0a00001f (MemberRef)  0A-02-1E-00-11-69 (#2ce)              
+ a: 0x0a00002d (MemberRef)  0A-01-11-69 (#2dd)                    
+ b: 0x0a000024 (MemberRef)  0A-01-11-69 (#2dd)                    
+ c: 0x0a00001f (MemberRef)  0A-02-11-81-CD-0E (#2fa)              
+ d: 0x06000019 (MethodDef)  0A-01-11-80-CD (#3a6)                 
+ e: 0x06000019 (MethodDef)  0A-01-11-80-DD (#3bd)                 
+ f: 0x06000018 (MethodDef)  0A-01-08 (#3c9)                       
+10: 0x06000019 (MethodDef)  0A-01-11-81-C1 (#43d)                 
+11: 0x06000019 (MethodDef)  0A-01-11-81-C5 (#454)                 
+12: 0x06000018 (MethodDef)  0A-01-06 (#46c)                       
+13: 0x06000018 (MethodDef)  0A-01-05 (#4e7)                       
+14: 0x06000019 (MethodDef)  0A-01-11-81-C9 (#7a7)                 
+15: 0x0a000020 (MemberRef)  0A-01-11-59 (#225)                    
+
+GenericParamConstraint (0x2c):
+====================================================
+   Parent                     Type                   
+====================================================
+1: 0x2a000002 (GenericParam)  0x1b000001 (TypeSpec)  
+
+#US (size = 2900):
+  0: ''
+  1: '/?'
+  7: '-?'
+  d: '-h'
+  13: '--help'
+  21: 'This tool dumps the contents of all tables in a set of PE files.'
+  a4: 'usage: mddumper <file>...'
+  d8: '>>>'
+  e0: '>>> Generation {0}:'
+  108: '  '
+  10e: 'x'
+  112: ': '
+  118: 'EncMap is missing record for {0:8X}.'
+  162: 'nil'
+  16a: '{0} (#{1:x})'
+  184: '{0} (#{1:x}/{2:x})'
+  1aa: '#{0:x}'
+  1b8: '{1:x} (#{0:x})'
+  1d6: '0x'
+  1dc: 'X4'
+  1e2: 'X8'
+  1e8: '0x{0:x8} ({1})'
+  206: '0x{0:x8}'
+  218: '0'
+  21c: '-'
+  220: ', '
+  226: 'Gen'
+  22e: 'Name'
+  238: 'Mvid'
+  242: 'EncId'
+  24e: 'EncBaseId'
+  262: 'Module (0x00):'
+  280: 'Scope'
+  28c: 'Namespace'
+  2a0: 'TypeRef (0x01):'
+  2c0: 'EnclosingType'
+  2dc: 'BaseType'
+  2ee: 'Interfaces'
+  304: 'Fields'
+  312: 'Methods'
+  322: 'Attributes'
+  338: 'ClassSize'
+  34c: 'PackingSize'
+  364: 'n/a'
+  36c: 'TypeDef (0x02):'
+  38c: 'Signature'
+  3a0: 'Marshalling'
+  3b8: 'Offset'
+  3c6: 'RVA'
+  3ce: 'Field (0x04):'
+  3ea: 'Parameters'
+  400: 'GenericParameters'
+  424: 'ImplAttributes'
+  442: 'ImportAttributes'
+  464: 'ImportName'
+  47a: 'ImportModule'
+  494: 'Method (0x06, 0x1C):'
+  4be: 'Seq#'
+  4c8: 'Param (0x08):'
+  4e4: 'Parent'
+  4f2: 'MemberRef (0x0a):'
+  516: 'Type'
+  520: 'Value'
+  52c: 'Constant (0x0b):'
+  54e: 'Constructor'
+  566: 'CustomAttribute (0x0c):'
+  596: 'PermissionSet'
+  5b2: 'Action'
+  5c0: 'DeclSecurity (0x0e):'
+  5ea: 'StandAloneSig (0x11):'
+  616: 'Add'
+  61e: 'Remove'
+  62c: 'Fire'
+  636: 'Event (0x12, 0x14, 0x18):'
+  66a: 'Get'
+  672: 'Set'
+  67a: 'Property (0x15, 0x17, 0x18):'
+  6b4: 'Body'
+  6be: 'Declaration'
+  6d6: 'MethodImpl (0x19):'
+  6fc: 'ModuleRef (0x1a):'
+  720: 'TypeSpec (0x1b):'
+  742: 'Entity'
+  750: 'Operation'
+  764: 'EnC Log (0x1e):'
+  784: 'Row'
+  78c: 'Edit'
+  796: 'x6'
+  79c: 'add'
+  7a4: 'update'
+  7b2: 'EnC Map (0x1f):'
+  7d2: 'Version'
+  7e2: 'Culture'
+  7f2: 'PublicKey'
+  806: 'Flags'
+  812: 'HashAlgorithm'
+  82e: '.'
+  832: 'Assembly (0x20):'
+  854: 'PublicKeyOrToken'
+  876: 'AssemblyRef (0x23):'
+  89e: 'Metadata'
+  8b0: 'HashValue'
+  8c4: 'No'
+  8ca: 'Yes'
+  8d2: 'File (0x26):'
+  8ec: 'Assembly'
+  8fe: 'ExportedType - forwarders (0x27):'
+  942: 'Implementation'
+  960: 'ManifestResource (0x28):'
+  992: 'TypeConstraints'
+  9b2: 'GenericParam (0x2a):'
+  9dc: 'Method'
+  9ea: 'MethodSpec (0x2b):'
+  a10: 'GenericParamConstraint (0x2c):'
+  a4e: '#US (size = {0}):'
+  a72: '  {0:x}: '{1}''
+  a90: '#String (size = {0}):'
+  abc: '#Blob (size = {0}):'
+  ae4: '  {0:x}: {1}'
+  afe: '#Guid (size = {0}):'
+  b26: '  {0:x}: {{{1}}}'
+  b48: '''
+  b4c: '{'
+  b50: '}'
+
+#String (size = 6134):
+  0: ''
+  1: '<>9__20_0'
+  b: '<Literal>b__20_0'
+  1c: '<>c__DisplayClass0_0'
+  31: '<>9__21_0'
+  3b: '<Literal>b__21_0'
+  4c: '<>9__22_0'
+  56: '<Literal>b__22_0'
+  67: '<>9__32_0'
+  71: '<WriteTypeDef>b__32_0'
+  87: '<>9__53_0'
+  91: '<WriteGenericParam>b__53_0'
+  ac: '<>9__34_0'
+  b6: '<WriteMethod>b__34_0'
+  cb: '<>9__6_0'
+  d4: '<.ctor>b__6_0'
+  e2: '<>9__19_0'
+  ec: '<Literal>b__19_0'
+  fd: '<>c__DisplayClass29_0'
+  113: '<Main>b__0'
+  11e: '<TokenList>b__0'
+  12e: '<>9__32_1'
+  138: '<WriteTypeDef>b__32_1'
+  14e: '<>9__34_1'
+  158: '<WriteMethod>b__34_1'
+  16d: 'IEnumerable`1'
+  17b: 'IEquatable`1'
+  188: 'IReadOnlyCollection`1'
+  19e: 'IComparer`1'
+  1aa: 'IEnumerator`1'
+  1b8: 'IReadOnlyList`1'
+  1c8: 'ImmutableArray`1'
+  1d9: 'Int32'
+  1df: 'Func`2'
+  1e6: 'Func`3'
+  1ed: 'Int64'
+  1f3: 'System.Reflection.Metadata.Ecma335'
+  216: 'UInt16'
+  21d: '<>9'
+  221: '<Module>'
+  22a: 'System.IO'
+  234: 'T'
+  236: 'System.Reflection.Metadata'
+  251: 'get_ContainsMetadata'
+  266: 'get_IsDelta'
+  272: 'mscorlib'
+  27b: '<>c'
+  27f: 'WriteMethodSpec'
+  28f: 'WriteTypeSpec'
+  29d: 'System.Collections.Generic'
+  2b8: 'get_GenerationId'
+  2c9: 'get_BaseGenerationId'
+  2de: 'OpenRead'
+  2e7: 'Add'
+  2eb: 'GetGuid'
+  2f3: 'get_Mvid'
+  2fc: 'WriteField'
+  307: 'get_Build'
+  311: 'get_Kind'
+  31a: 'HandleKind'
+  325: 'handleKind'
+  330: 'get_Method'
+  33b: 'WriteMethod'
+  347: 'get_Namespace'
+  355: 'Instance'
+  35e: 'GetModuleReference'
+  371: 'GetTypeReference'
+  382: 'GetMemberReference'
+  395: 'GetAssemblyReference'
+  3aa: 'WriteManifestResource'
+  3c0: 'GetManifestResource'
+  3d4: 'get_TypeCode'
+  3e1: 'ConstantTypeCode'
+  3f2: 'PrintUsage'
+  3fd: 'get_Message'
+  409: 'TryGetHandleRange'
+  41b: 'CreateRange'
+  427: 'TokenRange'
+  432: 'Invoke'
+  439: 'displayTable'
+  446: 'Enumerable'
+  451: 'IDisposable'
+  45d: 'System.Reflection.PortableExecutable'
+  482: 'System.Collections.Immutable'
+  49f: 'THandle'
+  4a7: 'get_Handle'
+  4b2: 'BlobHandle'
+  4bd: 'GuidHandle'
+  4c8: 'ModuleReferenceHandle'
+  4de: 'TypeReferenceHandle'
+  4f2: 'MemberReferenceHandle'
+  508: 'AssemblyReferenceHandle'
+  520: 'ManifestResourceHandle'
+  537: 'AssemblyFileHandle'
+  54a: 'ExportedTypeHandle'
+  55d: 'StandaloneSignatureHandle'
+  577: 'GetAggregateHandle'
+  58a: 'CustomAttributeHandle'
+  5a0: 'DeclarativeSecurityAttributeHandle'
+  5c3: 'UserStringHandle'
+  5d4: 'MethodSpecificationHandle'
+  5ee: 'TypeSpecificationHandle'
+  606: 'GetGenerationHandle'
+  61a: 'generationHandle'
+  62b: 'MethodImplementationHandle'
+  646: 'InterfaceImplementationHandle'
+  664: 'FieldDefinitionHandle'
+  67a: 'MethodDefinitionHandle'
+  691: 'NamespaceDefinitionHandle'
+  6ab: 'TypeDefinitionHandle'
+  6c0: 'EventDefinitionHandle'
+  6d6: 'PropertyDefinitionHandle'
+  6ef: 'GenericParameterHandle'
+  706: 'ConstantHandle'
+  715: 'GenericParameterConstraintHandle'
+  736: 'GetNextHandle'
+  744: 'EntityHandle'
+  751: 'handle'
+  758: 'WriteFile'
+  762: 'GetAssemblyFile'
+  772: 'Console'
+  77a: 'title'
+  780: 'get_Module'
+  78b: 'WriteModule'
+  797: 'get_Name'
+  7a0: 'WriteLine'
+  7aa: 'get_ResolutionScope'
+  7be: 'get_Type'
+  7c7: 'WriteExportedType'
+  7d9: 'GetExportedType'
+  7e9: 'get_BaseType'
+  7f6: 'GetDeclaringType'
+  807: 'Compare'
+  80f: 'System.Core'
+  81b: 'get_Signature'
+  829: 'GetStandaloneSignature'
+  840: 'get_Culture'
+  84c: 'Dispose'
+  854: 'Write'
+  85a: 'CompilerGeneratedAttribute'
+  875: 'DebuggableAttribute'
+  889: 'AssemblyTitleAttribute'
+  8a0: 'TargetFrameworkAttribute'
+  8b9: 'WriteCustomAttribute'
+  8ce: 'GetCustomAttribute'
+  8e1: 'AssemblyFileVersionAttribute'
+  8fe: 'AssemblyInformationalVersionAttribute'
+  924: 'AssemblyConfigurationAttribute'
+  943: 'CompilationRelaxationsAttribute'
+  963: 'AssemblyProductAttribute'
+  97c: 'ParamArrayAttribute'
+  990: 'AssemblyCompanyAttribute'
+  9a9: 'RuntimeCompatibilityAttribute'
+  9c7: 'GetDeclarativeSecurityAttribute'
+  9e7: 'get_Value'
+  9f1: 'get_HashValue'
+  9ff: 'EnumValue'
+  a09: 'getValue'
+  a12: 'value'
+  a18: 'MdDumper.exe'
+  a25: 'get_Size'
+  a2e: 'get_PackingSize'
+  a3e: 'GetHeapSize'
+  a4a: 'Visualize'
+  a54: 'WriteTypeDef'
+  a61: 'WriteModuleRef'
+  a70: 'WriteTypeRef'
+  a7d: 'WriteMemberRef'
+  a8c: 'WriteAssemblyRef'
+  a9d: 'WriteStandAloneSig'
+  ab0: 'System.Runtime.Versioning'
+  aca: 'ToString'
+  ad3: 'GetUserString'
+  ae1: 'GetString'
+  aeb: 'WriteEnCLog'
+  af7: 'Debug'
+  afd: 'BinarySearch'
+  b0a: 'Math'
+  b0f: 'get_Length'
+  b1a: 'Literal'
+  b22: 'get_IsNil'
+  b2c: 'WriteMethodImpl'
+  b3c: 'FileStream'
+  b47: 'WriteGenericParam'
+  b59: 'WriteParam'
+  b64: 'Program'
+  b6c: 'get_Item'
+  b75: 'System'
+  b7c: 'get_HashAlgorithm'
+  b8e: 'AssemblyHashAlgorithm'
+  ba4: 'Sum'
+  ba8: 'Enum'
+  bad: 'get_PublicKeyOrToken'
+  bc2: 'GetToken'
+  bcb: 'Main'
+  bd0: 'Join'
+  bd5: 'get_Revision'
+  be2: 'get_Version'
+  bee: 'conversion'
+  bf9: 'GetMethodSpecification'
+  c10: 'GetTypeSpecification'
+  c25: 'get_MethodDeclaration'
+  c3b: 'get_Generation'
+  c4a: 'generation'
+  c55: 'get_Operation'
+  c63: 'EditAndContinueOperation'
+  c7c: 'get_Implementation'
+  c8f: 'GetMethodImplementation'
+  ca7: 'MdDumper.Visualization'
+  cbe: 'get_Action'
+  cc9: 'DeclarativeSecurityAction'
+  ce3: 'System.Reflection'
+  cf5: 'TypeReferenceHandleCollection'
+  d13: 'MemberReferenceHandleCollection'
+  d33: 'AssemblyReferenceHandleCollection'
+  d55: 'ManifestResourceHandleCollection'
+  d76: 'AssemblyFileHandleCollection'
+  d93: 'ExportedTypeHandleCollection'
+  db0: 'CustomAttributeHandleCollection'
+  dd0: 'DeclarativeSecurityAttributeHandleCollection'
+  dfd: 'InterfaceImplementationHandleCollection'
+  e25: 'FieldDefinitionHandleCollection'
+  e45: 'MethodDefinitionHandleCollection'
+  e66: 'TypeDefinitionHandleCollection'
+  e85: 'EventDefinitionHandleCollection'
+  ea5: 'PropertyDefinitionHandleCollection'
+  ec8: 'GenericParameterHandleCollection'
+  ee9: 'GenericParameterConstraintHandleCollection'
+  f14: 'GetFieldDefinition'
+  f27: 'GetMethodDefinition'
+  f3b: 'GetModuleDefinition'
+  f4f: 'GetTypeDefinition'
+  f61: 'GetEventDefinition'
+  f74: 'GetAssemblyDefinition'
+  f8a: 'GetPropertyDefinition'
+  fa0: 'BadImageFormatException'
+  fb8: 'StringComparison'
+  fc9: 'CompareTo'
+  fd3: 'WriteEnCMap'
+  fdf: 'Skip'
+  fe4: 'System.Linq'
+  ff0: 'Clear'
+  ff6: 'get_SequenceNumber'
+  1009: 'GetRowNumber'
+  1016: 'AddHeader'
+  1020: 'PEReader'
+  1029: 'GetMetadataReader'
+  103b: 'header'
+  1042: 'reader'
+  1049: 'get_Adder'
+  1053: 'MdDumper'
+  105c: 'TokenTypeComparer'
+  106e: 'get_Raiser'
+  1079: 'get_Parameter'
+  1087: 'GetGenericParameter'
+  109b: 'GetParameter'
+  10a8: 'TextWriter'
+  10b3: 'writer'
+  10ba: 'BitConverter'
+  10c7: 'get_Getter'
+  10d2: 'get_Setter'
+  10dd: 'getter'
+  10e4: 'get_Remover'
+  10f0: 'MetadataVisualizer'
+  1103: 'get_Major'
+  110d: 'get_Minor'
+  1117: 'MetadataAggregator'
+  112a: 'aggregator'
+  1135: 'IEnumerator'
+  1141: 'GetEnumerator'
+  114f: '.ctor'
+  1155: '.cctor'
+  115c: 'get_Constructor'
+  116c: 'GetMarshallingDescriptor'
+  1185: 'WriteBlobs'
+  1190: 'System.Diagnostics'
+  11a3: 'WriteGuids'
+  11ae: 'GetFields'
+  11b8: 'fields'
+  11bf: 'GetMethods'
+  11ca: 'System.Runtime.CompilerServices'
+  11ea: 'get_TypeReferences'
+  11fd: 'get_MemberReferences'
+  1212: 'get_AssemblyReferences'
+  1229: 'get_ManifestResources'
+  123f: 'DebuggingModes'
+  124e: 'GetEditAndContinueLogEntries'
+  126b: 'GetEditAndContinueMapEntries'
+  1288: 'handles'
+  1290: 'get_AssemblyFiles'
+  12a2: 'get_ExportedTypes'
+  12b4: 'get_Attributes'
+  12c3: 'FieldAttributes'
+  12d3: 'MethodAttributes'
+  12e4: 'ManifestResourceAttributes'
+  12ff: 'TypeAttributes'
+  130e: 'get_ImplAttributes'
+  1321: 'MethodImplAttributes'
+  1336: 'get_CustomAttributes'
+  134b: 'GenericParameterAttributes'
+  1366: 'EventAttributes'
+  1376: 'MethodImportAttributes'
+  138d: 'get_DeclarativeSecurityAttributes'
+  13af: 'PropertyAttributes'
+  13c2: 'GetBlobBytes'
+  13cf: 'get_Flags'
+  13d9: 'AssemblyFlags'
+  13e7: 'WriteStrings'
+  13f4: 'WriteUserStrings'
+  1405: 'args'
+  140a: '<>4__this'
+  1414: 'Equals'
+  141b: 'MetadataTokens'
+  142a: 'PEReaderExtensions'
+  143d: 'MetadataReaderExtensions'
+  1456: 'VisualizeAllGenerations'
+  146e: 'GetInterfaceImplementations'
+  148a: 'System.Collections'
+  149d: 'get_FieldDefinitions'
+  14b2: 'get_MethodDefinitions'
+  14c8: 'get_TypeDefinitions'
+  14dc: 'get_EventDefinitions'
+  14f1: 'get_PropertyDefinitions'
+  1509: 'encMaps'
+  1511: 'readers'
+  1519: 'GetGenericParameters'
+  152e: 'GetParameters'
+  153c: 'GetAccessors'
+  1549: 'EventAccessors'
+  1558: 'PropertyAccessors'
+  156a: 'get_RelativeVirtualAddress'
+  1585: 'GetRelativeVirtualAddress'
+  159f: 'GetConstraints'
+  15ae: 'WriteRows'
+  15b8: 'pendingRows'
+  15c4: 'Concat'
+  15cb: 'Format'
+  15d2: 'Object'
+  15d9: 'Select'
+  15e0: 'Get'
+  15e4: 'get_PermissionSet'
+  15f6: 'get_Offset'
+  1601: 'GetHeapOffset'
+  160f: 'GetOffset'
+  1619: 'op_Implicit'
+  1625: 'op_Explicit'
+  1631: 'get_IsDefault'
+  163f: 'WriteConstant'
+  164d: 'GetConstant'
+  1659: 'get_Parent'
+  1664: 'get_Current'
+  1670: 'WriteEvent'
+  167b: 'WriteGenericParamConstraint'
+  1697: 'GetGenericParameterConstraint'
+  16b5: 'get_Count'
+  16bf: 'GetTableRowCount'
+  16d0: 'count'
+  16d6: 'start'
+  16dc: 'Assert'
+  16e3: 'MethodImport'
+  16f0: 'GetImport'
+  16fa: 'Last'
+  16ff: 'TokenList'
+  1709: 'First'
+  170f: 'get_Out'
+  1717: 'TypeLayout'
+  1722: 'GetLayout'
+  172c: 'MoveNext'
+  1735: 'AddRow'
+  173c: 'Max'
+  1740: 'Hex'
+  1744: 'get_Index'
+  174e: 'TryGetTableIndex'
+  175f: 'HeapIndex'
+  1769: 'ImmutableArray'
+  1778: 'get_MethodBody'
+  1787: 'get_PublicKey'
+  1795: 'WriteAssembly'
+  17a3: 'get_IsAssembly'
+  17b2: 'Any'
+  17b6: 'EditAndContinueLogEntry'
+  17ce: 'WriteDeclSecurity'
+  17e0: 'TEntity'
+  17e8: 'WriteProperty'
+
+#Blob (size = 2892):
+  0: 
+  1: 20-01-01-08
+  6: 20-00-01
+  a: 20-01-01-11-11
+  10: 20-01-01-0E
+  15: 15-12-80-89-01-1E-00
+  1d: 15-12-81-BD-01-11-59
+  25: 07-0A-12-10-02-1D-0E-08-0E-12-35-12-39-12-3D-12-0C-12-41
+  39: 15-12-80-91-02-0E-02
+  41: 20-02-01-1C-18
+  47: 10-01-02-02-15-12-80-95-01-1E-00-15-12-80-91-02-1E-00-02
+  5b: 0A-01-0E
+  5f: 00-01-01-0E
+  64: 20-02-01-03-08
+  6a: 00-01-12-35-0E
+  70: 20-01-01-12-81-E1
+  77: 00-01-12-3D-12-39
+  7e: 00-00-12-49
+  83: 20-00-0E
+  87: 07-02-02-15-12-5D-01-12-3D
+  91: 15-12-5D-01-1D-0E
+  98: 15-12-80-8D-01-12-3D
+  a0: 20-00-08
+  a4: 10-01-02-15-12-80-95-01-1E-00-15-12-80-95-01-1E-00-08
+  b7: 0A-01-12-3D
+  bc: 15-12-5D-01-12-3D
+  c3: 20-01-01-15-12-80-95-01-13-00
+  ce: 15-12-4D-01-12-3D
+  d5: 20-01-13-00-08
+  db: 20-02-01-12-3D-15-12-4D-01-12-3D
+  e7: 15-12-80-91-02-12-3D-15-11-55-01-11-59
+  f5: 10-02-02-15-12-80-95-01-1E-01-15-12-80-95-01-1E-00-15-12-80-91-02-1E-00-1E-01
+  110: 0A-02-12-3D-15-11-55-01-11-59
+  11b: 10-01-01-15-11-55-01-1E-00-15-12-80-95-01-1E-00
+  12c: 0A-01-15-11-55-01-11-59
+  135: 07-02-08-02
+  13a: 00-02-0E-0E-1C
+  140: 10-01-01-1E-00-15-12-80-95-01-1E-00
+  14d: 07-01-02
+  151: 00-02-08-12-3D-11-71
+  159: 00-01-01-02
+  15e: 20-01-01-13-00
+  164: 0A-01-1D-0E
+  169: 07-14-0E-08-1D-08-08-0E-02-08-15-11-65-01-1D-0E-1D-0E-08-02-08-1D-0E-02-0E-08-0E-02-02-02
+  188: 20-01-0E-0E
+  18d: 20-00-15-11-65-01-13-00
+  196: 15-11-65-01-1D-0E
+  19d: 20-00-13-00
+  1a2: 00-02-08-08-08
+  1a8: 20-00-02
+  1ac: 00-01-08-15-12-80-95-01-08
+  1b6: 07-06-15-11-55-01-11-59-08-08-15-11-55-01-15-11-55-01-11-59-02-11-69
+  1ce: 15-11-55-01-15-11-55-01-11-59
+  1d9: 20-00-11-6D
+  1de: 00-01-08-11-59
+  1e4: 15-11-55-01-11-59
+  1eb: 00-01-11-69-11-59
+  1f2: 07-09-11-71-08-08-08-02-02-02-11-59-02
+  200: 00-02-02-11-6D-10-11-71
+  209: 00-02-11-59-11-71-08
+  211: 10-01-03-08-15-11-55-01-1E-00-1E-00-15-12-81-BD-01-1E-00
+  225: 0A-01-11-59
+  22a: 07-04-02-08-11-69-1E-00
+  233: 20-02-11-69-11-69-10-08
+  23c: 15-12-75-03-12-3D-11-69-1E-00
+  247: 20-02-13-02-13-00-13-01
+  250: 07-01-0E
+  254: 00-01-11-69-11-79
+  25b: 15-12-75-03-12-3D-11-69-0E
+  265: 00-01-11-69-11-7D
+  26c: 00-01-11-69-11-80-81
+  274: 00-01-11-69-11-80-85
+  27c: 07-0B-02-0E-02-08-11-69-12-3D-0E-08-08-02-02
+  28c: 00-02-08-12-3D-11-69
+  294: 00-03-0E-0E-1C-1C
+  29b: 00-04-0E-0E-1C-1C-1C
+  2a3: 00-02-0E-0E-0E
+  2a9: 07-04-11-71-02-0E-02
+  2b1: 07-04-1E-00-02-1E-00-0E
+  2ba: 1E-00
+  2bd: 20-01-02-13-00
+  2c3: 07-02-15-12-80-95-01-11-69-0E
+  2ce: 0A-02-1E-00-11-69
+  2d5: 15-12-80-8D-01-1E-00
+  2dd: 0A-01-11-69
+  2e2: 00-03-0E-0E-0E-0E
+  2e9: 07-03-12-1C-02-0E
+  2f0: 15-12-80-91-02-11-81-CD-0E
+  2fa: 0A-02-11-81-CD-0E
+  301: 00-02-0E-0E-15-12-80-95-01-0E
+  30c: 07-02-11-80-9D-08
+  313: 20-00-11-80-9D
+  319: 20-00-11-79
+  31e: 20-00-11-80-81
+  324: 07-04-11-80-A5-11-80-A1-11-80-A9-11-80-AD
+  333: 20-00-11-80-A1
+  339: 20-00-11-80-A5
+  33f: 20-00-11-80-A9
+  345: 20-01-11-80-AD-11-80-A9
+  34e: 20-00-11-59
+  353: 07-06-11-80-B5-11-80-B1-11-80-B9-11-80-BD-11-80-C1-08
+  366: 20-00-11-80-B1
+  36c: 20-00-11-80-B5
+  372: 20-00-11-80-B9
+  378: 20-01-11-80-BD-11-80-B9
+  381: 20-00-11-80-C1
+  387: 00-01-11-69-11-80-B9
+  38f: 20-00-11-80-99
+  395: 20-00-11-80-C5
+  39b: 15-12-80-91-02-11-80-CD-11-69
+  3a6: 0A-01-11-80-CD
+  3ac: 20-00-11-80-D5
+  3b2: 15-12-80-91-02-11-80-DD-11-69
+  3bd: 0A-01-11-80-DD
+  3c3: 20-00-11-82-0D
+  3c9: 0A-01-08
+  3cd: 07-06-11-80-C9-11-80-C5-11-80-CD-11-80-D1-08-08
+  3de: 20-00-11-80-C9
+  3e4: 20-00-11-80-CD
+  3ea: 20-01-11-80-D1-11-80-CD
+  3f3: 20-00-11-80-85
+  3f9: 20-00-11-82-11
+  3ff: 07-05-11-80-D9-11-80-D5-11-80-DD-11-80-E1-11-80-E5
+  411: 20-00-11-80-D9
+  417: 20-00-11-80-DD
+  41d: 20-01-11-80-E1-11-80-DD
+  426: 20-00-11-80-E5
+  42c: 20-00-11-82-15
+  432: 15-12-80-91-02-11-81-C1-11-69
+  43d: 0A-01-11-81-C1
+  443: 20-00-11-82-19
+  449: 15-12-80-91-02-11-81-C5-11-69
+  454: 0A-01-11-81-C5
+  45a: 20-00-11-82-1D
+  460: 20-00-11-82-21
+  466: 20-00-11-82-25
+  46c: 0A-01-06
+  470: 20-00-11-82-29
+  476: 00-01-11-69-11-82-29
+  47e: 07-05-08-08-11-80-E9-08-02
+  488: 00-01-11-81-C1-08
+  48f: 20-01-11-80-E9-11-81-C1
+  498: 20-00-11-82-2D
+  49e: 07-04-11-80-F1-11-80-ED-11-80-F5-11-80-F9
+  4ad: 20-00-11-80-ED
+  4b3: 20-00-11-80-F1
+  4b9: 20-00-11-80-F5
+  4bf: 20-01-11-80-F9-11-80-F5
+  4c8: 07-04-08-08-11-80-FD-02
+  4d1: 00-01-11-82-31-08
+  4d8: 20-01-11-80-FD-11-82-31
+  4e1: 20-00-11-82-35
+  4e7: 0A-01-05
+  4eb: 07-04-11-81-05-11-81-01-11-81-09-11-81-0D
+  4fa: 20-00-11-81-01
+  500: 20-00-11-81-05
+  506: 20-00-11-81-09
+  50c: 20-01-11-81-0D-11-81-09
+  515: 07-04-11-81-15-11-81-11-11-81-19-11-81-1D
+  524: 20-00-11-81-11
+  52a: 20-00-11-81-15
+  530: 20-00-11-81-19
+  536: 20-01-11-81-1D-11-81-19
+  53f: 20-00-11-82-39
+  545: 07-04-08-08-11-81-21-02
+  54e: 00-01-11-82-3D-08
+  555: 20-01-11-81-21-11-82-3D
+  55e: 07-05-11-81-29-11-81-25-11-81-2D-11-81-31-11-81-35
+  570: 20-00-11-81-25
+  576: 20-00-11-81-29
+  57c: 20-00-11-81-2D
+  582: 20-01-11-81-31-11-81-2D
+  58b: 20-00-11-81-35
+  591: 00-01-11-69-11-80-DD
+  599: 20-00-11-82-41
+  59f: 07-05-11-81-3D-11-81-39-11-81-41-11-81-45-11-81-49
+  5b1: 20-00-11-81-39
+  5b7: 20-00-11-81-3D
+  5bd: 20-00-11-81-41
+  5c3: 20-01-11-81-45-11-81-41
+  5cc: 20-00-11-81-49
+  5d2: 20-00-11-82-45
+  5d8: 07-04-08-08-11-81-4D-02
+  5e1: 00-01-11-82-49-08
+  5e8: 20-01-11-81-4D-11-82-49
+  5f1: 07-04-08-08-11-81-51-02
+  5fa: 00-01-11-82-29-08
+  601: 20-01-11-81-51-11-82-29
+  60a: 07-04-08-08-11-81-55-02
+  613: 00-01-11-82-4D-08
+  61a: 20-01-11-81-55-11-82-4D
+  623: 07-02-15-12-81-59-01-11-81-5D-11-81-5D
+  631: 00-01-15-12-80-95-01-11-81-5D-12-3D
+  63e: 15-12-80-95-01-11-81-5D
+  647: 20-00-15-12-81-59-01-13-00
+  651: 15-12-81-59-01-11-81-5D
+  65a: 20-00-11-82-51
+  660: 07-09-02-15-12-81-59-01-11-59-11-59-02-08-11-69-02-11-80-9D-08
+  676: 00-01-15-12-80-95-01-11-59-12-3D
+  682: 15-12-80-95-01-11-59
+  68a: 15-12-81-59-01-11-59
+  692: 00-01-11-59-11-69
+  699: 07-03-02-11-81-61-08
+  6a1: 20-00-11-81-61
+  6a7: 20-00-12-82-59
+  6ad: 00-01-0E-1D-0E
+  6b3: 20-00-11-82-5D
+  6b9: 20-00-11-82-61
+  6bf: 07-05-11-81-69-11-81-65-11-81-6D-11-81-71-08
+  6cf: 20-00-11-81-65
+  6d5: 20-00-11-81-69
+  6db: 20-00-11-81-6D
+  6e1: 20-01-11-81-71-11-81-6D
+  6ea: 07-04-11-81-79-11-81-75-11-81-7D-11-81-81
+  6f9: 20-00-11-81-75
+  6ff: 20-00-11-81-79
+  705: 20-00-11-81-7D
+  70b: 20-01-11-81-81-11-81-7D
+  714: 07-04-11-81-89-11-81-85-11-81-8D-11-81-91
+  723: 20-00-11-81-85
+  729: 20-00-11-81-89
+  72f: 20-00-11-81-8D
+  735: 20-01-11-81-91-11-81-8D
+  73e: 07-06-11-81-99-11-81-95-11-81-9D-11-81-A1-11-81-A5-0A
+  751: 20-00-11-81-95
+  757: 20-00-11-81-99
+  75d: 20-00-11-81-9D
+  763: 20-01-11-81-A1-11-81-9D
+  76c: 20-00-11-81-A5
+  772: 20-00-0A
+  776: 07-05-08-08-11-81-A9-08-02
+  780: 00-01-11-81-C5-08
+  787: 20-01-11-81-A9-11-81-C5
+  790: 20-00-11-82-69
+  796: 20-00-11-82-6D
+  79c: 15-12-80-91-02-11-81-C9-11-69
+  7a7: 0A-01-11-81-C9
+  7ad: 07-04-08-08-11-81-AD-02
+  7b6: 00-01-11-82-71-08
+  7bd: 20-01-11-81-AD-11-82-71
+  7c6: 07-04-08-08-11-81-B1-02
+  7cf: 00-01-11-81-C9-08
+  7d6: 20-01-11-81-B1-11-81-C9
+  7df: 20-00-11-81-C5
+  7e5: 00-01-11-69-11-81-C5
+  7ed: 07-05-08-11-81-B5-02-0E-02
+  7f7: 00-02-08-12-3D-11-82-75
+  800: 00-01-11-81-B5-08
+  807: 20-01-0E-11-81-B5
+  80e: 00-01-11-69-11-81-B5
+  816: 20-03-01-0E-1C-1C
+  81d: 00-02-11-81-B5-12-3D-11-81-B5
+  828: 07-05-08-11-79-02-0E-02
+  831: 00-01-11-79-08
+  837: 20-01-0E-11-79
+  83d: 00-02-11-79-12-3D-11-79
+  846: 07-05-08-11-80-85-02-1D-05-02
+  851: 00-01-11-80-85-08
+  858: 20-01-1D-05-11-80-85
+  860: 00-01-0E-1D-05
+  866: 00-02-11-80-85-12-3D-11-80-85
+  871: 07-06-08-08-02-0E-11-81-B9-02
+  87c: 00-01-11-80-81-08
+  883: 20-01-11-81-B9-11-80-81
+  88c: 00-03-02-0E-0E-11-82-7D
+  895: 07-02-11-6D-08
+  89b: 20-01-08-1C
+  8a0: 00-01-11-79-11-69
+  8a7: 00-01-11-7D-11-69
+  8ae: 20-01-0E-11-7D
+  8b4: 07-01-11-81-B9
+  8ba: 00-01-11-80-81-11-69
+  8c2: 00-01-11-80-85-11-69
+  8ca: 00-01-11-69-11-80-CD
+  8d2: 00-01-11-69-11-81-C1
+  8da: 00-01-11-69-11-81-C9
+  8e2: 00-01-11-69-11-81-CD
+  8ea: B7-7A-5C-56-19-34-E0-89
+  8f3: B0-3F-5F-7F-11-D5-0A-3A
+  8fc: FF-FF-FF-FF
+  901: 01
+  903: 00
+  905: 06-12-49
+  909: 06-15-12-4D-01-12-3D
+  911: 06-12-51
+  915: 06-15-11-55-01-15-11-55-01-11-59
+  921: 06-12-3D
+  925: 06-15-12-5D-01-1D-0E
+  92d: 06-1D-0E
+  931: 06-12-14
+  935: 06-12-18
+  939: 06-15-12-80-91-02-12-3D-15-11-55-01-11-59
+  948: 06-15-12-75-03-12-3D-11-69-0E
+  953: 06-15-12-80-91-02-11-80-CD-11-69
+  95f: 06-15-12-80-91-02-11-80-DD-11-69
+  96b: 06-15-12-80-91-02-11-81-C1-11-69
+  977: 06-15-12-80-91-02-11-81-C5-11-69
+  983: 06-15-12-80-91-02-11-81-C9-11-69
+  98f: 06-12-0C
+  993: 06-02
+  996: 00-01-01-1D-0E
+  99c: 00-00-01
+  9a0: 20-02-01-12-49-15-12-4D-01-12-3D
+  9ac: 20-02-01-12-3D-12-49
+  9b4: 20-02-01-15-12-4D-01-12-3D-12-49
+  9c0: 20-01-01-1D-0E
+  9c6: 20-02-11-69-11-59-08
+  9ce: 00-04-02-15-11-55-01-11-59-11-6D-10-08-10-08
+  9de: 30-01-02-1E-00-11-69-15-12-75-03-12-3D-11-69-1E-00
+  9f0: 20-01-0E-11-80-81
+  9f7: 20-01-0E-11-80-85
+  9fe: 20-02-0E-11-69-15-12-75-03-12-3D-11-69-0E
+  a0d: 20-01-0E-07
+  a12: 20-01-0E-08
+  a17: 20-02-0E-11-69-02
+  a1e: 10-01-01-0E-1C
+  a24: 30-01-02-0E-15-12-80-8D-01-1E-00-15-12-80-91-02-1E-00-11-69
+  a39: 20-02-0E-11-80-99-02
+  a41: 20-01-02-0E
+  a46: 20-02-08-11-59-11-59
+  a4e: 20-01-15-11-55-01-11-59-12-3D
+  a59: 20-02-0E-12-3D-11-69
+  a61: 20-01-11-69-11-80-CD
+  a69: 20-01-11-69-11-80-DD
+  a71: 20-01-11-69-11-81-C1
+  a79: 20-01-11-69-11-81-C5
+  a81: 20-01-11-69-11-81-C9
+  a89: 20-01-0E-11-81-CD
+  a90: 28-00-02
+  a94: 01-00-08-00-00-00-00-00
+  a9d: 01-00-01-00-54-02-16-57-72-61-70-4E-6F-6E-45-78-63-65-70-74-69-6F-6E-54-68-72-6F-77-73-01
+  abc: 01-00-07-01-00-00-00-00
+  ac5: 01-00-1C-2E-4E-45-54-46-72-61-6D-65-77-6F-72-6B-2C-56-65-72-73-69-6F-6E-3D-76-34-2E-36-2E-31-01-00-54-0E-14-46-72-61-6D-65-77-6F-72-6B-44-69-73-70-6C-61-79-4E-61-6D-65-14-2E-4E-45-54-20-46-72-61-6D-65-77-6F-72-6B-20-34-2E-36-2E-31
+  b13: 01-00-08-4D-64-44-75-6D-70-65-72-00-00
+  b21: 01-00-05-44-65-62-75-67-00-00
+  b2c: 01-00-07-31-2E-30-2E-30-2E-30-00-00
+  b39: 01-00-05-31-2E-30-2E-30-00-00
+  b44: 01-00-00-00
+  b49: 
+  b4a: 
+  b4b: 
+
+#Guid (size = 16):
+  1: {fc26bd05-eae0-410d-ac11-a21085555e85}
+

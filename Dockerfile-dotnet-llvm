@@ -1,4 +1,6 @@
-FROM ubuntu:19.04
+FROM ubuntu:18.04
+
+RUN apt-get update -y && apt-get upgrade -y
 
 RUN apt-get -y update && \
     apt-get -y install wget apt-utils llvm-8 lldb-8
