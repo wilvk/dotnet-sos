@@ -5,6 +5,11 @@ define DOCKER_COMPOSE_LLVM
 	docker-compose -f docker-compose-test-llvm.yml run --rm --service-ports
 endef
 
+define DOCKER_COMPOSE_GDB
+	docker-compose -f docker-compose-test-gdb.yml build
+	docker-compose -f docker-compose-test-gdb.yml run --rm --service-ports
+endef
+
 llvm:
 	$(DOCKER_COMPOSE_LLVM) test-llvm-server /bin/bash
 
@@ -23,3 +28,9 @@ d-llvm-code-line-breakpoint:
 
 d-llvm-method-breakpoint:
 	lldb --source ./scripts/startup.lldb --source ./scripts/method_breakpoint.lldb
+
+gdb-start-server:
+	gdbserver :9999 /work/tests/binaries/hello_linux
+
+gdb:
+	$(DOCKER_COMPOSE_GDB) dotnet-gdb /bin/bash

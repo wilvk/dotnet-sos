@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  dotnet-gdb:
+    hostname: dotnet-gdb
+    build:
+      context: .
+      dockerfile: Dockerfile-dotnet-gdb
+    working_dir: /work
+    security_opt:
+      - seccomp:unconfined
+    expose:
+      - "9999"
+    ports:
+      - "9999:9999"
+    volumes:
+      - .:/work
