@@ -5,8 +5,7 @@ dotnet core and sos testing
 
 - [x] Build binaries
 - [ ] Understand symbol files
-- [ ] Understand llvm sos debugging
-- [ ] (If needed) Modify sos debugger to stop on line numbers
+- [ ] create a gdb plugin
 
 
 ## TODO:

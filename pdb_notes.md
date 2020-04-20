@@ -76,3 +76,7 @@ dotnet run ../../../../dotnet-sos/test_app/bin/Debug/netcoreapp3.1/test_app.dll
 ## extending gdb:
 
 https://sourceware.org/gdb/current/onlinedocs/gdb/Extending-GDB.html
+
+
+## debugger history:
+https://blog.lextudio.com/the-rough-history-of-net-core-debuggers-b9fb206dc4aa
