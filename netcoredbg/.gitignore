@@ -1,0 +1,24 @@
+# Proposed build directory according to README
+/build/
+
+# Visual Studio Code
+/.vscode/
+
+# Qt Creator files
+CMakeLists.txt.user
+*.config
+*.creator
+*.files
+*.includes
+*.autosave
+
+# Build artifacts
+*.o
+*.so
+*.a
+*.dll
+*.pdb
+bin/
+obj/
+/.dotnet/
+/.coreclr/
