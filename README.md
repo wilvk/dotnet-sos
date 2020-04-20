@@ -11,12 +11,12 @@ dotnet core and sos testing
 
 ## TODO:
 
-determine how to set a breakpoint for a line in a file
-determine how to interact with llvm in a container
-determine how to match up ildasm code to lines in assembly
-how to get a breakpoint for a specific line - and how to confirm it is correct
-how to make a breakpoint hit more than once after continue in lldb
-complete docker file with llvm from: https://apt.llvm.org/
+- [ ] determine how to set a breakpoint for a line in a file
+- [ ] determine how to interact with llvm in a container
+- [ ] determine how to match up ildasm code to lines in assembly
+- [ ] how to get a breakpoint for a specific line - and how to confirm it is correct
+- [ ] how to make a breakpoint hit more than once after continue in lldb
+- [ ] complete docker file with llvm from: https://apt.llvm.org/
 
 ## Links
 
@@ -24,17 +24,20 @@ complete docker file with llvm from: https://apt.llvm.org/
 
 ### Setting a breakpoint:
 
+```
 dotnet build ./test_debug/
 dotnet ./test_debug/bin/Debug/netcoreapp3.1/test_debug.dll &
 export TEST_PID=$!
 lldb
+```
 
+```
 plugin load /root/.dotnet/sos/libsosplugin.so
 process attach -p $TEST_PID
 bpmd test_debug.dll Program.GetTicksElapsed
 process continue
 clrstack -p
-
+```
 
 ###  Setting a breakpoint for a line:
 
@@ -87,6 +90,5 @@ https://dotnet.myget.org/feed/dotnet-core/package/nuget/runtime.linux-x64.Micros
 There is a link to "Download symbols". It gets you a nuget package, which can be renamed to .zip and unzipped to get the symbol files. Please note that the unzip on Linux for some reason sets access rights wrong on the files, so that they are not accessible even for read, so you'd need to chmod them.
 
 If you are using a preview version of the runtime downloaded from https://github.com/dotnet/core-setup, then there are links to tarballs with symbols on that page next to the corresponding runtime links.
-
 
 https://github.com/dotnet/runtime/issues/9213
