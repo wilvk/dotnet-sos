@@ -80,3 +80,10 @@ https://sourceware.org/gdb/current/onlinedocs/gdb/Extending-GDB.html
 
 ## debugger history:
 https://blog.lextudio.com/the-rough-history-of-net-core-debuggers-b9fb206dc4aa
+
+
+## Metadata reader class
+https://docs.microsoft.com/en-us/dotnet/api/system.reflection.metadata.metadatareader?view=netcore-3.1
+
+github question:
+https://github.com/dotnet/runtime/issues/25899
