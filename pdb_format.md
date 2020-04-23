@@ -33,4 +33,8 @@ for setting a breakpoint in a file at a line:
 - What is the corresponding reference in the msil for the line and metadata?
 - What is the corresponding assembly address to break on for the msil reference?
 
-todo: read ecma 335 spec
+todo:
+
+read ecma 335 spec
+
+define a code to msil mapping file format from pdb metadata and/or a code to address mapping file format
