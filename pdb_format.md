@@ -1,6 +1,11 @@
 from 3.1:
 
+pdb overview:
 https://github.com/dotnet/corefx/blob/v3.1.1/src/System.Reflection.Metadata/specs/PortablePdb-Metadata.md
+
+assembly manifest:
+https://docs.microsoft.com/en-us/dotnet/standard/assembly/manifest
+
 
 repreesentations:
 
@@ -35,6 +40,14 @@ for setting a breakpoint in a file at a line:
 
 todo:
 
-read ecma 335 spec
+- [ ] read ecma 335 spec
+- [ ] define a code to msil mapping file format from pdb metadata and/or a code to address mapping file format
+- [ ] build and run ildasm for dotnet core
 
-define a code to msil mapping file format from pdb metadata and/or a code to address mapping file format
+
+## Format
+
+sequence-points
+tables:
+  Document
+  MethodDebugInformation
