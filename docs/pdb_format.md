@@ -51,3 +51,19 @@ sequence-points
 tables:
   Document
   MethodDebugInformation
+
+## ECMA 335
+
+Partition II - Metadata Definitions and Semantics
+Partition V - Debug Interchange Format - CLI producres and consumers
+
+
+p32:
+
+metadata: Data that describes and references the types defined by the CTS. Metadata is stored in a way that is independent of any particular programming language. Thus, metadata provides a common interchange mechanism for use between tools that manipulate programs (such as compilers and debuggers) as well as between these tools and the VES.
+
+p36:
+Relationship to managed metadata-driven execution
+
+
+-
