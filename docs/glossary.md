@@ -1,4 +1,5 @@
-sos - son of ...
+SOS - Son of Strike. A debugger extension that uses the DAC (Data Access Component) to hook into and reveal internal CLR data structures.
+EE - Execution Engine. Appears in the names of parts of the CLR that were adapted specifically for running .NET code. As you found out.
 pdb - program database
 dia - debug interface access
 llvm - low level virtual machine
@@ -13,3 +14,9 @@ cli - common language infrastructure
 ves - virtual execution system
 dif - debug interchange format
 BNF - Backus-Naur form -
+
+ip - instruction pointer
+md - method descriptor
+mt - method table
+sequence point - used in pdb file for debugging-
+EEClass - a cli class in sos

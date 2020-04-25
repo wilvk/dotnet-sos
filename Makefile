@@ -21,7 +21,7 @@ list:
 	@cat Makefile| grep -E '^(.*):$$'|sed -e 's/://g'
 
 d-build-debug:
-	dotnet build ./test_debug/
+	dotnet build ./source/own/test_debug/
 
 d-llvm-code-line-breakpoint:
 	lldb --source ./scripts/startup.lldb --source ./scripts/code_line_breakpoint.lldb

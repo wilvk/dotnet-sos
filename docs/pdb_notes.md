@@ -87,3 +87,26 @@ https://docs.microsoft.com/en-us/dotnet/api/system.reflection.metadata.metadatar
 
 github question:
 https://github.com/dotnet/runtime/issues/25899
+
+### Sequence points
+
+https://benhall.io/c-debug-vs-release-builds-and-debugging-in-visual-studio-from-novice-to-expert-in-one-blog-article/
+
+sequence points - allow for debugging
+
+ILEmitStyle.Debug – no optimization of IL in addition to adding nop instructions in order to map sequence points to IL
+
+Put simply, a .pdb file stores debugging information about your DLL or EXE, which will help a debugger map the IL instructions to the original C# code.
+
+You can ignore IsJITTrackingEnabled, as it is has been ignored by the JIT compiler since .NET 2.0. The JIT compiler will always generate tracking information during debugging to match up IL with its machine code and track where local variables and function arguments are stored
+
+
+https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debuggableattribute.isjittrackingenabled?redirectedfrom=MSDN&view=netcore-3.1#System_Diagnostics_DebuggableAttribute_IsJITTrackingEnabled
+
+Specifically, the compiler tracks the Microsoft Intermediate Language (MSIL)-offset to the native-code offset within a method.
+
+
+DebuggingModes.IgnoreSymbolStoreSequencePoints tells the debugger to work out the sequence points from the IL instead of loading the .pdb file, which would have performance implications. Sequence points are used to map locations in the IL code to locations in your C# source code.
+
+
+

@@ -1,4 +1,4 @@
-bpmd /work/test_debug/Program.cs:14
+bpmd /work/source/own/test_debug/Program.cs:14
 process launch -s
 process status
 thread continue
