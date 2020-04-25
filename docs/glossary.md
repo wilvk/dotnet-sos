@@ -12,3 +12,4 @@ cls - common language specification
 cli - common language infrastructure
 ves - virtual execution system
 dif - debug interchange format
+BNF - Backus-Naur form -

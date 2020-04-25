@@ -65,5 +65,17 @@ metadata: Data that describes and references the types defined by the CTS. Metad
 p36:
 Relationship to managed metadata-driven execution
 
+p44:
+Type System
+
+p79:
+I.9 Metadata
+
+p107:
+I.12.3 Machine state
+
+p130:
+Partition II:
+Metadata Definition and Semantics
 
 -
