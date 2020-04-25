@@ -15,7 +15,7 @@ llvm:
 
 dotnet-build:
 	docker build -f Dockerfile-dotnet-build --memory="4096m" --memory-swap="8192m" -t dotnet-sos .
-	docker run -it -v ${CWDIR}:/work --privileged dotnet-sos /bin/bash
+	docker run -it -v $(shell pwd):/work --privileged dotnet-sos /bin/bash
 
 list:
 	@cat Makefile| grep -E '^(.*):$$'|sed -e 's/://g'
