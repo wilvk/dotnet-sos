@@ -2,15 +2,15 @@ version: "3"
 
 services:
 
-  test-llvm-server:
-    hostname: test-llvm-server
+  llvm:
+    hostname: llvm
     build:
-      context: .
-      dockerfile: Dockerfile-dotnet-llvm
+      context: ..
+      dockerfile: ./docker/Dockerfile-llvm
     working_dir: /work
     security_opt:
       - seccomp:unconfined
     privileged: true
     volumes:
-      - .:/work
+      - ..:/work
     command: /work/tests/scripts/start-llvm-server

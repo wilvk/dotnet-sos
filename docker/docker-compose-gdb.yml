@@ -2,11 +2,11 @@ version: "3"
 
 services:
 
-  dotnet-gdb:
-    hostname: dotnet-gdb
+  gdb:
+    hostname: gdb
     build:
-      context: .
-      dockerfile: Dockerfile-dotnet-gdb
+      context: ..
+      dockerfile: ./docker/Dockerfile-gdb
     working_dir: /work
     security_opt:
       - seccomp:unconfined
@@ -15,4 +15,4 @@ services:
     ports:
       - "9999:9999"
     volumes:
-      - .:/work
+      - ..:/work

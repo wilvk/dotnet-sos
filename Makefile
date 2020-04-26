@@ -1,20 +1,20 @@
 .PHONY: llvm list d-build-debug d-llvm-code-line-breakpoint d-llvm-method-breakpoint
 
 define DOCKER_COMPOSE_LLVM
-	docker-compose -f docker-compose-test-llvm.yml build
-	docker-compose -f docker-compose-test-llvm.yml run --rm --service-ports
+	docker-compose -f docker/docker-compose-llvm.yml build
+	docker-compose -f docker/docker-compose-llvm.yml run --rm --service-ports
 endef
 
 define DOCKER_COMPOSE_GDB
-	docker-compose -f docker-compose-test-gdb.yml build
-	docker-compose -f docker-compose-test-gdb.yml run --rm --service-ports
+	docker-compose -f docker/docker-compose-gdb.yml build
+	docker-compose -f docker/docker-compose-gdb.yml run --rm --service-ports
 endef
 
 llvm:
-	$(DOCKER_COMPOSE_LLVM) test-llvm-server /bin/bash
+	$(DOCKER_COMPOSE_LLVM) llvm /bin/bash
 
 dotnet-build:
-	docker build -f Dockerfile-dotnet-build --memory="4096m" --memory-swap="8192m" -t dotnet-sos .
+	docker build -f ./docker/Dockerfile-dotnet-build --memory="4096m" --memory-swap="8192m" -t dotnet-sos .
 	docker run -it -v $(shell pwd):/work --privileged dotnet-sos /bin/bash
 
 list:
