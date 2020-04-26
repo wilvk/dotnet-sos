@@ -1,0 +1,168 @@
+﻿<!-- Copyright (c)  Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net46;netcoreapp3.1</TargetFrameworks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- 
+      We would need to download 32bit dotnet cli, which would add extra time to PR runs 
+      Testing 64bit only on Desktop suffixiently covers our interop code paths.  
+    -->
+    <TestArchitectures Condition="'$(TargetFramework)' == 'net46'">x64;x86</TestArchitectures>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.DiaSymReader.PortablePdb\Microsoft.DiaSymReader.PortablePdb.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DiaSymReader.Native" Version="$(MicrosoftDiaSymReaderNativeVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Resources\**\*.cs" />
+    <Content Include="Resources\**\*.cs" />
+    <Content Include="Resources\**\*.cmd" />
+    <Content Include="Resources\**\*.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Async.dll">
+      <LogicalName>Async.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Async.pdb">
+      <LogicalName>Async.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Async.dllx">
+      <LogicalName>Async.dllx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Async.pdbx">
+      <LogicalName>Async.pdbx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Documents.dll">
+      <LogicalName>Documents.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Documents.pdb">
+      <LogicalName>Documents.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Documents.dllx">
+      <LogicalName>Documents.dllx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Documents.pdbx">
+      <LogicalName>Documents.pdbx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Scopes.dll">
+      <LogicalName>Scopes.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Scopes.pdb">
+      <LogicalName>Scopes.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Scopes.dllx">
+      <LogicalName>Scopes.dllx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Scopes.pdbx">
+      <LogicalName>Scopes.pdbx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MethodBoundaries.dll">
+      <LogicalName>MethodBoundaries.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MethodBoundaries.pdb">
+      <LogicalName>MethodBoundaries.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MethodBoundaries.dllx">
+      <LogicalName>MethodBoundaries.dllx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MethodBoundaries.pdbx">
+      <LogicalName>MethodBoundaries.pdbx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MiscEmbedded.dll">
+      <LogicalName>MiscEmbedded.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EmbeddedSource.cs">
+      <LogicalName>EmbeddedSource.cs</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EmbeddedSourceSmall.cs">
+      <LogicalName>EmbeddedSourceSmall.cs</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EmbeddedSourceNoSequencePoints.cs">
+      <LogicalName>EmbeddedSourceNoSequencePoints.cs</LogicalName>
+    </EmbeddedResource>
+      <EmbeddedResource Include="Resources\EmbeddedSourceNoCode.cs">
+          <LogicalName>EmbeddedSourceNoCode.cs</LogicalName>
+      </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EmbeddedSource.dll">
+      <LogicalName>EmbeddedSource.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EmbeddedSource.pdb">
+      <LogicalName>EmbeddedSource.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EmbeddedSource.dllx">
+      <LogicalName>EmbeddedSource.dllx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EmbeddedSource.pdbx">
+      <LogicalName>EmbeddedSource.pdbx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SourceLink.dll">
+      <LogicalName>SourceLink.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SourceLink.pdb">
+      <LogicalName>SourceLink.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SourceLink.dllx">
+      <LogicalName>SourceLink.dllx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SourceLink.pdbx">
+      <LogicalName>SourceLink.pdbx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SourceLink.json">
+      <LogicalName>SourceLink.json</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SourceLink.Embedded.dll">
+      <LogicalName>SourceLink.Embedded.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.dll">
+      <LogicalName>EncMethodExtents.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.pdb">
+      <LogicalName>EncMethodExtents.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.dllx">
+      <LogicalName>EncMethodExtents.dllx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.pdbx">
+      <LogicalName>EncMethodExtents.pdbx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.1.metadata">
+      <LogicalName>EncMethodExtents.1.metadata</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.1.pdb">
+      <LogicalName>EncMethodExtents.1.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.1.metadatax">
+      <LogicalName>EncMethodExtents.1.metadatax</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.1.pdbx">
+      <LogicalName>EncMethodExtents.1.pdbx</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.2.metadata">
+      <LogicalName>EncMethodExtents.2.metadata</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.2.pdb">
+      <LogicalName>EncMethodExtents.2.pdb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.2.metadatax">
+      <LogicalName>EncMethodExtents.2.metadatax</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EncMethodExtents\EncMethodExtents.2.pdbx">
+      <LogicalName>EncMethodExtents.2.pdbx</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(OS)' == 'Windows_NT'">
+    <Content Include="$(NuGetPackageRoot)\Microsoft.DiaSymReader.Native\$(MicrosoftDiaSymReaderNativeVersion)\runtimes\win\native\Microsoft.DiaSymReader.Native.x86.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+      <Link>Microsoft.DiaSymReader.Native.x86.dll</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)\Microsoft.DiaSymReader.Native\$(MicrosoftDiaSymReaderNativeVersion)\runtimes\win\native\Microsoft.DiaSymReader.Native.amd64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+      <Link>Microsoft.DiaSymReader.Native.amd64.dll</Link>
+    </Content>
+  </ItemGroup>
+</Project>

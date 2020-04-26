@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_pdb", "test_pdb\test_p
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pdb_testing", "tests\pdb_testing.csproj", "{E9931C0A-CE59-4D1B-B47B-3AFFC64D0FEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.DiaSymReader.PortablePdb", "..\..\cloned\symreader-portable\src\Microsoft.DiaSymReader.PortablePdb\Microsoft.DiaSymReader.PortablePdb.csproj", "{34CA2632-5CF0-49AC-8702-DDC2882528BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{E9931C0A-CE59-4D1B-B47B-3AFFC64D0FEE}.Release|x64.Build.0 = Release|Any CPU
 		{E9931C0A-CE59-4D1B-B47B-3AFFC64D0FEE}.Release|x86.ActiveCfg = Release|Any CPU
 		{E9931C0A-CE59-4D1B-B47B-3AFFC64D0FEE}.Release|x86.Build.0 = Release|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Debug|x64.Build.0 = Debug|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Debug|x86.Build.0 = Debug|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Release|x64.ActiveCfg = Release|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Release|x64.Build.0 = Release|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Release|x86.ActiveCfg = Release|Any CPU
+		{34CA2632-5CF0-49AC-8702-DDC2882528BF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
