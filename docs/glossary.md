@@ -20,3 +20,4 @@ md - method descriptor
 mt - method table
 sequence point - used in pdb file for debugging-
 EEClass - a cli class in sos
+DAC - data access component - https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/dac-notes.md
