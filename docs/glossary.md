@@ -27,3 +27,6 @@ gnujit - GNU JII interface - now maintained by LLVM
 metadata -
 dbi - debugger interface
 bc - base class liibrary
+ICorDebug - CLR debugging api - https://docs.microsoft.com/en-us/dotnet/framework/unmanaged-api/debugging/
+BOTR - Book of the Runtime - https://github.com/dotnet/coreclr/tree/master/Documentation/botr
+mdbg - managed debugger
