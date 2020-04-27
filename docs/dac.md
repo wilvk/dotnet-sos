@@ -27,7 +27,7 @@ https://docs.microsoft.com/en-us/archive/blogs/jmstall/how-do-managed-breakpoint
 mdbg sample:
 https://docs.microsoft.com/en-us/archive/blogs/jmstall/managed-debugger-sample
 
-mfbg repo:
+clrmd repo:
 https://github.com/wilvk/clrmd
 
 
@@ -42,6 +42,11 @@ dotnet-symbol - grabs the correct symbols for any assembly:
 https://github.com/dotnet/symstore/tree/master/src/dotnet-symbol
 
 TODO:
+
+read sample:
+https://docs.microsoft.com/en-us/archive/blogs/jmstall/managed-debugger-sample
+
+
 do tutorial:
 https://github.com/wilvk/clrmd
 
