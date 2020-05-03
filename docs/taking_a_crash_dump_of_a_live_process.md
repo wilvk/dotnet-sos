@@ -18,7 +18,8 @@ Open another terminal
 
 Load up the llvm container
 
-make llvm
+docker ps
+docker exec -it <container_id> bash
 
 Chdir to the test_debug path:
 
