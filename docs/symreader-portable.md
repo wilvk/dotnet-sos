@@ -15,3 +15,16 @@ gdb will stop at a memory address from a breakpont being hit. the address needs 
 ## Getting the filename from an offset
 
 https://github.com/dotnet/symreader-portable/blob/f6ce54910bd3e3c0563fcd6d16d4b1c1123288ca/src/Microsoft.DiaSymReader.PortablePdb/SymMethod.cs#L528
+
+
+setting up a test:
+
+get a pdb file
+use SymBinder class.
+call public int GetReaderFromPdbFile() with pdb file
+use reader to get documents
+
+use method token from clrmd and sequence point to determine position in il
+
+todo: find out how to set a breakpoint at a line based on offset in il using clrmd
+also, how to get types and values from a breakpoint position
