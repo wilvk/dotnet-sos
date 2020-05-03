@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {
+      "Microsoft.VisualStudio.UnitTesting/11.0.50727.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll": {}
+        }
+      },
+      "Microsoft.Diagnostics.Runtime/1.0.0": {
+        "type": "project"
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.VisualStudio.UnitTesting/11.0.50727.1": {
+      "sha512": "DoqQ6Zl7GcytRa1isWv20MyV1znFRDje6k/y3edbew3Qx/Z1r5Cf6rBktD7lGxN97d2VVC5RzdFHw+dci9lsMw==",
+      "type": "package",
+      "path": "microsoft.visualstudio.unittesting/11.0.50727.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-LICENSE.txt",
+        "lib/net45/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll",
+        "lib/net45/Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml",
+        "microsoft.visualstudio.unittesting.11.0.50727.1.nupkg.sha512",
+        "microsoft.visualstudio.unittesting.nuspec",
+        "tools/net45/MSTest.exe",
+        "tools/net45/MSTest.exe.config"
+      ]
+    },
+    "Microsoft.Diagnostics.Runtime/1.0.0": {
+      "type": "project",
+      "path": "../Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj",
+      "msbuildProject": "../Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "Microsoft.VisualStudio.UnitTesting >= 11.0.50727.1"
+    ],
+    ".NETFramework,Version=v4.5": []
+  },
+  "packageFolders": {
+    "/Users/willvk/.nuget/packages/": {}
+  },
+  "project": {
+    "restore": {
+      "projectUniqueName": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/Microsoft.Diagnostics.Runtime.Tests.csproj",
+      "projectName": "Microsoft.Diagnostics.Runtime.Tests",
+      "projectPath": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/Microsoft.Diagnostics.Runtime.Tests.csproj",
+      "projectJsonPath": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/project.json",
+      "packagesPath": "/Users/willvk/.nuget/packages/",
+      "outputPath": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/obj/",
+      "projectStyle": "ProjectJson",
+      "validateRuntimeAssets": true,
+      "configFilePaths": [
+        "/Users/willvk/.nuget/NuGet/NuGet.Config"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {
+            "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj": {
+              "projectPath": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj"
+            }
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "Microsoft.VisualStudio.UnitTesting": "[11.0.50727.1, )"
+    },
+    "frameworks": {
+      "net45": {}
+    }
+  }
+}
