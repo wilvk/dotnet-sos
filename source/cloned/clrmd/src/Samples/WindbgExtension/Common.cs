@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Microsoft.Diagnostics.Runtime;
+using Microsoft.Diagnostics.Runtime.Interop;
+using RGiesecke.DllExport;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
-using Microsoft.Diagnostics.Runtime;
-using Microsoft.Diagnostics.Runtime.Interop;
-using RGiesecke.DllExport;
 
 namespace WindbgExtension
 {
@@ -46,7 +46,7 @@ namespace WindbgExtension
             //   1. Store a copy of IDebugClient in DebugClient.
             //   2. Replace Console's output stream to be the debugger window.
             //   3. Create an instance of DataTarget using the IDebugClient.
-            if (DebugClient is null)
+            if (DebugClient == null)
             {
                 object client = Marshal.GetUniqueObjectForIUnknown(ptrClient);
                 DebugClient = (IDebugClient)client;
@@ -55,13 +55,13 @@ namespace WindbgExtension
                 stream.AutoFlush = true;
                 Console.SetOut(stream);
 
-                DataTarget = DataTarget.CreateFromDebuggerInterface(DebugClient);
+                DataTarget = Microsoft.Diagnostics.Runtime.DataTarget.CreateFromDebuggerInterface(DebugClient);
             }
 
             // If our ClrRuntime instance is null, it means that this is our first call, or
             // that the dac wasn't loaded on any previous call.  Find the dac loaded in the
             // process (the user must use .cordll), then construct our runtime from it.
-            if (Runtime is null)
+            if (Runtime == null)
             {
                 // Just find a module named mscordacwks and assume it's the one the user
                 // loaded into windbg.
@@ -77,7 +77,7 @@ namespace WindbgExtension
                 }
 
                 // Otherwise, the user didn't run .cordll.
-                if (Runtime is null)
+                if (Runtime == null)
                 {
                     Console.WriteLine("Mscordacwks.dll not loaded into the debugger.");
                     Console.WriteLine("Run .cordll to load the dac before running this command.");
@@ -106,10 +106,10 @@ namespace WindbgExtension
 
         static uint DEBUG_EXTENSION_VERSION(uint Major, uint Minor)
         {
-            return (((Major) & 0xffff) << 16) | ((Minor) & 0xffff);
+            return ((((Major) & 0xffff) << 16) | ((Minor) & 0xffff));
         }
     }
-
+    
     class DbgEngStream : Stream
     {
         public void Clear()
@@ -126,22 +126,36 @@ namespace WindbgExtension
             m_control = (IDebugControl)client;
         }
 
-        public override bool CanRead => false;
+        public override bool CanRead
+        {
+            get { return false; }
+        }
 
-        public override bool CanSeek => false;
+        public override bool CanSeek
+        {
+            get { return false; }
+        }
 
-        public override bool CanWrite => true;
+        public override bool CanWrite
+        {
+            get { return true; }
+        }
 
         public override void Flush()
         {
         }
 
-        public override long Length => -1;
+        public override long Length
+        {
+            get { return -1; }
+        }
 
         public override long Position
         {
-            get => 0;
-
+            get
+            {
+                return 0;
+            }
             set
             {
             }
