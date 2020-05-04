@@ -4,5 +4,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
+  <ItemGroup>
+    <Reference Include="Microsoft.Diagnostics.Runtime">
+      <HintPath>../../artefacts/Microsoft.DiaSymReader.PortablePdb.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
