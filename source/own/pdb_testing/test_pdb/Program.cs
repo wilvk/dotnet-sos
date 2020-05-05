@@ -16,6 +16,7 @@ namespace test_pdb
             //var dllStream = new MemoryStream(GetResourceBlob(dllFilename));
 
             string pdbFilename = "../../artefacts/test_debug.pdb";
+            var pdbPath = Path.GetFullPath((new Uri(pdbFilename)).LocalPath);
             var pdbStream = new MemoryStream(GetResourceBlob(pdbFilename));
 
             //var test = symBinder.GetReaderFromStream(pdbStreeam,
@@ -23,6 +24,22 @@ namespace test_pdb
 
             ISymUnmanagedReader symReader;
             var hresult = symBinder.GetReaderFromPdbFile(NotImplementedMetadataProvider.Instance, pdbFilename, out symReader);
+
+            int documentCount = 0;
+
+            hresult = symReader.GetDocuments(0, out documentCount, null);
+            Console.WriteLine("Number of documents: " + documentCount.ToString());
+
+            ISymUnmanagedDocument[] documents = new ISymUnmanagedDocument[documentCount];
+            hresult = symReader.GetDocuments(0, out documentCount, documents);
+
+
+//            Assert.Equal(HResult.S_OK, document.GetUrl(0, out actualCount, null));
+//
+//            char[] actualUrl = new char[actualCount];
+//            Assert.Equal(HResult.S_OK, document.GetUrl(actualCount, out actualCount2, actualUrl));
+
+
 
             Console.WriteLine("Hello World!");
         }
