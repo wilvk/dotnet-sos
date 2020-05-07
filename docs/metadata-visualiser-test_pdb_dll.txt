@@ -1,0 +1,509 @@
+Debug Directory:
+  CodeView stamp=0xD67DAFDF, version=(0x0100, 0x504D), size=138
+    path='/Users/willvk/source/github/wilvk/dotnet-sos/source/own/pdb_testing/test_pdb/obj/Debug/netcoreapp3.1/test_pdb.pdb', guid={4a80e1c0-4d6c-478d-90a2-6e186952258a}, age=1
+  PdbChecksum stamp=0x00000000, version=(0x0001, 0x0000), size=39
+  Reproducible stamp=0x00000000, version=(0x0000, 0x0000), size=0
+
+MetadataVersion: v4.0.30319
+
+Module (0x00):
+================================================================================================
+   Gen  Name                   Mvid                                         EncId  EncBaseId  
+================================================================================================
+1: 0    'test_pdb.dll' (#247)  {fc3d4c97-61c3-475b-9882-1b6a3de27610} (#1)  nil    nil        
+
+TypeRef (0x01):
+=========================================================================================================================
+    Scope                     Name                                            Namespace                                   
+=========================================================================================================================
+ 1: 0x23000001 (AssemblyRef)  'CompilationRelaxationsAttribute' (#1a4)        'System.Runtime.CompilerServices' (#396)    
+ 2: 0x23000001 (AssemblyRef)  'RuntimeCompatibilityAttribute' (#1f6)          'System.Runtime.CompilerServices' (#396)    
+ 3: 0x23000001 (AssemblyRef)  'DebuggableAttribute' (#fe)                     'System.Diagnostics' (#383)                 
+ 4: 0x01000003 (TypeRef)      'DebuggingModes' (#3b6)                         nil                                         
+ 5: 0x23000001 (AssemblyRef)  'TargetFrameworkAttribute' (#129)               'System.Runtime.Versioning' (#219)          
+ 6: 0x23000001 (AssemblyRef)  'AssemblyCompanyAttribute' (#1dd)               'System.Reflection' (#28f)                  
+ 7: 0x23000001 (AssemblyRef)  'AssemblyConfigurationAttribute' (#185)         'System.Reflection' (#28f)                  
+ 8: 0x23000001 (AssemblyRef)  'AssemblyFileVersionAttribute' (#142)           'System.Reflection' (#28f)                  
+ 9: 0x23000001 (AssemblyRef)  'AssemblyInformationalVersionAttribute' (#15f)  'System.Reflection' (#28f)                  
+ a: 0x23000001 (AssemblyRef)  'AssemblyProductAttribute' (#1c4)               'System.Reflection' (#28f)                  
+ b: 0x23000001 (AssemblyRef)  'AssemblyTitleAttribute' (#112)                 'System.Reflection' (#28f)                  
+ c: 0x23000001 (AssemblyRef)  'Object' (#3f8)                                 'System' (#283)                             
+ d: 0x23000002 (AssemblyRef)  'SymBinder' (#36c)                              'Microsoft.DiaSymReader.PortablePdb' (#21)  
+ e: 0x23000003 (AssemblyRef)  'MemoryStream' (#26e)                           'System.IO' (#17)                           
+ f: 0x23000004 (AssemblyRef)  'ISymUnmanagedReader' (#2e5)                    'Microsoft.DiaSymReader' (#2f9)             
+10: 0x23000004 (AssemblyRef)  'ISymUnmanagedDocument' (#3ff)                  'Microsoft.DiaSymReader' (#2f9)             
+11: 0x23000001 (AssemblyRef)  'Assembly' (#43b)                               'System.Reflection' (#28f)                  
+12: 0x23000001 (AssemblyRef)  'Stream' (#274)                                 'System.IO' (#17)                           
+13: 0x23000004 (AssemblyRef)  'IMetadataImportProvider' (#344)                'Microsoft.DiaSymReader' (#2f9)             
+14: 0x23000001 (AssemblyRef)  'Func`1' (#1)                                   'System' (#283)                             
+15: 0x23000002 (AssemblyRef)  'IMetadataImport' (#415)                        'Microsoft.DiaSymReader.PortablePdb' (#21)  
+16: 0x23000001 (AssemblyRef)  'Int32' (#8)                                    'System' (#283)                             
+17: 0x23000001 (AssemblyRef)  'String' (#235)                                 'System' (#283)                             
+18: 0x23000005 (AssemblyRef)  'Console' (#a6)                                 'System' (#283)                             
+19: 0x23000001 (AssemblyRef)  'MethodBase' (#eb)                              'System.Reflection' (#28f)                  
+1a: 0x23000001 (AssemblyRef)  'MemberInfo' (#2da)                             'System.Reflection' (#28f)                  
+1b: 0x23000001 (AssemblyRef)  'Type' (#e6)                                    'System' (#283)                             
+1c: 0x23000001 (AssemblyRef)  'InvalidOperationException' (#2b9)              'System' (#283)                             
+1d: 0x23000001 (AssemblyRef)  'Byte' (#214)                                   'System' (#283)                             
+1e: 0x23000001 (AssemblyRef)  'IDisposable' (#7e)                             'System' (#283)                             
+1f: 0x23000001 (AssemblyRef)  'NotImplementedException' (#2a1)                'System' (#283)                             
+
+TypeDef (0x02):
+================================================================================================================================================================================================================================================================
+   Name                                     Namespace         EnclosingType  BaseType              Interfaces  Fields                 Methods                Attributes                                                          ClassSize  PackingSize  
+================================================================================================================================================================================================================================================================
+1: '<Module>' (#e)                          nil               nil (TypeDef)  nil (TypeDef)         nil         nil                    nil                    0                                                                   n/a        n/a          
+2: 'Program' (#27b)                         'test_pdb' (#44)  nil (TypeDef)  0x0100000c (TypeRef)  nil         nil                    0x06000001-0x06000003  0x00100000 (BeforeFieldInit)                                        n/a        n/a          
+3: 'NotImplementedMetadataProvider' (#310)  'test_pdb' (#44)  nil (TypeDef)  0x0100000c (TypeRef)  0x01000013  0x04000001-0x04000001  0x06000004-0x06000006  0x00100100 (AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit)  n/a        n/a          
+4: 'TestMetadataProvider' (#32f)            'test_pdb' (#44)  nil (TypeDef)  0x0100000c (TypeRef)  0x01000013  0x04000002-0x04000002  0x06000007-0x06000008  0x00100100 (AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit)  n/a        n/a          
+
+Field (0x04):
+===============================================================================================================================
+   Name                      Signature                     Attributes                             Marshalling  Offset  RVA  
+===============================================================================================================================
+1: 'Instance' (#6e)          typeref#13 (#9e)              0x00000036 (Public, Static, InitOnly)  nil          n/a     0    
+2: '_importProvider' (#35c)  typeref#14<typeref#15> (#a2)  0x00000021 (Private, InitOnly)         nil          n/a     0    
+
+Method (0x06, 0x1C):
+===================================================================================================================================================================================================================================================================================
+   Name                        Signature                            RVA         Parameters             GenericParameters  Attributes                                                                         ImplAttributes  ImportAttributes  ImportName  ImportModule     
+===================================================================================================================================================================================================================================================================================
+1: 'Main' (#28a)               void (string[]) (#aa)                0x00002050  0x08000001-0x08000001  nil                0x00000091 (PrivateScope, Private, Static, HideBySig)                              0               0                 nil         nil (ModuleRef)  
+2: 'GetResourceBlob' (#4d)     uint8[] (string) (#b0)               0x000020D0  0x08000002-0x08000002  nil                0x00000091 (PrivateScope, Private, Static, HideBySig)                              0               0                 nil         nil (ModuleRef)  
+3: '.ctor' (#376)              void () (#6)                         0x00002198  nil                    nil                0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0               0                 nil         nil (ModuleRef)  
+4: 'GetMetadataImport' (#425)  object () (#b6)                      0x000021A1  nil                    nil                0x000001e6 (PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask)     0               0                 nil         nil (ModuleRef)  
+5: '.ctor' (#376)              void () (#6)                         0x000021A9  nil                    nil                0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0               0                 nil         nil (ModuleRef)  
+6: '.cctor' (#37c)             void () (#ba)                        0x000021B2  nil                    nil                0x00001891 (PrivateScope, Private, Static, HideBySig, SpecialName, RTSpecialName)  0               0                 nil         nil (ModuleRef)  
+7: '.ctor' (#376)              void (typeref#14<typeref#15>) (#be)  0x000021BE  0x08000003-0x08000003  nil                0x00001886 (PrivateScope, Public, HideBySig, SpecialName, RTSpecialName)           0               0                 nil         nil (ModuleRef)  
+8: 'GetMetadataImport' (#425)  object () (#b6)                      0x000021CF  nil                    nil                0x000001e6 (PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask)     0               0                 nil         nil (ModuleRef)  
+
+Param (0x08):
+============================================================
+   Name                     Seq#  Attributes  Marshalling  
+============================================================
+1: 'args' (#3c5)            1     0           nil          
+2: 'name' (#bb)             1     0           nil          
+3: 'importProvider' (#35d)  1     0           nil          
+
+MemberRef (0x0a):
+============================================================================================================
+    Parent                 Name                                Signature                                     
+============================================================================================================
+ 1: 0x01000001 (TypeRef)   '.ctor' (#376)                      void (int32) (#1)                             
+ 2: 0x01000002 (TypeRef)   '.ctor' (#376)                      void () (#6)                                  
+ 3: 0x01000003 (TypeRef)   '.ctor' (#376)                      void (typeref#4) (#a)                         
+ 4: 0x01000005 (TypeRef)   '.ctor' (#376)                      void (string) (#10)                           
+ 5: 0x01000006 (TypeRef)   '.ctor' (#376)                      void (string) (#10)                           
+ 6: 0x01000007 (TypeRef)   '.ctor' (#376)                      void (string) (#10)                           
+ 7: 0x01000008 (TypeRef)   '.ctor' (#376)                      void (string) (#10)                           
+ 8: 0x01000009 (TypeRef)   '.ctor' (#376)                      void (string) (#10)                           
+ 9: 0x0100000a (TypeRef)   '.ctor' (#376)                      void (string) (#10)                           
+ a: 0x0100000b (TypeRef)   '.ctor' (#376)                      void (string) (#10)                           
+ b: 0x0100000d (TypeRef)   '.ctor' (#376)                      void () (#6)                                  
+ c: 0x0100000e (TypeRef)   '.ctor' (#376)                      void (uint8[]) (#24)                          
+ d: 0x0100000d (TypeRef)   'GetReaderFromPdbFile' (#8a)        int32 (typeref#13, string, typeref#f&) (#2a)  
+ e: 0x0100000f (TypeRef)   'GetDocuments' (#3e4)               int32 (int32, int32&, typeref#10[]) (#34)     
+ f: 0x01000016 (TypeRef)   'ToString' (#233)                   string () (#3e)                               
+10: 0x01000017 (TypeRef)   'Concat' (#3f1)                     string (string, string) (#42)                 
+11: 0x01000018 (TypeRef)   'WriteLine' (#cf)                   void (string) (#48)                           
+12: 0x01000019 (TypeRef)   'GetCurrentMethod' (#5d)            typeref#19 () (#5b)                           
+13: 0x0100001a (TypeRef)   'get_DeclaringType' (#d9)           typeref#1b () (#60)                           
+14: 0x0100001b (TypeRef)   'get_Assembly' (#437)               typeref#11 () (#65)                           
+15: 0x01000011 (TypeRef)   'GetManifestResourceStream' (#254)  typeref#12 (string) (#6a)                     
+16: 0x0100000c (TypeRef)   'ToString' (#233)                   string () (#3e)                               
+17: 0x01000011 (TypeRef)   'get_FullName' (#ae)                string () (#3e)                               
+18: 0x01000017 (TypeRef)   'Concat' (#3f1)                     string (string[]) (#70)                       
+19: 0x0100001c (TypeRef)   '.ctor' (#376)                      void (string) (#10)                           
+1a: 0x01000012 (TypeRef)   'get_Length' (#23c)                 int64 () (#76)                                
+1b: 0x01000012 (TypeRef)   'CopyTo' (#2d3)                     void (typeref#12) (#7a)                       
+1c: 0x0100001e (TypeRef)   'Dispose' (#f6)                     void () (#6)                                  
+1d: 0x0100000c (TypeRef)   '.ctor' (#376)                      void () (#6)                                  
+1e: 0x0100001f (TypeRef)   '.ctor' (#376)                      void () (#6)                                  
+1f: 0x1b000001 (TypeSpec)  'Invoke' (#77)                      !0 () (#87)                                   
+
+CustomAttribute (0x0c):
+========================================================================================================================================================================================================================
+   Parent                 Constructor             Value                                                                                                                                                                 
+========================================================================================================================================================================================================================
+1: 0x20000001 (Assembly)  0x0a000001 (MemberRef)  01-00-08-00-00-00-00-00 (#c8)                                                                                                                                         
+2: 0x20000001 (Assembly)  0x0a000002 (MemberRef)  01-00-01-00-54-02-16-57-72-61-70-4E-6F-6E-45-78-63-65-70-74-69-6F-6E-54-68-72-6F-77-73-01 (#d1)                                                                       
+3: 0x20000001 (Assembly)  0x0a000003 (MemberRef)  01-00-07-01-00-00-00-00 (#f0)                                                                                                                                         
+4: 0x20000001 (Assembly)  0x0a000004 (MemberRef)  01-00-18-2E-4E-45-54-43-6F-72-65-41-70-70-2C-56-65-72-73-69-6F-6E-3D-76-33-2E-31-01-00-54-0E-14-46-72-61-6D-65-77-6F-72-6B-44-69-73-70-6C-61-79-4E-61-6D-65-00 (#f9)  
+5: 0x20000001 (Assembly)  0x0a000005 (MemberRef)  01-00-08-74-65-73-74-5F-70-64-62-00-00 (#12f)                                                                                                                         
+6: 0x20000001 (Assembly)  0x0a000006 (MemberRef)  01-00-05-44-65-62-75-67-00-00 (#13d)                                                                                                                                  
+7: 0x20000001 (Assembly)  0x0a000007 (MemberRef)  01-00-07-31-2E-30-2E-30-2E-30-00-00 (#148)                                                                                                                            
+8: 0x20000001 (Assembly)  0x0a000008 (MemberRef)  01-00-05-31-2E-30-2E-30-00-00 (#155)                                                                                                                                  
+9: 0x20000001 (Assembly)  0x0a000009 (MemberRef)  01-00-08-74-65-73-74-5F-70-64-62-00-00 (#12f)                                                                                                                         
+a: 0x20000001 (Assembly)  0x0a00000a (MemberRef)  01-00-08-74-65-73-74-5F-70-64-62-00-00 (#12f)                                                                                                                         
+
+StandAloneSig (0x11):
+============================================================================
+   Signature                                                                  
+============================================================================
+1: typeref#d, string, typeref#e, typeref#f, int32, int32, typeref#10[] (#15)  
+2: typeref#11, typeref#12, uint8[], bool, typeref#e, uint8[] (#4d)            
+
+TypeSpec (0x1b):
+===============================
+   Name                          
+===============================
+1: typeref#14<typeref#15> (#80)  
+
+Assembly (0x20):
+===============================================================================
+   Name              Version  Culture  PublicKey  Flags  HashAlgorithm      
+===============================================================================
+1: 'test_pdb' (#44)  1.0.0.0  nil      nil        0      0x00008004 (Sha1)  
+
+AssemblyRef (0x23):
+=============================================================================================================
+   Name                                        Version      Culture  PublicKeyOrToken               Flags  
+=============================================================================================================
+1: 'System.Runtime' (#c0)                      4.2.2.0      nil      B0-3F-5F-7F-11-D5-0A-3A (#8c)  0      
+2: 'Microsoft.DiaSymReader.PortablePdb' (#21)  42.42.42.42  nil      31-BF-38-56-AD-36-4E-35 (#95)  0      
+3: 'System.Runtime.Extensions' (#3ca)          4.2.2.0      nil      B0-3F-5F-7F-11-D5-0A-3A (#8c)  0      
+4: 'Microsoft.DiaSymReader' (#2f9)             42.42.42.42  nil      31-BF-38-56-AD-36-4E-35 (#95)  0      
+5: 'System.Console' (#9f)                      4.1.2.0      nil      B0-3F-5F-7F-11-D5-0A-3A (#8c)  0      
+
+#US (size = 184):
+  0: ''
+  1: 'test_debug.pdb'
+  1f: 'Number of documents: '
+  4b: 'Hello World!'
+  65: 'assembly: '
+  7b: 'Resource ''
+  91: '' not found in '
+  b1: '.'
+  b5: ''
+  b6: ''
+  b7: ''
+
+#String (size = 1092):
+  0: ''
+  1: 'Func`1'
+  8: 'Int32'
+  e: '<Module>'
+  17: 'System.IO'
+  21: 'Microsoft.DiaSymReader.PortablePdb'
+  44: 'test_pdb'
+  4d: 'GetResourceBlob'
+  5d: 'GetCurrentMethod'
+  6e: 'Instance'
+  77: 'Invoke'
+  7e: 'IDisposable'
+  8a: 'GetReaderFromPdbFile'
+  9f: 'System.Console'
+  ae: 'get_FullName'
+  bb: 'name'
+  c0: 'System.Runtime'
+  cf: 'WriteLine'
+  d9: 'get_DeclaringType'
+  eb: 'MethodBase'
+  f6: 'Dispose'
+  fe: 'DebuggableAttribute'
+  112: 'AssemblyTitleAttribute'
+  129: 'TargetFrameworkAttribute'
+  142: 'AssemblyFileVersionAttribute'
+  15f: 'AssemblyInformationalVersionAttribute'
+  185: 'AssemblyConfigurationAttribute'
+  1a4: 'CompilationRelaxationsAttribute'
+  1c4: 'AssemblyProductAttribute'
+  1dd: 'AssemblyCompanyAttribute'
+  1f6: 'RuntimeCompatibilityAttribute'
+  214: 'Byte'
+  219: 'System.Runtime.Versioning'
+  233: 'ToString'
+  23c: 'get_Length'
+  247: 'test_pdb.dll'
+  254: 'GetManifestResourceStream'
+  26e: 'MemoryStream'
+  27b: 'Program'
+  283: 'System'
+  28a: 'Main'
+  28f: 'System.Reflection'
+  2a1: 'NotImplementedException'
+  2b9: 'InvalidOperationException'
+  2d3: 'CopyTo'
+  2da: 'MemberInfo'
+  2e5: 'ISymUnmanagedReader'
+  2f9: 'Microsoft.DiaSymReader'
+  310: 'NotImplementedMetadataProvider'
+  32f: 'TestMetadataProvider'
+  344: 'IMetadataImportProvider'
+  35c: '_importProvider'
+  36c: 'SymBinder'
+  376: '.ctor'
+  37c: '.cctor'
+  383: 'System.Diagnostics'
+  396: 'System.Runtime.CompilerServices'
+  3b6: 'DebuggingModes'
+  3c5: 'args'
+  3ca: 'System.Runtime.Extensions'
+  3e4: 'GetDocuments'
+  3f1: 'Concat'
+  3f8: 'Object'
+  3ff: 'ISymUnmanagedDocument'
+  415: 'IMetadataImport'
+  425: 'GetMetadataImport'
+  437: 'get_Assembly'
+
+#Blob (size = 352):
+  0: 
+  1 (MemberRefSignature): 20-01-01-08
+  6 (MemberRefSignature): 20-00-01
+  a (MemberRefSignature): 20-01-01-11-11
+  10 (MemberRefSignature): 20-01-01-0E
+  15 (StandAloneSignature): 07-07-12-35-0E-12-39-12-3D-08-08-1D-12-41
+  24 (MemberRefSignature): 20-01-01-1D-05
+  2a (MemberRefSignature): 20-03-08-12-4D-0E-10-12-3D
+  34 (MemberRefSignature): 20-03-08-08-10-08-1D-12-41
+  3e (MemberRefSignature): 20-00-0E
+  42 (MemberRefSignature): 00-02-0E-0E-0E
+  48 (MemberRefSignature): 00-01-01-0E
+  4d (StandAloneSignature): 07-06-12-45-12-49-1D-05-02-12-39-1D-05
+  5b (MemberRefSignature): 00-00-12-65
+  60 (MemberRefSignature): 20-00-12-6D
+  65 (MemberRefSignature): 20-00-12-45
+  6a (MemberRefSignature): 20-01-12-49-0E
+  70 (MemberRefSignature): 00-01-0E-1D-0E
+  76 (MemberRefSignature): 20-00-0A
+  7a (MemberRefSignature): 20-01-01-12-49
+  80 (TypeSpec): 15-12-51-01-12-55
+  87 (MemberRefSignature): 20-00-13-00
+  8c (Key): B0-3F-5F-7F-11-D5-0A-3A
+  95 (Key): 31-BF-38-56-AD-36-4E-35
+  9e (FieldSignature): 06-12-4D
+  a2 (FieldSignature): 06-15-12-51-01-12-55
+  aa (MethodSignature): 00-01-01-1D-0E
+  b0 (MethodSignature): 00-01-1D-05-0E
+  b6 (MethodSignature): 20-00-1C
+  ba (MethodSignature): 00-00-01
+  be (MethodSignature): 20-01-01-15-12-51-01-12-55
+  c8 (CustomAttribute): 01-00-08-00-00-00-00-00
+  d1 (CustomAttribute): 01-00-01-00-54-02-16-57-72-61-70-4E-6F-6E-45-78-63-65-70-74-69-6F-6E-54-68-72-6F-77-73-01
+  f0 (CustomAttribute): 01-00-07-01-00-00-00-00
+  f9 (CustomAttribute): 01-00-18-2E-4E-45-54-43-6F-72-65-41-70-70-2C-56-65-72-73-69-6F-6E-3D-76-33-2E-31-01-00-54-0E-14-46-72-61-6D-65-77-6F-72-6B-44-69-73-70-6C-61-79-4E-61-6D-65-00
+  12f (CustomAttribute): 01-00-08-74-65-73-74-5F-70-64-62-00-00
+  13d (CustomAttribute): 01-00-05-44-65-62-75-67-00-00
+  148 (CustomAttribute): 01-00-07-31-2E-30-2E-30-2E-30-00-00
+  155 (CustomAttribute): 01-00-05-31-2E-30-2E-30-00-00
+
+Sizes:
+  Key: 16 bytes
+  MethodSignature: 25 bytes
+  FieldSignature: 10 bytes
+  MemberRefSignature: 85 bytes
+  StandAloneSignature: 27 bytes
+  TypeSpec: 6 bytes
+  CustomAttribute: 144 bytes
+
+CustomAttribute sizes by constructor:
+  System.Runtime.Versioning.TargetFrameworkAttribute: 53 bytes
+  System.Runtime.CompilerServices.RuntimeCompatibilityAttribute: 30 bytes
+  System.Reflection.AssemblyCompanyAttribute: 13 bytes
+  System.Reflection.AssemblyFileVersionAttribute: 12 bytes
+  System.Reflection.AssemblyConfigurationAttribute: 10 bytes
+  System.Reflection.AssemblyInformationalVersionAttribute: 10 bytes
+  System.Runtime.CompilerServices.CompilationRelaxationsAttribute: 8 bytes
+  System.Diagnostics.DebuggableAttribute: 8 bytes
+
+#Guid (size = 16):
+  1: {fc3d4c97-61c3-475b-9882-1b6a3de27610}
+
+Method 'Main' (#28a) (0x06000001)
+  Locals: typeref#d, string, typeref#e, typeref#f, int32, int32, typeref#10[] (#15)
+{
+  // Code size      113 (0x71)
+  .maxstack  4
+  IL_0000:  nop
+  IL_0001:  newobj     0x0A00000B
+  IL_0006:  stloc.0
+  IL_0007:  ldstr      0x70000001
+  IL_000c:  stloc.1
+  IL_000d:  ldloc.1
+  IL_000e:  call       0x06000002
+  IL_0013:  newobj     0x0A00000C
+  IL_0018:  stloc.2
+  IL_0019:  ldloc.0
+  IL_001a:  ldsfld     0x04000001
+  IL_001f:  ldloc.1
+  IL_0020:  ldloca.s   V_3
+  IL_0022:  callvirt   0x0A00000D
+  IL_0027:  stloc.s    V_4
+  IL_0029:  ldc.i4.0
+  IL_002a:  stloc.s    V_5
+  IL_002c:  ldloc.3
+  IL_002d:  ldc.i4.0
+  IL_002e:  ldloca.s   V_5
+  IL_0030:  ldnull
+  IL_0031:  callvirt   0x0A00000E
+  IL_0036:  stloc.s    V_4
+  IL_0038:  ldstr      0x7000001F
+  IL_003d:  ldloca.s   V_5
+  IL_003f:  call       0x0A00000F
+  IL_0044:  call       0x0A000010
+  IL_0049:  call       0x0A000011
+  IL_004e:  nop
+  IL_004f:  ldloc.s    V_5
+  IL_0051:  newarr     0x01000010
+  IL_0056:  stloc.s    V_6
+  IL_0058:  ldloc.3
+  IL_0059:  ldc.i4.0
+  IL_005a:  ldloca.s   V_5
+  IL_005c:  ldloc.s    V_6
+  IL_005e:  callvirt   0x0A00000E
+  IL_0063:  stloc.s    V_4
+  IL_0065:  ldstr      0x7000004B
+  IL_006a:  call       0x0A000011
+  IL_006f:  nop
+  IL_0070:  ret
+}
+
+Method 'GetResourceBlob' (#4d) (0x06000002)
+  Locals: typeref#11, typeref#12, uint8[], bool, typeref#e, uint8[] (#4d)
+{
+  // Code size      172 (0xac)
+  .maxstack  4
+  IL_0000:  nop
+  IL_0001:  call       0x0A000012
+  IL_0006:  callvirt   0x0A000013
+  IL_000b:  callvirt   0x0A000014
+  IL_0010:  stloc.0
+  IL_0011:  ldloc.0
+  IL_0012:  ldarg.0
+  IL_0013:  callvirt   0x0A000015
+  IL_0018:  stloc.1
+  IL_0019:  ldstr      0x70000065
+  IL_001e:  ldloc.0
+  IL_001f:  dup
+  IL_0020:  brtrue.s   IL_0026
+  IL_0022:  pop
+  IL_0023:  ldnull
+  IL_0024:  br.s       IL_002b
+  IL_0026:  callvirt   0x0A000016
+  IL_002b:  call       0x0A000010
+  IL_0030:  call       0x0A000011
+  IL_0035:  nop
+  IL_0036:  ldloc.1
+  IL_0037:  ldnull
+  IL_0038:  ceq
+  IL_003a:  stloc.3
+  IL_003b:  ldloc.3
+  IL_003c:  brfalse.s  IL_0075
+  IL_003e:  nop
+  IL_003f:  ldc.i4.5
+  IL_0040:  newarr     0x01000017
+  IL_0045:  dup
+  IL_0046:  ldc.i4.0
+  IL_0047:  ldstr      0x7000007B
+  IL_004c:  stelem.ref
+  IL_004d:  dup
+  IL_004e:  ldc.i4.1
+  IL_004f:  ldarg.0
+  IL_0050:  stelem.ref
+  IL_0051:  dup
+  IL_0052:  ldc.i4.2
+  IL_0053:  ldstr      0x70000091
+  IL_0058:  stelem.ref
+  IL_0059:  dup
+  IL_005a:  ldc.i4.3
+  IL_005b:  ldloc.0
+  IL_005c:  callvirt   0x0A000017
+  IL_0061:  stelem.ref
+  IL_0062:  dup
+  IL_0063:  ldc.i4.4
+  IL_0064:  ldstr      0x700000B1
+  IL_0069:  stelem.ref
+  IL_006a:  call       0x0A000018
+  IL_006f:  newobj     0x0A000019
+  IL_0074:  throw
+  IL_0075:  ldloc.1
+  IL_0076:  callvirt   0x0A00001A
+  IL_007b:  conv.ovf.i
+  IL_007c:  newarr     0x0100001D
+  IL_0081:  stloc.2
+  IL_0082:  ldloc.2
+  IL_0083:  newobj     0x0A00000C
+  IL_0088:  stloc.s    V_4
+  IL_008a:  nop
+  IL_008b:  ldloc.1
+  IL_008c:  ldloc.s    V_4
+  IL_008e:  callvirt   0x0A00001B
+  IL_0093:  nop
+  IL_0094:  nop
+  IL_0095:  leave.s    IL_00a4
+  IL_0097:  ldloc.s    V_4
+  IL_0099:  brfalse.s  IL_00a3
+  IL_009b:  ldloc.s    V_4
+  IL_009d:  callvirt   0x0A00001C
+  IL_00a2:  nop
+  IL_00a3:  endfinally
+  IL_00a4:  ldloc.2
+  IL_00a5:  stloc.s    V_5
+  IL_00a7:  br.s       IL_00a9
+  IL_00a9:  ldloc.s    V_5
+  IL_00ab:  ret
+}
+
+Method '.ctor' (#376) (0x06000003)
+{
+  // Code size        8 (0x8)
+  .maxstack  8
+  IL_0000:  ldarg.0
+  IL_0001:  call       0x0A00001D
+  IL_0006:  nop
+  IL_0007:  ret
+}
+
+Method 'GetMetadataImport' (#425) (0x06000004)
+{
+  // Code size        7 (0x7)
+  .maxstack  8
+  IL_0000:  nop
+  IL_0001:  newobj     0x0A00001E
+  IL_0006:  throw
+}
+
+Method '.ctor' (#376) (0x06000005)
+{
+  // Code size        8 (0x8)
+  .maxstack  8
+  IL_0000:  ldarg.0
+  IL_0001:  call       0x0A00001D
+  IL_0006:  nop
+  IL_0007:  ret
+}
+
+Method '.cctor' (#37c) (0x06000006)
+{
+  // Code size       11 (0xb)
+  .maxstack  8
+  IL_0000:  newobj     0x06000005
+  IL_0005:  stsfld     0x04000001
+  IL_000a:  ret
+}
+
+Method '.ctor' (#376) (0x06000007)
+{
+  // Code size       16 (0x10)
+  .maxstack  8
+  IL_0000:  ldarg.0
+  IL_0001:  call       0x0A00001D
+  IL_0006:  nop
+  IL_0007:  nop
+  IL_0008:  ldarg.0
+  IL_0009:  ldarg.1
+  IL_000a:  stfld      0x04000002
+  IL_000f:  ret
+}
+
+Method 'GetMetadataImport' (#425) (0x06000008)
+{
+  // Code size       12 (0xc)
+  .maxstack  8
+  IL_0000:  ldarg.0
+  IL_0001:  ldfld      0x04000002
+  IL_0006:  callvirt   0x0A00001F
+  IL_000b:  ret
+}
+
