@@ -114,3 +114,27 @@ on L8265 - call with Offset is defined - this is the il offset and can only be u
 
 L8277 - after loading symbols, we resolve the sequence points for the method:
 if(SUCCEEDED(symbolReader.ResolveSequencePoint(Filename, lineNumber, &methodDefToken, &ilOffset)))
+
+
+
+# format
+
+metadata-tools provides this info
+
+
+
+https://github.com/dotnet/roslyn/issues/37237
+
+
+example:
+
+<sequencePoints>
+        <entry offset="0x0" startLine="5" startColumn="5" endLine="5" endColumn="6" document="1" />
+        <entry offset="0x1" hidden="true" document="1" />
+        <entry offset="0x5b" hidden="true" document="1" />
+        <entry offset="0x118" startLine="16" startColumn="5" endLine="16" endColumn="6" document="1" />
+</sequencePoints>
+
+example for a method:
+
+7f (SequencePoints): 01-00-00-01-08-05-01-00-00-02-00-01-04-04-01-00-23-02-04-0E-00-24-02-00-0B-00-2E-02-00-07-00-3F-02-00-17-00-01-02-7D-01-00-0C-75-00
