@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Moq" />
+    <PackageReference Include="Newtonsoft.Json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(RepoSource)\Microsoft.HttpRepl\Microsoft.HttpRepl.csproj" />
+    <ProjectReference Include="$(RepoTest)\Microsoft.HttpRepl.Fakes\Microsoft.HttpRepl.Fakes.csproj" />
+    <ProjectReference Include="$(RepoSource)\Microsoft.Repl\Microsoft.Repl.csproj" />
+  </ItemGroup>
+
+</Project>
