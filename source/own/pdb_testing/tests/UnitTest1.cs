@@ -40,7 +40,7 @@ namespace pdb_testing
         }
 
         [Fact]
-        public void Test_CagGetMetaDataProviderFromStreamForPdb()
+        public void Test_CanGetMetaDataReaderForPdb()
         {
             string peFilePath = Path.GetFullPath("../../../../../artefacts/test_debug.pdb");
             var file = File.OpenRead(peFilePath);
