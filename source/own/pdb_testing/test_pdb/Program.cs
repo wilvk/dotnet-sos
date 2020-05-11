@@ -24,13 +24,17 @@ namespace test_pdb
             string peFilePath = Path.GetFullPath("../../artefacts/test_debug.dll");
             string pdbFilePath = Path.GetFullPath("../../artefacts/test_debug.pdb");
 
-            string searchPath = null;
+            //MemoryStream ms = new MemoryStream();
+            //FileStream file = new FileStream(pdbFilePath, FileMode.Open, FileAccess.Read);
+            //file.CopyTo(ms);
 
-            MemoryStream ms = new MemoryStream();
-            FileStream file = new FileStream(pdbFilePath, FileMode.Open, FileAccess.Read);
-            file.CopyTo(ms);
+            var file = File.OpenRead(peFilePath);
 
-            ISymUnmanagedReader symReader;
+            var peReader = new PEReader(file);
+
+            Console.WriteLine("PER: " + peReader.PEHeaders.CoffHeader.Machine.ToString());
+            var generationData = new GenerationData(peReader, peReader.GetMetadataReader(), peReader);
+            Console.WriteLine("GD: " + generationData.MetadataReader.AssemblyFiles.ToString());
 
             Console.WriteLine("Hello World!");
         }
