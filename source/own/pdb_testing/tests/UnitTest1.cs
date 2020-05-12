@@ -59,8 +59,8 @@ namespace pdb_testing
             var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
             var mdReader = mdProvider.GetMetadataReader();
             var address = Helpers.Address(mdReader, mdReader.DebugMetadataHeader.EntryPoint);
-            Assert.Equal(100663297, address);
 
+            Assert.Equal(100663297, address);
         }
 
         [Fact]
@@ -71,8 +71,8 @@ namespace pdb_testing
             var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
             var mdReader = mdProvider.GetMetadataReader();
             var address = Helpers.AddressString(mdReader, mdReader.DebugMetadataHeader.EntryPoint);
-            Assert.Equal("0x06000001", address);
 
+            Assert.Equal("0x06000001", address);
         }
 
         [Fact]
@@ -83,8 +83,8 @@ namespace pdb_testing
             var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
             var mdReader = mdProvider.GetMetadataReader();
             var table = Helpers.Table(mdReader.DebugMetadataHeader.EntryPoint);
-            Assert.Equal("MethodDef", table);
 
+            Assert.Equal("MethodDef", table);
         }
     }
 }

@@ -69,6 +69,38 @@ namespace test_pdb
             return typeDefinitions;
         }
 
+        public static List<TypeLayout> GetTypeLayouts(MetadataReader reader)
+        {
+            var typeLayouts = new List<TypeLayout>();
+            var typeDefinitions = GetTypeDefinitions(reader);
+
+            foreach(var typeDefinition in typeDefinitions)
+            {
+              typeLayouts.Add(typeDefinition.GetLayout());
+            }
+
+            return typeLayouts;
+        }
+
+        public static List<FieldDefinitionHandle> GetFieldDefinitionHandles(MetadataReader reader)
+        {
+            return reader.FieldDefinitions.ToList();
+        }
+
+        public static List<FieldDefinition> GetFieldDefinitions(MetadataReader reader)
+        {
+            var fieldDefinitions = new List<FieldDefinition>();
+            var fieldDefinitionHandles = GetFieldDefinitionHandles(reader);
+
+            foreach(var fieldDefinitionHandle in fieldDefinitionHandles)
+            {
+              var fieldDefinition = reader.GetFieldDefinition(fieldDefinitionHandle);
+              fieldDefinitions.Add(fieldDefinition);
+            }
+
+            return fieldDefinitions;
+        }
+
 
 // From Microsoft.Metadata.Visualizer lib
 //         public void Visualize(int generation = -1)
