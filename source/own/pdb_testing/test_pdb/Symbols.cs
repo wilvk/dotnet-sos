@@ -1,11 +1,73 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.PortableExecutable;
 using System.IO;
+using System.Reflection.Metadata;
 
 namespace test_pdb
 {
-    public static class Pdb
+    public static class Symbols
     {
+        public static MetadataReader GetMetadataReaderFromFile(string path)
+        {
+            var file = File.OpenRead(path);
+            var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
+            return mdProvider.GetMetadataReader();
+        }
+
+        public static string GetMetadataVersion(MetadataReader reader)
+        {
+            return reader.MetadataVersion;
+        }
+
+        public static int GetEntrypointAddress(MetadataReader reader)
+        {
+            return Helpers.Address(reader, reader.DebugMetadataHeader.EntryPoint);
+        }
+
+        public static ModuleDefinition GetModule(MetadataReader reader)
+        {
+          return reader.GetModuleDefinition();
+        }
+
+        public static List<TypeReferenceHandle> GetTypeReferenceHandles(MetadataReader reader)
+        {
+            return reader.TypeReferences.ToList();
+        }
+
+        public static List<TypeReference> GetTypeReferences(MetadataReader reader)
+        {
+            var typeReferences = new List<TypeReference>();
+            var typeReferenceHandles = GetTypeReferenceHandles(reader);
+
+            foreach(var typeReferenceHandle in typeReferenceHandles)
+            {
+              var typeReference = reader.GetTypeReference(typeReferenceHandle);
+              typeReferences.Add(typeReference);
+            }
+
+            return typeReferences;
+        }
+
+        public static List<TypeDefinitionHandle> GetTypeDefinitionHandles(MetadataReader reader)
+        {
+            return reader.TypeDefinitions.ToList();
+        }
+
+        public static List<TypeDefinition> GetTypeDefinitions(MetadataReader reader)
+        {
+            var typeDefinitions = new List<TypeDefinition>();
+            var typeDefinitionHandles = GetTypeDefinitionHandles(reader);
+
+            foreach(var typeDefinitionHandle in typeDefinitionHandles)
+            {
+              var typeDefinition = reader.GetTypeDefinition(typeDefinitionHandle);
+              typeDefinitions.Add(typeDefinition);
+            }
+
+            return typeDefinitions;
+        }
 
 
 // From Microsoft.Metadata.Visualizer lib

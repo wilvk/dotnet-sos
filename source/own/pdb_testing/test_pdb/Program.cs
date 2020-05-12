@@ -12,11 +12,9 @@ namespace test_pdb
     {
         static void Main(string[] args)
         {
-            string peFilePath = Path.GetFullPath("../../artefacts/test_debug.pdb");
-            var file = File.OpenRead(peFilePath);
-            var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
-            var mdReader = mdProvider.GetMetadataReader();
-            VisualizeHeaders(mdReader);
+            var path = Path.GetFullPath("../../artefacts/test_debug.pdb");
+            var reader = Symbols.GetMetadataReaderFromFile(path);
+            VisualizeHeaders(reader);
         }
 
         static void VisualizeHeaders(MetadataReader reader)
@@ -29,7 +27,7 @@ namespace test_pdb
 
                 if (!reader.DebugMetadataHeader.EntryPoint.IsNil)
                 {
-                    Console.WriteLine($"Entrypoint: {Helpers.AddressString(reader, reader.DebugMetadataHeader.EntryPoint)}");
+                    Console.WriteLine($"Entrypoint: {Helpers.Address(reader, reader.DebugMetadataHeader.EntryPoint)}");
                     Console.WriteLine($"Table:      {Helpers.Table(reader.DebugMetadataHeader.EntryPoint)}");
                 }
             }

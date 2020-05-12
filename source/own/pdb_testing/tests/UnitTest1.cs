@@ -52,7 +52,19 @@ namespace pdb_testing
         }
 
         [Fact]
-        public void Test_CanGetEntrypointFromPdb()
+        public void Test_CanGetEntrypointAddressFromPdb()
+        {
+            string peFilePath = Path.GetFullPath("../../../../../artefacts/test_debug.pdb");
+            var file = File.OpenRead(peFilePath);
+            var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
+            var mdReader = mdProvider.GetMetadataReader();
+            var address = Helpers.Address(mdReader, mdReader.DebugMetadataHeader.EntryPoint);
+            Assert.Equal(100663297, address);
+
+        }
+
+        [Fact]
+        public void Test_CanGetEntrypointAddressStringFromPdb()
         {
             string peFilePath = Path.GetFullPath("../../../../../artefacts/test_debug.pdb");
             var file = File.OpenRead(peFilePath);
@@ -60,6 +72,18 @@ namespace pdb_testing
             var mdReader = mdProvider.GetMetadataReader();
             var address = Helpers.AddressString(mdReader, mdReader.DebugMetadataHeader.EntryPoint);
             Assert.Equal("0x06000001", address);
+
+        }
+
+        [Fact]
+        public void Test_CanGetEntrypointAdressTableStringFromPdb()
+        {
+            string peFilePath = Path.GetFullPath("../../../../../artefacts/test_debug.pdb");
+            var file = File.OpenRead(peFilePath);
+            var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
+            var mdReader = mdProvider.GetMetadataReader();
+            var table = Helpers.Table(mdReader.DebugMetadataHeader.EntryPoint);
+            Assert.Equal("MethodDef", table);
 
         }
     }
