@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.IO;
 using Microsoft.DiaSymReader.PortablePdb;
 using System.Reflection.Metadata;
+using System.Reflection.Metadata.Ecma335;
 using System.Reflection.PortableExecutable;
 
 namespace test_pdb
@@ -10,19 +12,28 @@ namespace test_pdb
     {
         static void Main(string[] args)
         {
-            var symBinder = new SymBinder();
-
-            string peFilePath = Path.GetFullPath("../../artefacts/test_debug.dll");
-            string pdbFilePath = Path.GetFullPath("../../artefacts/test_debug.pdb");
+            string peFilePath = Path.GetFullPath("../../artefacts/test_debug.pdb");
             var file = File.OpenRead(peFilePath);
-
-            var peReader = new PEReader(file);
-
-            Console.WriteLine("PER: " + peReader.PEHeaders.CoffHeader.Machine.ToString());
-            var generationData = new GenerationData(peReader, peReader.GetMetadataReader(), peReader);
-            Console.WriteLine("GD: " + generationData.MetadataReader.AssemblyFiles.ToString());
-
-            Console.WriteLine("Hello World!");
+            var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
+            var mdReader = mdProvider.GetMetadataReader();
+            VisualizeHeaders(mdReader);
         }
+
+        static void VisualizeHeaders(MetadataReader reader)
+        {
+            Console.WriteLine($"MetadataVersion: {reader.MetadataVersion}");
+
+            if (reader.DebugMetadataHeader != null)
+            {
+                Console.WriteLine("Id: " + BitConverter.ToString(reader.DebugMetadataHeader.Id.ToArray()));
+
+                if (!reader.DebugMetadataHeader.EntryPoint.IsNil)
+                {
+                    Console.WriteLine($"Entrypoint: {Helpers.AddressString(reader, reader.DebugMetadataHeader.EntryPoint)}");
+                    Console.WriteLine($"Table:      {Helpers.Table(reader.DebugMetadataHeader.EntryPoint)}");
+                }
+            }
+        }
+
     }
 }

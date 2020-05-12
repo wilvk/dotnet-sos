@@ -19,4 +19,8 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\test_pdb\test_pdb.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -3,6 +3,7 @@ using System.IO;
 using System.Reflection.Metadata;
 using System.Reflection.PortableExecutable;
 using Xunit;
+using test_pdb;
 
 namespace pdb_testing
 {
@@ -48,6 +49,18 @@ namespace pdb_testing
             var mdReader = mdProvider.GetMetadataReader();
 
             Assert.NotNull(mdReader);
+        }
+
+        [Fact]
+        public void Test_CanGetEntrypointFromPdb()
+        {
+            string peFilePath = Path.GetFullPath("../../../../../artefacts/test_debug.pdb");
+            var file = File.OpenRead(peFilePath);
+            var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
+            var mdReader = mdProvider.GetMetadataReader();
+            var address = Helpers.AddressString(mdReader, mdReader.DebugMetadataHeader.EntryPoint);
+            Assert.Equal("0x06000001", address);
+
         }
     }
 }
