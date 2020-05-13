@@ -43,8 +43,8 @@ namespace test_pdb
 
             foreach(var typeReferenceHandle in typeReferenceHandles)
             {
-              var typeReference = reader.GetTypeReference(typeReferenceHandle);
-              typeReferences.Add(typeReference);
+                var typeReference = reader.GetTypeReference(typeReferenceHandle);
+                typeReferences.Add(typeReference);
             }
 
             return typeReferences;
@@ -55,6 +55,11 @@ namespace test_pdb
             return reader.TypeDefinitions.ToList();
         }
 
+        public static TypeDefinition GetTypeDefinition(MetadataReader reader, TypeDefinitionHandle handle)
+        {
+            return reader.GetTypeDefinition(handle);
+        }
+
         public static List<TypeDefinition> GetTypeDefinitions(MetadataReader reader)
         {
             var typeDefinitions = new List<TypeDefinition>();
@@ -62,7 +67,7 @@ namespace test_pdb
 
             foreach(var typeDefinitionHandle in typeDefinitionHandles)
             {
-              var typeDefinition = reader.GetTypeDefinition(typeDefinitionHandle);
+              var typeDefinition = GetTypeDefinition(reader, typeDefinitionHandle);
               typeDefinitions.Add(typeDefinition);
             }
 
@@ -82,9 +87,27 @@ namespace test_pdb
             return typeLayouts;
         }
 
+        public static List<(TypeDefinition, TypeLayout)> GetTypeDefinitionsLayoutTuple(MetadataReader reader)
+        {
+            var typeDefinitionLayouts = new List<(TypeDefinition, TypeLayout)>();
+            var typeDefinitions = GetTypeDefinitions(reader);
+
+            foreach(var typeDefinition in typeDefinitions)
+            {
+              typeDefinitionLayouts.Add((typeDefinition, typeDefinition.GetLayout()));
+            }
+
+            return typeDefinitionLayouts;
+        }
+
         public static List<FieldDefinitionHandle> GetFieldDefinitionHandles(MetadataReader reader)
         {
             return reader.FieldDefinitions.ToList();
+        }
+
+        public static FieldDefinition GetFieldDefinition(MetadataReader reader, FieldDefinitionHandle handle)
+        {
+            return reader.GetFieldDefinition(handle);
         }
 
         public static List<FieldDefinition> GetFieldDefinitions(MetadataReader reader)
@@ -94,11 +117,86 @@ namespace test_pdb
 
             foreach(var fieldDefinitionHandle in fieldDefinitionHandles)
             {
-              var fieldDefinition = reader.GetFieldDefinition(fieldDefinitionHandle);
+              var fieldDefinition = GetFieldDefinition(reader, fieldDefinitionHandle);
               fieldDefinitions.Add(fieldDefinition);
             }
 
             return fieldDefinitions;
+        }
+
+        public static List<MethodDefinitionHandle> GetMethodDefinitionHandles(MetadataReader reader)
+        {
+            return reader.MethodDefinitions.ToList();
+        }
+
+        public static List<MethodDefinition> GetMethodDefinitions(MetadataReader reader)
+        {
+            var methodDefinitions = new List<MethodDefinition>();
+            var methodDefinitionHandles = GetMethodDefinitionHandles(reader);
+
+            foreach(var methodDefinitionHandle in methodDefinitionHandles)
+            {
+                var methodDefinition = reader.GetMethodDefinition(methodDefinitionHandle);
+                methodDefinitions.Add(methodDefinition);
+            }
+            return methodDefinitions;
+        }
+
+        public static MethodDefinition GetMethodDefinition(MetadataReader reader, MethodDefinitionHandle handle)
+        {
+            return reader.GetMethodDefinition(handle);
+        }
+
+        public static MethodImport GetMethodImport(MethodDefinition method)
+        {
+            return method.GetImport();
+        }
+
+        public static List<(MethodDefinition, MethodImport)> GetMethodDefinitionImports(MetadataReader reader)
+        {
+            var methodDefinitionImports = new List<(MethodDefinition, MethodImport)>();
+            var methodDefinitions = GetMethodDefinitions(reader);
+
+            foreach(var methodDefinition in methodDefinitions)
+            {
+              var methodImport = GetMethodImport(methodDefinition);
+              methodDefinitionImports.Add((methodDefinition, methodImport));
+            }
+            return methodDefinitionImports;
+        }
+
+        public static Parameter GetParameter(MetadataReader reader, ParameterHandle handle)
+        {
+            return reader.GetParameter(handle);
+        }
+
+        public static List<Parameter> GetMethodParameters(MetadataReader reader, MethodDefinition method)
+        {
+            var parameters = new List<Parameter>();
+            var parameterHandles = method.GetParameters();
+            foreach(var parameterHandle in parameterHandles)
+            {
+                var parameter = GetParameter(reader, parameterHandle);
+                parameters.Add(parameter);
+            }
+            return parameters;
+        }
+
+        public static GenericParameter GetGenericParameter(MetadataReader reader, GenericParameterHandle handle)
+        {
+            return reader.GetGenericParameter(handle);
+        }
+
+        public static List<GenericParameter> GetGenericMethodParameters(MetadataReader reader, MethodDefinition method)
+        {
+            var genericParameters = new List<GenericParameter>();
+            var genericParameterHandles = method.GetGenericParameters();
+            foreach(var genericParameterHandle in genericParameterHandles)
+            {
+                var genericParameter = GetGenericParameter(reader, genericParameterHandle);
+                genericParameters.Add(genericParameter);
+            }
+            return genericParameters;
         }
 
 
