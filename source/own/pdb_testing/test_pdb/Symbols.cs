@@ -2,19 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.PortableExecutable;
-using System.IO;
 using System.Reflection.Metadata;
 
 namespace test_pdb
 {
     public static class Symbols
     {
-        public static MetadataReader GetMetadataReaderFromFile(string path)
-        {
-            var file = File.OpenRead(path);
-            var mdProvider = MetadataReaderProvider.FromMetadataStream(file);
-            return mdProvider.GetMetadataReader();
-        }
 
         public static string GetMetadataVersion(MetadataReader reader)
         {

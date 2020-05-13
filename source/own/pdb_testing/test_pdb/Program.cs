@@ -13,8 +13,15 @@ namespace test_pdb
         static void Main(string[] args)
         {
             var path = Path.GetFullPath("../../artefacts/test_debug.pdb");
-            var reader = Symbols.GetMetadataReaderFromFile(path);
-            VisualizeHeaders(reader);
+            var stream = Readers.GetFileStreamFromFilePath(path);
+            var isPe = Readers.IsPEStream(stream);
+            var isMd = Readers.IsManagedMetadata(stream);
+            var reader = Readers.GetMetadataReaderFromFileStream(stream);
+            Console.WriteLine("PE: " + isPe.ToString());
+            Console.WriteLine("MD: " + isMd.ToString());
+            //Console.WriteLine("Version: " + version);
+            var typeDefinitions = Symbols.GetTypeDefinitions(reader);
+            Console.Write($"TypeDefinitions: " + typeDefinitions.Count);
         }
 
         static void VisualizeHeaders(MetadataReader reader)
