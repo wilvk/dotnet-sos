@@ -214,6 +214,31 @@ namespace test_pdb
             return documents;
         }
 
+        public static Document GetDocumentByNumber(MetadataReader reader, int number)
+        {
+          var documents = GetDocuments(reader);
+          if(number-1 <= documents.Count)
+          {
+              return documents[number-1];
+          }
+          throw new ApplicationException("Error: value of number: " + number.ToString() + " is out of range: 1 to " + documents.Count);
+        }
+
+        public static int GetDocumentNumberByName(MetadataReader reader, string name)
+        {
+            var documents = GetDocuments(reader);
+            int i = 1;
+            foreach(var document in documents)
+            {
+                if(name == Helpers.DocumentName(reader, document.Name))
+                {
+                  return i;
+                }
+                i++;
+            }
+            return 0;
+        }
+
 
 // From Microsoft.Metadata.Visualizer lib
 //         public void Visualize(int generation = -1)
@@ -262,14 +287,6 @@ namespace test_pdb
 //            WriteBlobs();
 //            WriteGuids();
 //        }
-
-        public static void VisHeaders(PEReader peReader)
-        {
-        }
-
-        public static void VisMemberRefs(PEReader peReader)
-        {
-        }
 
         public static void VisualizeDebugDirectory(PEReader peReader)
         {
