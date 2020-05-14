@@ -25,6 +25,11 @@ namespace test_pdb
             var documents = Symbols.GetDocuments(reader);
             Console.WriteLine("Doc count: " + documents.Count.ToString());
 
+            foreach(var doc in documents)
+            {
+              Console.WriteLine("DOC: " + Helpers.DocumentName(reader, doc.Name));
+            }
+
         }
 
         static void VisualizeHeaders(MetadataReader reader)
