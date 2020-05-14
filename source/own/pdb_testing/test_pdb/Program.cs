@@ -20,8 +20,11 @@ namespace test_pdb
             Console.WriteLine("PE: " + isPe.ToString());
             Console.WriteLine("MD: " + isMd.ToString());
             //Console.WriteLine("Version: " + version);
-            var typeDefinitions = Symbols.GetTypeDefinitions(reader);
-            Console.Write($"TypeDefinitions: " + typeDefinitions.Count);
+            //var typeDefinitions = Symbols.GetTypeDefinitions(reader);
+            //Console.Write($"TypeDefinitions: " + typeDefinitions.Count);
+            var documents = Symbols.GetDocuments(reader);
+            Console.WriteLine("Doc count: " + documents.Count.ToString());
+
         }
 
         static void VisualizeHeaders(MetadataReader reader)

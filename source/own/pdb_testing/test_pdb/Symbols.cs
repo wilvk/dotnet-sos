@@ -192,6 +192,28 @@ namespace test_pdb
             return genericParameters;
         }
 
+        public static List<DocumentHandle> GetDocumentHandles(MetadataReader reader)
+        {
+            return reader.Documents.ToList();
+        }
+
+        public static Document GetDocumentFromdocumentHandle(MetadataReader reader, DocumentHandle handle)
+        {
+            return reader.GetDocument(handle);
+        }
+
+        public static List<Document> GetDocuments(MetadataReader reader)
+        {
+            var documents = new List<Document>();
+            var documentHandles = GetDocumentHandles(reader);
+            foreach(var documentHandle in documentHandles)
+            {
+                var document = GetDocumentFromdocumentHandle(reader, documentHandle);
+                documents.Add(document);
+            }
+            return documents;
+        }
+
 
 // From Microsoft.Metadata.Visualizer lib
 //         public void Visualize(int generation = -1)
