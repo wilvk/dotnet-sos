@@ -31,6 +31,23 @@ namespace test_pdb
                 Console.WriteLine("  #:    "  + documentNumber.ToString() + ", " + documentName);;
             }
 
+            var debugInfoAndSequences = Symbols.GetMethodInformationAndSequencePoints(reader);
+
+            foreach(var (md, sql) in debugInfoAndSequences)
+            {
+                var document = Symbols.GetDocumentFromDocumentHandle(reader, md.Document);
+                var docName = Helpers.DocumentName(reader, document.Name);
+
+                Console.WriteLine("DocName: " + docName);
+
+                foreach(var sp in sql)
+                {
+                    Console.WriteLine("  Start Line:   " + sp.StartLine.ToString());
+                    Console.WriteLine("  End   Line:   " + sp.EndLine.ToString());
+                    Console.WriteLine("  Start Column: " + sp.StartColumn.ToString());
+                    Console.WriteLine("  End   Column: " + sp.EndColumn.ToString());
+                }
+            }
         }
 
         static void VisualizeHeaders(MetadataReader reader)

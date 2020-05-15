@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.PortableExecutable;
 using System.Reflection.Metadata;
+using System.Reflection.Metadata.Ecma335;
+
 
 namespace test_pdb
 {
@@ -197,7 +199,7 @@ namespace test_pdb
             return reader.Documents.ToList();
         }
 
-        public static Document GetDocumentFromdocumentHandle(MetadataReader reader, DocumentHandle handle)
+        public static Document GetDocumentFromDocumentHandle(MetadataReader reader, DocumentHandle handle)
         {
             return reader.GetDocument(handle);
         }
@@ -208,7 +210,7 @@ namespace test_pdb
             var documentHandles = GetDocumentHandles(reader);
             foreach(var documentHandle in documentHandles)
             {
-                var document = GetDocumentFromdocumentHandle(reader, documentHandle);
+                var document = GetDocumentFromDocumentHandle(reader, documentHandle);
                 documents.Add(document);
             }
             return documents;
@@ -216,28 +218,181 @@ namespace test_pdb
 
         public static Document GetDocumentByNumber(MetadataReader reader, int number)
         {
-          var documents = GetDocuments(reader);
-          if(number-1 <= documents.Count)
-          {
-              return documents[number-1];
-          }
-          throw new ApplicationException("Error: value of number: " + number.ToString() + " is out of range: 1 to " + documents.Count);
+            var documentHandles = GetDocumentHandles(reader);
+
+            foreach(var documentHandle in documentHandles)
+            {
+                var rowNumber = reader.GetRowNumber(documentHandle);
+                if(rowNumber == number)
+                {
+                    return GetDocumentFromDocumentHandle(reader, documentHandle);
+                }
+            }
+
+           throw new ApplicationException("Error: unable to find Document with  number: " + number.ToString());
         }
 
         public static int GetDocumentNumberByName(MetadataReader reader, string name)
         {
-            var documents = GetDocuments(reader);
-            int i = 1;
-            foreach(var document in documents)
+            var documentHandles = GetDocumentHandles(reader);
+
+            foreach(var documentHandle in documentHandles)
             {
+                var document = GetDocumentFromDocumentHandle(reader, documentHandle);
+
                 if(name == Helpers.DocumentName(reader, document.Name))
                 {
-                  return i;
+                  return reader.GetRowNumber(documentHandle);
                 }
-                i++;
             }
+
             return 0;
         }
+
+        public static List<MethodDebugInformationHandle> GetMethodDebugInformationHandles(MetadataReader reader)
+        {
+            return reader.MethodDebugInformation.ToList();
+        }
+
+        public static List<MethodDebugInformation> GetMethodDebugInformation(MetadataReader reader)
+        {
+            var methodDebugInformationList = new List<MethodDebugInformation>();
+            var methodDebugInformationHandles = GetMethodDebugInformationHandles(reader);
+
+            foreach(var methodDebugInformationHandle in methodDebugInformationHandles)
+            {
+                var methodDebugInformation = reader.GetMethodDebugInformation(methodDebugInformationHandle);
+                methodDebugInformationList.Add(methodDebugInformation);
+            }
+
+            return methodDebugInformationList;
+        }
+
+        public static int GetRowNumberFromDocumentHandle(MetadataReader reader, DocumentHandle documentHandle)
+        {
+            return reader.GetRowNumber(documentHandle);
+        }
+
+        public static List<(MethodDebugInformation, List<SequencePoint>)> GetMethodInformationAndSequencePoints(MetadataReader reader)
+        {
+            var methodDebugInformationAndSequencePoints = new List<(MethodDebugInformation, List<SequencePoint>)>();
+            var methodDebugInformation = GetMethodDebugInformation(reader);
+
+            foreach(var methodDebugInfo in methodDebugInformation)
+            {
+                var sequencePoints = GetSequencePointsFromMethodDebugInformation(methodDebugInfo);
+                methodDebugInformationAndSequencePoints.Add((methodDebugInfo, sequencePoints));
+            }
+
+            return methodDebugInformationAndSequencePoints;
+        }
+
+        public static List<SequencePoint> GetSequencePointsFromMethodDebugInformation(MethodDebugInformation method)
+        {
+            return method.GetSequencePoints().ToList();
+        }
+
+//        public static string SequencePoint(SequencePoint sequencePoint, bool includeDocument = true)
+//        {
+//            string range = sequencePoint.IsHidden ?
+//                "<hidden>" :
+//                $"({sequencePoint.StartLine}, {sequencePoint.StartColumn}) - ({sequencePoint.EndLine}, {sequencePoint.EndColumn})" +
+//                    (includeDocument ? $" [{RowId(() => sequencePoint.Document)}]" : "");
+//
+//            return $"IL_{sequencePoint.Offset:X4}: " + range;
+//        }
+//
+
+
+//        public void WriteMethodDebugInformation()
+//        {
+//            if (_reader.MethodDebugInformation.Count == 0)
+//            {
+//                return;
+//            }
+//
+//            _writer.WriteLine(MakeTableName(TableIndex.MethodDebugInformation));
+//            _writer.WriteLine(new string('=', 50));
+//
+//            foreach (var handle in _reader.MethodDebugInformation)
+//            {
+//                if (handle.IsNil)
+//                {
+//                    continue;
+//                }
+//
+//                var entry = _reader.GetMethodDebugInformation(handle);
+//
+//                bool hasSingleDocument = false;
+//                bool hasSequencePoints = false;
+//                try
+//                {
+//                    hasSingleDocument = !entry.Document.IsNil;
+//                    hasSequencePoints = !entry.SequencePointsBlob.IsNil;
+//                }
+//                catch (BadImageFormatException)
+//                {
+//                    hasSingleDocument = hasSequencePoints = false;
+//                }
+//
+//                _writer.WriteLine($"{MetadataTokens.GetRowNumber(handle):x}: {HeapOffset(() => entry.SequencePointsBlob)}");
+//
+//                if (!hasSequencePoints)
+//                {
+//                    continue;
+//                }
+//
+//                _blobKinds[entry.SequencePointsBlob] = BlobKind.SequencePoints;
+//
+//                _writer.WriteLine("{");
+//
+//                bool addLineBreak = false;
+//
+//                if (!TryGetValue(() => entry.GetStateMachineKickoffMethod(), out var kickoffMethod) || !kickoffMethod.IsNil)
+//                {
+//                    _writer.WriteLine($"  Kickoff Method: {(kickoffMethod.IsNil ? BadMetadataStr : Token(kickoffMethod))}");
+//                    addLineBreak = true;
+//                }
+//
+//                if (!TryGetValue(() => entry.LocalSignature, out var localSignature) || !localSignature.IsNil)
+//                {
+//                    _writer.WriteLine($"  Locals: {(localSignature.IsNil ? BadMetadataStr : Token(localSignature))}");
+//                    addLineBreak = true;
+//                }
+//
+//                if (hasSingleDocument)
+//                {
+//                    _writer.WriteLine($"  Document: {RowId(() => entry.Document)}");
+//                    addLineBreak = true;
+//                }
+//
+//                if (addLineBreak)
+//                {
+//                    _writer.WriteLine();
+//                }
+//
+//                try
+//                {
+//                    foreach (var sequencePoint in entry.GetSequencePoints())
+//                    {
+//                        _writer.Write("  ");
+//                        _writer.WriteLine(SequencePoint(sequencePoint, includeDocument: !hasSingleDocument));
+//                    }
+//                }
+//                catch (BadImageFormatException)
+//                {
+//                    _writer.WriteLine("  " + BadMetadataStr);
+//                }
+//
+//                _writer.WriteLine("}");
+//            }
+//
+//            _writer.WriteLine();
+//        }
+//
+//
+//
+
 
 
 // From Microsoft.Metadata.Visualizer lib
