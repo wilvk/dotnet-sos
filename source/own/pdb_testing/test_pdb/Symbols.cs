@@ -232,6 +232,11 @@ namespace test_pdb
            throw new ApplicationException("Error: unable to find Document with  number: " + number.ToString());
         }
 
+        public static int GetDocumentRowNumber(MetadataReader reader, DocumentHandle handle)
+        {
+            return reader.GetRowNumber(handle);
+        }
+
         public static int GetDocumentNumberByName(MetadataReader reader, string name)
         {
             var documentHandles = GetDocumentHandles(reader);
@@ -242,7 +247,8 @@ namespace test_pdb
 
                 if(name == Helpers.DocumentName(reader, document.Name))
                 {
-                  return reader.GetRowNumber(documentHandle);
+                  var documentRowNumber = GetDocumentRowNumber(reader, documentHandle);
+                  return documentRowNumber;
                 }
             }
 
@@ -254,18 +260,23 @@ namespace test_pdb
             return reader.MethodDebugInformation.ToList();
         }
 
-        public static List<MethodDebugInformation> GetMethodDebugInformation(MetadataReader reader)
+        public static List<MethodDebugInformation> GetMethodDebugInformationList(MetadataReader reader)
         {
             var methodDebugInformationList = new List<MethodDebugInformation>();
             var methodDebugInformationHandles = GetMethodDebugInformationHandles(reader);
 
             foreach(var methodDebugInformationHandle in methodDebugInformationHandles)
             {
-                var methodDebugInformation = reader.GetMethodDebugInformation(methodDebugInformationHandle);
+                var methodDebugInformation = GetMethodDebugInformation(reader, methodDebugInformationHandle);
                 methodDebugInformationList.Add(methodDebugInformation);
             }
 
             return methodDebugInformationList;
+        }
+
+        public static MethodDebugInformation GetMethodDebugInformation(MetadataReader reader, MethodDebugInformationHandle handle)
+        {
+            return reader.GetMethodDebugInformation(handle);
         }
 
         public static int GetRowNumberFromDocumentHandle(MetadataReader reader, DocumentHandle documentHandle)
@@ -273,23 +284,58 @@ namespace test_pdb
             return reader.GetRowNumber(documentHandle);
         }
 
-        public static List<(MethodDebugInformation, List<SequencePoint>)> GetMethodInformationAndSequencePoints(MetadataReader reader)
+        public static List<(MethodDebugInformation, List<SequencePoint>)> GetMethodDebugInformationAndSequencePoints(MetadataReader reader)
         {
             var methodDebugInformationAndSequencePoints = new List<(MethodDebugInformation, List<SequencePoint>)>();
-            var methodDebugInformation = GetMethodDebugInformation(reader);
+            var methodDebugInformationList = GetMethodDebugInformationList(reader);
+
+            foreach(var methodDebugInformation in methodDebugInformationList)
+            {
+                var sequencePoints = GetSequencePointsFromMethodDebugInformation(methodDebugInformation);
+                methodDebugInformationAndSequencePoints.Add((methodDebugInformation, sequencePoints));
+            }
+
+            return methodDebugInformationAndSequencePoints;
+        }
+
+        public static List<(MethodDebugInformationHandle, List<SequencePoint>)> GetMethodDebugInformationHandlesAndSequencePoints(MetadataReader reader)
+        {
+            var methodDebugInformationAndSequencePoints = new List<(MethodDebugInformationHandle, List<SequencePoint>)>();
+            var methodDebugInformation = GetMethodDebugInformationHandles(reader);
 
             foreach(var methodDebugInfo in methodDebugInformation)
             {
-                var sequencePoints = GetSequencePointsFromMethodDebugInformation(methodDebugInfo);
+                var sequencePoints = GetSequencePointsFromMethodDebugInformationHandle(reader, methodDebugInfo);
                 methodDebugInformationAndSequencePoints.Add((methodDebugInfo, sequencePoints));
             }
 
             return methodDebugInformationAndSequencePoints;
         }
 
+        public static int GetMethodRowNumber(MethodDebugInformationHandle handle)
+        {
+          return MetadataTokens.GetRowNumber(handle);
+        }
+
         public static List<SequencePoint> GetSequencePointsFromMethodDebugInformation(MethodDebugInformation method)
         {
             return method.GetSequencePoints().ToList();
+        }
+
+        public static MethodDebugInformation GetMethodDebugInformationFromMethodDebugInformationHandle(MetadataReader reader, MethodDebugInformationHandle handle)
+        {
+            return reader.GetMethodDebugInformation(handle);
+        }
+
+        public static List<SequencePoint> GetSequencePointsFromMethodDebugInformationHandle(MetadataReader reader, MethodDebugInformationHandle handle)
+        {
+            var methodDebugInformation = GetMethodDebugInformationFromMethodDebugInformationHandle(reader, handle);
+            return methodDebugInformation.GetSequencePoints().ToList();
+        }
+
+        public static int GetMethodRowNumberFromMethodDebugInformationHandle(MetadataReader reader, MethodDebugInformationHandle handle)
+        {
+            return reader.GetRowNumber(handle);
         }
 
 //        public static string SequencePoint(SequencePoint sequencePoint, bool includeDocument = true)

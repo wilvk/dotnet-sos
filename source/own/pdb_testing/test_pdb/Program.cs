@@ -31,21 +31,31 @@ namespace test_pdb
                 Console.WriteLine("  #:    "  + documentNumber.ToString() + ", " + documentName);;
             }
 
-            var debugInfoAndSequences = Symbols.GetMethodInformationAndSequencePoints(reader);
+            var debugInfoAndSequences = Symbols.GetMethodDebugInformationHandlesAndSequencePoints(reader);
 
             foreach(var (md, sql) in debugInfoAndSequences)
             {
-                var document = Symbols.GetDocumentFromDocumentHandle(reader, md.Document);
-                var docName = Helpers.DocumentName(reader, document.Name);
-
-                Console.WriteLine("DocName: " + docName);
-
-                foreach(var sp in sql)
+                var methodDebugInformation = Symbols.GetMethodDebugInformation(reader, md);
+                if(!methodDebugInformation.Document.IsNil)
                 {
-                    Console.WriteLine("  Start Line:   " + sp.StartLine.ToString());
-                    Console.WriteLine("  End   Line:   " + sp.EndLine.ToString());
-                    Console.WriteLine("  Start Column: " + sp.StartColumn.ToString());
-                    Console.WriteLine("  End   Column: " + sp.EndColumn.ToString());
+                    var document = Symbols.GetDocumentFromDocumentHandle(reader, methodDebugInformation.Document);
+                    var docName = Helpers.DocumentName(reader, document.Name);
+
+                    Console.WriteLine("DocName: " + docName);
+                    var methodNumber = Symbols.GetMethodRowNumberFromMethodDebugInformationHandle(reader, md);
+                    Console.WriteLine(" Method#: " + methodNumber.ToString());
+
+                    foreach(var sp in sql)
+                    {
+                        Console.WriteLine("  Start Line:   " + sp.StartLine.ToString());
+                        Console.WriteLine("  End   Line:   " + sp.EndLine.ToString());
+                        Console.WriteLine("  Start Column: " + sp.StartColumn.ToString());
+                        Console.WriteLine("  End   Column: " + sp.EndColumn.ToString());
+                        Console.WriteLine("  IL offset:    " + sp.Offset.ToString());
+                        Console.WriteLine("  IS Hidden: :  " + sp.IsHidden.ToString());
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine();
                 }
             }
         }
