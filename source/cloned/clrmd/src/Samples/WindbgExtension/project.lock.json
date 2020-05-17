@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "UnmanagedExports/1.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      },
+      "Microsoft.Diagnostics.Runtime/1.0.0": {
+        "type": "project"
+      }
+    }
+  },
+  "libraries": {
+    "UnmanagedExports/1.2.7": {
+      "sha512": "bPIbzFaAj4AFxjHGFGPrYnUSCyIWJMkT/LFuiphWdpUbO2L9fP68W/1SP9cHCAxgiekV+kFNbybA2VvRo8PYIQ==",
+      "type": "package",
+      "path": "unmanagedexports/1.2.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net/RGiesecke.DllExport.Metadata.dll",
+        "tools/DllExportCmdLets.psm1",
+        "tools/Mono.Cecil.dll",
+        "tools/RGiesecke.DllExport.MSBuild.dll",
+        "tools/RGiesecke.DllExport.MSBuild.pdb",
+        "tools/RGiesecke.DllExport.dll",
+        "tools/RGiesecke.DllExport.pdb",
+        "tools/RGiesecke.DllExport.targets",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1",
+        "unmanagedexports.1.2.7.nupkg.sha512",
+        "unmanagedexports.nuspec"
+      ]
+    },
+    "Microsoft.Diagnostics.Runtime/1.0.0": {
+      "type": "project",
+      "path": "../../Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj",
+      "msbuildProject": "../../Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "UnmanagedExports >= 1.2.7"
+    ],
+    ".NETFramework,Version=v4.5.2": []
+  },
+  "packageFolders": {
+    "/root/.nuget/packages/": {}
+  },
+  "project": {
+    "restore": {
+      "projectUniqueName": "/work/source/cloned/clrmd/src/Samples/WindbgExtension/WindbgExtension.csproj",
+      "projectName": "WindbgExtension",
+      "projectPath": "/work/source/cloned/clrmd/src/Samples/WindbgExtension/WindbgExtension.csproj",
+      "projectJsonPath": "/work/source/cloned/clrmd/src/Samples/WindbgExtension/project.json",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/work/source/cloned/clrmd/src/Samples/WindbgExtension/obj/",
+      "projectStyle": "ProjectJson",
+      "validateRuntimeAssets": true,
+      "configFilePaths": [
+        "/root/.nuget/NuGet/NuGet.Config"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net452": {
+          "projectReferences": {
+            "/work/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj": {
+              "projectPath": "/work/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj"
+            }
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "UnmanagedExports": "[1.2.7, )"
+    },
+    "frameworks": {
+      "net452": {}
+    }
+  }
+}

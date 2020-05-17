@@ -48,20 +48,20 @@
     ".NETFramework,Version=v4.5": []
   },
   "packageFolders": {
-    "/Users/willvk/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/Microsoft.Diagnostics.Runtime.Tests.csproj",
+      "projectUniqueName": "/work/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/Microsoft.Diagnostics.Runtime.Tests.csproj",
       "projectName": "Microsoft.Diagnostics.Runtime.Tests",
-      "projectPath": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/Microsoft.Diagnostics.Runtime.Tests.csproj",
-      "projectJsonPath": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/project.json",
-      "packagesPath": "/Users/willvk/.nuget/packages/",
-      "outputPath": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/obj/",
+      "projectPath": "/work/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/Microsoft.Diagnostics.Runtime.Tests.csproj",
+      "projectJsonPath": "/work/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/project.json",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/work/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime.Tests/obj/",
       "projectStyle": "ProjectJson",
       "validateRuntimeAssets": true,
       "configFilePaths": [
-        "/Users/willvk/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
@@ -69,8 +69,8 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj": {
-              "projectPath": "/Users/willvk/source/github/wilvk/dotnet-sos/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj"
+            "/work/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj": {
+              "projectPath": "/work/source/cloned/clrmd/src/Microsoft.Diagnostics.Runtime/Microsoft.Diagnostics.Runtime.csproj"
             }
           }
         }
