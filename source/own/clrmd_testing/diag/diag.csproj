@@ -8,5 +8,8 @@
     <Reference Include="Microsoft.Diagnostics.Runtime">
       <HintPath>../../artefacts/Microsoft.Diagnostics.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Diagnostics.Runtime.Utilities">
+      <HintPath>../../artefacts/Microsoft.Diagnostics.Runtime.Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
