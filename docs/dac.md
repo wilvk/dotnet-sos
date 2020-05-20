@@ -55,3 +55,14 @@ https://github.com/SymbolSource/Microsoft.Samples.Debugging/tree/master/src
 
 understand dnspy debugging:
 https://github.com/0xd4d/dnSpy
+
+
+# CLR Overview 2017
+
+https://mattwarren.org/2017/03/23/Hitchhikers-Guide-to-the-CoreCLR-Source-Code/
+https://mattwarren.org/2017/02/07/The-68-things-the-CLR-does-before-executing-a-single-line-of-your-code/
+https://mattwarren.org/2016/07/04/How-the-dotnet-CLI-tooling-runs-your-code/
+
+## JIT
+
+https://github.com/dotnet/coreclr/blob/master/Documentation/botr/ryujit-overview.md#phases-of-ryujit

@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Diagnostics.Runtime;
+using Microsoft.Diagnostics.Runtime.DacInterface;
 
 namespace debug
 {

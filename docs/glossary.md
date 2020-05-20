@@ -1,5 +1,5 @@
 SOS - Son of Strike. A debugger extension that uses the DAC (Data Access Component) to hook into and reveal internal CLR data structures.
-EE - Execution Engine. Appears in the names of parts of the CLR that were adapted specifically for running .NET code. As you found out.
+EE - Execution Engine. Appears in the names of parts of the CLR that were adapted specifically for running .NET code. As you found out. Also referred to as the Execution Environment.
 pdb - program database
 dia - debug interface access
 llvm - low level virtual machine
@@ -30,3 +30,9 @@ bc - base class liibrary
 ICorDebug - CLR debugging api - https://docs.microsoft.com/en-us/dotnet/framework/unmanaged-api/debugging/
 BOTR - Book of the Runtime - https://github.com/dotnet/coreclr/tree/master/Documentation/botr
 mdbg - managed debugger
+CSE - Common Subexpression Elimination
+PAL - Platform Abstraction Layer
+IR - Internal Representation - https://github.com/dotnet/coreclr/blob/master/Documentation/botr/ryujit-overview.md
+HIR - High-level IR
+LIR - Low-level IR
+ABI - Application Binary Interface
