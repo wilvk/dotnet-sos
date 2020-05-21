@@ -80,3 +80,29 @@ https://github.com/dotnet/coreclr/blob/a9f3fc16483eecfc47fb79c362811d870be02249/
 debugging support: local var info:
 
 https://github.com/dotnet/coreclr/blob/a9f3fc16483eecfc47fb79c362811d870be02249/src/jit/ee_il_dll.cpp#L621
+
+ICorDebug Com discussion:
+https://github.com/dotnet/runtime/issues/7968
+
+## dlls:
+
+
+    coreclr - This is the main runtime DLL (the GC, class loader, interop are all here)
+    corjit - This is the Just In Time (JIT) compiler that compiles .NET Intermediate language to native code.
+    corerun - This is the simple host program that can load the CLR and run a .NET Core application
+    crossgen - This is the host program that runs the JIT compiler and produces .NET Native images (*.ni.dll) for C# code.
+
+
+
+## following netcoredbg
+
+dbgshim.so is a useful starting point:
+
+dotnet/coreclr:  /src/dlls/dbgshim
+
+### instructions on installing:
+
+CC=clang CXX=clang++ cmake .. -DCMAKE_INSTALL_PREFIX=$PWD/../bin all
+make
+cd ./build/src/debug/netcoredbg
+cp /work/source/cloned/netcoredbg/.dotnet/shared/Microsoft.NETCore.App/2.1.16/libdbgshim.so .
