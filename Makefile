@@ -1,8 +1,7 @@
 .PHONY: llvm list d-build-debug d-llvm-code-line-breakpoint d-llvm-method-breakpoint d-build-netcoredbg
 
-NETCOREDBG_BUILD_PTH ?= $(NETCOREDBG_PTH)/build
-NETCOREDBG_OUT_PTH ?= $(NETCORE_BUILD_PTH)/src/debug/netcoredbg
-LIBDBGSHIM_PTH ?= $(NETCOREDBG_PTH)/.dotnet/shared/Microsoft.NETCore.App/2.1.16/libdbgshim.so
+NETCOREDBG_BUILD_PTH = $(NETCOREDBG_PTH)/build
+NETCOREDBG_OUT_PTH = $(NETCOREDBG_BUILD_PTH)/src/debug/netcoredbg
 
 define DOCKER_COMPOSE_LLVM
 	docker-compose -f docker/docker-compose-llvm.yml build
@@ -24,6 +23,10 @@ dotnet-build:
 list:
 	@cat Makefile| grep -E '^(.*):$$'|sed -e 's/://g'
 
+d-build-debug-310:
+	 cd /work/source/own/test_debug && \
+		 /app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/dotnet build
+
 d-build-debug:
 	dotnet build ./source/own/test_debug/
 
@@ -40,13 +43,23 @@ gdb:
 	$(DOCKER_COMPOSE_GDB) dotnet-gdb /bin/bash
 
 d-build-netcoredbg-310:
-	NETCOREDBG_PTH=/work/source/own/netcoredbg310 $(MAKE) d-build-netcoredbg
+	LIBDBGSHIM_PTH=/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.0/libdbgshim.so \
+	NETCOREDBG_PTH=/work/source/own/netcoredbg310 \
+	$(MAKE) d-build-netcoredbg
 
 d-build-netcoredbg-orig:
-	NETCOREDBG_PTH=/work/source/cloned/netcoredbg $(MAKE) d-build-netcoredbg
+	LIBDBGSHIM_PTH=$(NETCOREDBG_PTH)/.dotnet/shared/Microsoft.NETCore.App/2.1.16/libdbgshim.so \
+	NETCOREDBG_PTH=/work/source/cloned/netcoredbg \
+	$(MAKE) d-build-netcoredbg
 
 d-build-netcoredbg:
-	cd $(NETCOREDBG_PTH) && rm -rf ./build || true && mkdir build
-	cd $(NETCOREDBG_BUILD_PTH) && CC=clang CXX=clang++ cmake .. -DCMAKE_INSTALL_PREFIX=$(shell pwd)/../bin
-	cd $(NETCOREDBG_BUILD_PTH) && make
-	cd $(NETCOREDBG_OUT_PTH) && cp $(LIBDBGSHIM_PTH) .
+	cd $(NETCOREDBG_PTH) && \
+	rm -rf ./build && \
+	rm -rf ./coreclr && \
+	mkdir build && \
+	cd $(NETCOREDBG_BUILD_PTH) && \
+	CC=clang CXX=clang++ cmake .. -DCMAKE_INSTALL_PREFIX=$(shell pwd)/../bin && \
+	cd $(NETCOREDBG_BUILD_PTH) && \
+	make && \
+	cd $(NETCOREDBG_OUT_PTH) && \
+	cp $(LIBDBGSHIM_PTH) .
