@@ -106,3 +106,61 @@ CC=clang CXX=clang++ cmake .. -DCMAKE_INSTALL_PREFIX=$PWD/../bin all
 make
 cd ./build/src/debug/netcoredbg
 cp /work/source/cloned/netcoredbg/.dotnet/shared/Microsoft.NETCore.App/2.1.16/libdbgshim.so .
+
+--
+all instructions are codified in the makefile now:
+
+terminal 1:
+
+make dotnet-build
+
+make d-buildnetcoredbg-310
+
+make d-build-debug-310
+
+terminal 2:
+
+docker exec -it < id_of dotnet-build container > bash
+
+cd /work/source/own/test_debug/
+/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/dotnet exec ./bin/Debug/netcoreapp3.1/test_debug.dll
+< starts test_debug app >
+
+terminal 1:
+
+ps aux
+< find test_debug PID >
+
+cd source/own/netcoredbg310/build/src/debug/netcoredbg/
+./netcoredbg --attach < PID >
+
+## Output listed on attach:
+
+
+root@5499edf596ec:/work/source/own/netcoredbg310/build/src/debug/netcoredbg# ./netcoredbg --attach 1603
+(gdb)
+=library-loaded,id="{c494bb81-2820-4c33-848b-a8de8cd3793c}",target-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Private.CoreLib.dll",host-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Private.CoreLib.dll",symbols-loaded="0",base-address="0x7fee814db000",size="3011584"
+=library-loaded,id="{ac810feb-8bd2-46ff-bb56-8343c1a334a7}",target-name="/work/source/own/test_debug/bin/Debug/netcoreapp3.1/test_debug.dll",host-name="/work/source/own/test_debug/bin/Debug/netcoreapp3.1/test_debug.dll",symbols-loaded="1",base-address="0x7fee87746000",size="4608"
+=library-loaded,id="{f5f80e18-b06d-4701-97b9-5c6ce44afa01}",target-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Runtime.dll",host-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Runtime.dll",symbols-loaded="0",base-address="0x7fee8758a000",size="36864"
+=library-loaded,id="{de74e8e8-d589-4acf-8196-9015172d2b2a}",target-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Threading.Thread.dll",host-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Threading.Thread.dll",symbols-loaded="0",base-address="0x7fee87588000",size="6144"
+=library-loaded,id="{6a8b2ba5-e7c8-4125-a85f-e165efab5b9e}",target-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Console.dll",host-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Console.dll",symbols-loaded="0",base-address="0x7fee87573000",size="84480"
+=library-loaded,id="{5d06fb5f-352f-4320-9925-64d3eed5be16}",target-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Runtime.Extensions.dll",host-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Runtime.Extensions.dll",symbols-loaded="0",base-address="0x7fee87553000",size="90112"
+=library-loaded,id="{da07e87c-65ea-4cf7-93c9-7d729520a52c}",target-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Threading.dll",host-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Threading.dll",symbols-loaded="0",base-address="0x7fee80200000",size="43008"
+=library-loaded,id="{782fc2d1-0856-4fc4-930e-64399ab60dac}",target-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Diagnostics.Debug.dll",host-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Diagnostics.Debug.dll",symbols-loaded="0",base-address="0x7fee8756d000",size="5120"
+=library-loaded,id="{a1520061-1d96-4246-87de-7936528dbcbf}",target-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Text.Encoding.Extensions.dll",host-name="/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/System.Text.Encoding.Extensions.dll",symbols-loaded="0",base-address="0x7fee8756b000",size="5120"
+=thread-created,id="1603"
+=thread-created,id="1609"
+=thread-created,id="1611"
+
+
+## Dlls loaded:
+
+System.Private.CoreLib.dll
+test_debug.dll
+System.Runtime.dll
+System.Threading.Thread.dll
+System.Console.dll
+System.Runtime.Extensions.dll
+System.Threading.dll
+System.Diagnostics.Debug.dll
+System.Text.Encoding.Extensions.dll
