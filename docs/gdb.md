@@ -19,3 +19,11 @@ https://github.com/microsoft/MIEngine
 clrdbg - command-line debugger for dotnet core:
 
 https://github.com/Microsoft/MIEngine/wiki/What-is-CLRDBG
+
+Core interfaces (ICorDebug et al.):
+
+https://docs.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/core-interfaces?view=vs-2015&redirectedfrom=MSDN
+
+overview of MI commands:
+
+https://sourceware.org/gdb/onlinedocs/gdb/GDB_002fMI.html

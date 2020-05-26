@@ -43,7 +43,7 @@ gdb:
 	$(DOCKER_COMPOSE_GDB) dotnet-gdb /bin/bash
 
 d-build-netcoredbg-310:
-	LIBDBGSHIM_PTH=/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.0/libdbgshim.so \
+	LIBDBGSHIM_PTH=/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/libdbgshim.so \
 	NETCOREDBG_PTH=/work/source/own/netcoredbg310 \
 	$(MAKE) d-build-netcoredbg
 
