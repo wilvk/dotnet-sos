@@ -94,12 +94,12 @@ RUN cd corefx      && git checkout v3.1.3    && ./build.sh --restore --build --p
 
 RUN cd sdk         && git checkout v3.1.201  && ./build.sh --restore --build --publish --configuration Debug
 
-#RUN cd /app/sdk/.dotnet && ./dotnet-build.sh
+RUN cd /app/sdk/.dotnet && ./dotnet-build.sh
+
+RUN cd diagnostics && git checkout 3.1.57502 && ./build.sh
 
 RUN apt-get update -y && apt-get install -y clang
 RUN apt-get update -y && apt-get install -y curl
-
-RUN cd diagnostics && git checkout 3.1.57502 && ./build.sh
 
 #RUN ./diagnostics/build.sh --configuration debug
 #RUN ./symstore/build.sh --configuration debug

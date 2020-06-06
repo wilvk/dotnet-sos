@@ -17,7 +17,7 @@ llvm:
 	$(DOCKER_COMPOSE_LLVM) llvm /bin/bash
 
 dotnet-build:
-	docker build -f ./docker/Dockerfile-dotnet-build --memory="4096m" --memory-swap="8192m" -t dotnet-sos .
+	docker build -f ./docker/Dockerfile-dotnet-build --memory="4096m" -t dotnet-sos .
 	docker run -it -v $(shell pwd):/work --privileged dotnet-sos /bin/bash
 
 list:
