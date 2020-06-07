@@ -36,6 +36,25 @@ d-llvm-code-line-breakpoint:
 d-llvm-method-breakpoint:
 	lldb --source ./scripts/startup.lldb --source ./scripts/method_breakpoint.lldb
 
+d-dotnet-build-diagnostics:
+	cd /app/sdk && \
+	    git checkout v3.0.103 && \
+			./build.sh
+	cd /app/sdk/.dotnet && \
+	    chmod +x dotnet-install.sh && \
+	    ./dotnet-install.sh
+	ln -sf /app/sdk/.dotnet/dotnet /usr/bin/dotnet
+	cd /app/diagnostics && \
+	    git checkout 3.1.57502 && \
+	    ./build.sh && \
+	    dotnet build ./diagnostics.sln && \
+	    ./build.sh --test || true
+	apt-get update -y && apt-get install -y llvm-8 lldb-8
+	export LLDB_PATH=/usr/bin/lldb-8 && \
+	    cd /app/diagnostics/src/SOS/SOS.UnitTests && \
+	    dotnet test || true
+	echo "remember to: export LLDB_PATH=/usr/bin/lldb-8"
+
 gdb-start-server:
 	gdbserver :9999 /work/tests/binaries/hello_linux
 
