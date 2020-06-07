@@ -4,18 +4,25 @@ dotnet core and sos testing
 ## Approach
 
 - [x] Build binaries
-- [ ] Understand symbol files
+- [x] Understand symbol files
 - [ ] create a gdb plugin
 
+## creeate a gdb plugin:
+
+- [ ] use a sos debug wrapper like clrmd and/or ICorDebug and IUnknown references.
+- [ ] determine how to get stack and local variable info out of interface
+- [ ] implement as a [python-style repl](https://www.learnpython.dev/01-introduction/02-requirements/05-vs-code/04-the-repl-in-vscode/)
 
 ## TODO:
 
-- [ ] determine how to set a breakpoint for a line in a file
-- [ ] determine how to interact with llvm in a container
-- [ ] determine how to match up ildasm code to lines in assembly
+- [x] determine how to set a breakpoint for a line in a file - ./docs/sos-mem-tests/bp_\* examples
+- [x] determine how to interact with llvm in a container - ./scripts/code_line_breakpoint.lldb
+- [x] determine how to match up ildasm code to lines in assembly - sequence points and il offset
+- [x] complete docker file with llvm from: https://apt.llvm.org/
 - [ ] how to get a breakpoint for a specific line - and how to confirm it is correct
+      [ ] determine native vs JIT offset
+      [ ] use COM IUnknown and clrmd to determine additional info at breakpoint
 - [ ] how to make a breakpoint hit more than once after continue in lldb
-- [ ] complete docker file with llvm from: https://apt.llvm.org/
 
 ## Links
 
