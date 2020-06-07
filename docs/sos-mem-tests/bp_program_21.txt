@@ -1,0 +1,35 @@
+Process 23 stopped
+* thread #1, name = 'dotnet', stop reason = signal SIGSTOP
+    frame #0: 0x00007ffff7dd6090 ld-2.27.so`___lldb_unnamed_symbol4$$ld-2.27.so + 47
+ld-2.27.so`___lldb_unnamed_symbol4$$ld-2.27.so:
+->  0x7ffff7dd6090 <+47>: movq   %rsp, %rdi
+    0x7ffff7dd6093 <+50>: callq  0x7ffff7dd6ea0            ; ___lldb_unnamed_symbol17$$ld-2.27.so
+    0x7ffff7dd6098 <+55>: movq   %rax, %r12
+    0x7ffff7dd609b <+58>: movl   0x226697(%rip), %eax
+(lldb) thread continue
+1 location added to breakpoint 1
+JITTED test_debug!console.Program.GetTicksElapsed(Int64)
+Setting breakpoint: breakpoint set --address 0x00007FFF7CE72690 [console.Program.GetTicksElapsed(Int64)]
+Resuming thread 0x0017 in process 23
+Process 23 resuming
+Process 23 stopped
+* thread #1, name = 'dotnet', stop reason = breakpoint 3.1
+    frame #0: 0x00007fff7ce72690
+->  0x7fff7ce72690: pushq  %rbp
+    0x7fff7ce72691: subq   $0x40, %rsp
+    0x7fff7ce72695: leaq   0x40(%rsp), %rbp
+    0x7fff7ce7269a: xorl   %eax, %eax
+
+(lldb) clrstack -p
+OS Thread Id: 0x17 (1)
+        Child SP               IP Call Site
+00007FFFFFFFD7E8 00007FFF7CE72690 console.Program.GetTicksElapsed(Int64) [/work/source/own/test_debug/Program.cs @ 19]
+    PARAMETERS:
+        lastTicks (<CLR reg>) = 0x08d80ad9f0fb8e48
+
+00007FFFFFFFD7F0 00007FFF7CE70919 console.Program.Main(System.String[]) [/work/source/own/test_debug/Program.cs @ 13]
+    PARAMETERS:
+        args (0x00007FFFFFFFD840) = 0x00007fff58007368
+
+00007FFFFFFFDB58 00007ffff6291d5f [GCFrame: 00007fffffffdb58]
+00007FFFFFFFE040 00007ffff6291d5f [GCFrame: 00007fffffffe040]

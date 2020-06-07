@@ -6,3 +6,9 @@
 
 
 - [ ] read this article: https://benhall.io/c-debug-vs-release-builds-and-debugging-in-visual-studio-from-novice-to-expert-in-one-blog-article/
+
+- [ ] put the repl project into an application: /app/diagnostics/src/Microsoft.Diagnostics.Repl
+
+- [ ] look into ICorDebug and IUnknown interfaces and MIDL in dotnet core:
+      /app/diagnostics/src/pal/prebuilt/inc/cordebug.h
+      /app/diagnostics/src/inc/icordebug.idl
