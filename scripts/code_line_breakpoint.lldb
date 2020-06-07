@@ -1,5 +1,6 @@
-bpmd /work/source/own/test_debug/Program.cs:14
+bpmd Program.cs:21
 process launch -s
+loadsymbols
 process status
 thread continue
 clrstack -p
