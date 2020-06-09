@@ -61,6 +61,13 @@ gdb-start-server:
 gdb:
 	$(DOCKER_COMPOSE_GDB) dotnet-gdb /bin/bash
 
+macos-build-netcoredbg:
+	cd ./source/own/netcoredbg310 && \
+		rm -rf ./build && \
+		mkdir build && \
+	  cd build && \
+		cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON .. -DCMAKE_INSTALL_PREFIX=$PWD/../bin
+
 d-build-netcoredbg-310:
 	LIBDBGSHIM_PTH=/app/corefx/artifacts/bin/testhost/netcoreapp-Linux-Debug-x64/shared/Microsoft.NETCore.App/3.1.3/libdbgshim.so \
 	NETCOREDBG_PTH=/work/source/own/netcoredbg310 \

@@ -3,6 +3,7 @@ EE - Execution Engine. Appears in the names of parts of the CLR that were adapte
 pdb - program database
 dia - debug interface access
 llvm - low level virtual machine
+lldb - low level debugger
 gdb - gnu debugger
 msil - microsoft intermediate language
 cil - common intermediate language
@@ -36,3 +37,4 @@ IR - Internal Representation - https://github.com/dotnet/coreclr/blob/master/Doc
 HIR - High-level IR
 LIR - Low-level IR
 ABI - Application Binary Interface
+clang, g++ - c/c++ compilers - https://medium.com/@alitech_2017/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378
