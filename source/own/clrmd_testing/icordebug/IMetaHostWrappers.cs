@@ -9,12 +9,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Security.Permissions;
 using System.Reflection;
+using Microsoft.Win32.SafeHandles;
 
 #pragma warning disable 1591
 
-namespace Microsoft.Diagnostics.Runtime.ICorDebug
+namespace icordebug
 {
-    class ProcessSafeHandle : Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
+    class ProcessSafeHandle : SafeHandleZeroOrMinusOneIsInvalid
     {
         private ProcessSafeHandle()
             : base(true)

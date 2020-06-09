@@ -7,6 +7,7 @@ namespace icordebug
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            CLRDebugging debugging = new CLRDebugging();
         }
     }
 }

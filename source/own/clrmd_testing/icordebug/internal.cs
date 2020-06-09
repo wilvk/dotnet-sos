@@ -8,7 +8,7 @@ using System.IO;
 using Microsoft.Win32.SafeHandles;
 using System.Reflection;
 
-namespace Microsoft.Diagnostics.Runtime
+namespace icordebug
 {
     static class TypeHelpers
     {

@@ -16,7 +16,7 @@ using Microsoft.Win32.SafeHandles;
 
 #pragma warning disable 1591
 
-namespace Microsoft.Diagnostics.Runtime.ICorDebug
+namespace icordebug
 {
     #region Structures for CreateProcess
     [StructLayout(LayoutKind.Sequential, Pack = 8), ComVisible(false)]
@@ -65,9 +65,9 @@ namespace Microsoft.Diagnostics.Runtime.ICorDebug
             this.cb = Marshal.SizeOf(this);
 
             // initialize safe handles
-            this.hStdInput = new Win32.SafeHandles.SafeFileHandle(new IntPtr(0), false);
-            this.hStdOutput = new Win32.SafeHandles.SafeFileHandle(new IntPtr(0), false);
-            this.hStdError = new Win32.SafeHandles.SafeFileHandle(new IntPtr(0), false);
+            this.hStdInput = new SafeFileHandle(new IntPtr(0), false);
+            this.hStdOutput = new SafeFileHandle(new IntPtr(0), false);
+            this.hStdError = new SafeFileHandle(new IntPtr(0), false);
         }
     }
 

@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using IStream = System.Runtime.InteropServices.ComTypes.IStream;
 
-namespace Microsoft.Diagnostics.Runtime.ICorDebug
+namespace icordebug
 {
     /// <summary>
     /// Wrapper for the ICLRDebugging shim interface. This interface exposes the native pipeline

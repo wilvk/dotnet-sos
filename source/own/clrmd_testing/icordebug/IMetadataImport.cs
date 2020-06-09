@@ -7,7 +7,7 @@ using System.Text;
 
 #pragma warning disable 1591
 
-namespace Microsoft.Diagnostics.Runtime.ICorDebug
+namespace icordebug
 {
     [Guid("7DAC8207-D3AE-4c75-9B67-92801A497D44"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IMetadataImport

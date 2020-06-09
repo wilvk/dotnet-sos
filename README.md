@@ -13,6 +13,10 @@ dotnet core and sos testing
 - [ ] determine how to get stack and local variable info out of interface
 - [ ] implement as a [python-style repl](https://www.learnpython.dev/01-introduction/02-requirements/05-vs-code/04-the-repl-in-vscode/)
 
+### pointers:
+/dotnet-sos/source/own/clrmd_testing/icordebug
+/dotnet-sos/docs/ICorDebug.md
+
 ## TODO:
 
 - [x] determine how to set a breakpoint for a line in a file - ./docs/sos-mem-tests/bp_\* examples
