@@ -7,7 +7,12 @@ namespace icordebug
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            CLRDebugging debugging = new CLRDebugging();
+            Console.WriteLine("ProcId: " + args[0]);
+            var processId = int.Parse(args[0]);
+            var minVersion = "0";
+            var debugger = new CLRDebugging();
+            var result = CLRDebugging.GetDebuggerForProcess(processId, minVersion);
+
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Diagnostics.Runtime;
 using Microsoft.Diagnostics.Runtime.DacInterface;
+using Microsoft.Diagnostics.Runtime;
 
 namespace debug
 {
@@ -18,6 +19,25 @@ namespace debug
             if(dataTarget != null)
             {
               Console.WriteLine("Attached.");
+              Console.WriteLine("Name: " + dataTarget.DataReader.DisplayName);
+              Console.WriteLine("Arch: " + dataTarget.DataReader.Architecture.ToString());
+              var modules = dataTarget.DataReader.EnumerateModules();
+              foreach(var module in modules)
+              {
+                Console.WriteLine("file: " + module.FileName);
+              }
+
+              var clrVersions = dataTarget.ClrVersions;
+
+              foreach(var version in clrVersions)
+              {
+                Console.WriteLine("dacPath: " + version.DacInfo.LocalDacPath);
+              }
+
+
+              // we have a live dac! (i think).
+              var dac = new DacLibrary(dataTarget, clrVersions[0].DacInfo.LocalDacPath);
+
             }
             else
             {

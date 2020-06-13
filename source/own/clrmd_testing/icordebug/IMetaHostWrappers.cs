@@ -39,7 +39,7 @@ namespace icordebug
         private const string Kernel32LibraryName = "kernel32.dll";
         private const string Ole32LibraryName = "ole32.dll";
         private const string ShlwapiLibraryName = "shlwapi.dll";
-        private const string ShimLibraryName = "mscoree.dll";
+        private const string ShimLibraryName = "mscoree.so";
 
         public const int MAX_PATH = 260;
 
