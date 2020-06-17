@@ -8,6 +8,13 @@ namespace cs_lib
         {
             Console.WriteLine("Hello World!");
             TestWrapper.DoNothing();
+
+            unsafe
+            {
+              String returnStringString = TestWrapper.ReturnString();
+              Console.WriteLine(returnStringString);
+            }
+
         }
     }
 }
