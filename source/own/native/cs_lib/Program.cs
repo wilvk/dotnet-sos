@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace cs_lib
 {
@@ -9,12 +10,9 @@ namespace cs_lib
             Console.WriteLine("Hello World!");
             TestWrapper.DoNothing();
 
-            unsafe
-            {
-              String returnStringString = TestWrapper.ReturnString();
-              Console.WriteLine(returnStringString);
-            }
-
+            IntPtr returnStringPointer = TestWrapper.ReturnString();
+            string returnString = Marshal.PtrToStringAnsi(returnStringPointer);
+            Console.WriteLine(returnString);
         }
     }
 }

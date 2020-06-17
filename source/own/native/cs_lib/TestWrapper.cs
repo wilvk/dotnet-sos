@@ -9,7 +9,7 @@ namespace cs_lib
     [DllImport("libtest.dylib", EntryPoint="DoNothing")]
     public static extern void DoNothing();
 
-    [DllImport("libtest.dylib", EntryPoint="ReturnString", CharSet = CharSet.Ansi)]
-    public static extern String ReturnString();
+    [DllImport("libtest.dylib", EntryPoint="ReturnString")]
+    public static extern IntPtr ReturnString();
   }
 }
