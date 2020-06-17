@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.Diagnostics.Runtime;
 using Microsoft.Diagnostics.Runtime.DacInterface;
-using Microsoft.Diagnostics.Runtime;
+using Microsoft.Diagnostics.Runtime.DbgEng;
+
 
 namespace debug
 {
@@ -37,6 +38,7 @@ namespace debug
 
               // we have a live dac! (i think).
               var dac = new DacLibrary(dataTarget, clrVersions[0].DacInfo.LocalDacPath);
+              var dacDebug = dac.DacPrivateInterface.QueryInterface(Guid.NewGuid());
 
             }
             else
