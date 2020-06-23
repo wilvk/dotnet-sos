@@ -38,3 +38,10 @@ HIR - High-level IR
 LIR - Low-level IR
 ABI - Application Binary Interface
 clang, g++ - c/c++ compilers - https://medium.com/@alitech_2017/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378
+
+
+internal:
+Telesto - a clr module/process?
+retail - shipped version?
+TLS - Thread Local Storage
+Crst - critical section (usually with threads)
