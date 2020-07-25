@@ -45,3 +45,5 @@ Telesto - a clr module/process?
 retail - shipped version?
 TLS - Thread Local Storage
 Crst - critical section (usually with threads)
+superpmi - ./src/ToolBox/superpmi/readme.txt - jit testing
+tpa - Trusted Platform Assemblies corhost.cpp:765
